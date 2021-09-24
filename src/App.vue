@@ -29,29 +29,9 @@
           </div>
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-
-          <!-- Profile dropdown -->
-          <Menu as="div" class="ml-3 relative">
-            <div>
-              <MenuButton class="bg-gray-800 p-2 rounded-full text-white hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                <span class="sr-only">Open user menu</span>
-                <FlagIcon class="h-6 w-6" aria-hidden="true" />
-              </MenuButton>
-            </div>
-            <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
-              <MenuItems class="origin-top-right absolute right-0 mt-2 w-38 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                <MenuItem v-slot="{ active }">
-                  <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">FR</a>
-                </MenuItem>
-                <MenuItem v-slot="{ active }">
-                  <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">IT</a>
-                </MenuItem>
-                <MenuItem v-slot="{ active }">
-                  <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">EN</a>
-                </MenuItem>
-              </MenuItems>
-            </transition>
-          </Menu>
+          <div>
+            <img v-if="homePage()" class="h-8 w-8 rounded-full" id="flag" :src="flag" alt="pizza-vino-logo" />
+          </div>
         </div>
       </div>
     </div>
@@ -169,12 +149,6 @@
                       12:00 – 2:30 pm, 6:00 – 10:30 pm
                     </dd>
                   </div>
-<!--                  <div class="py-2 sm:py-3 sm:grid sm:grid-cols-3 sm:gap-4">-->
-<!--                    <dt class="text-sm font-medium text-gray-500">-->
-<!--                    </dt>-->
-<!--                    <dd class="mt-1 text-sm text-white sm:mt-0 sm:col-span-2">-->
-<!--                    </dd>-->
-<!--                  </div>-->
                 </dl>
               </div>
             </div>
@@ -231,8 +205,9 @@ import { defineComponent, h } from 'vue'
 
 
 const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'About', href: '/about', current: true },
+  { name: 'Français', href: '/', current: true },
+  { name: 'English', href: '/HomeEN', current: true },
+  { name: 'Italiano', href: '/HomeIT', current: true },
 ]
 
 const transferFeatures = [
@@ -307,14 +282,33 @@ const fooddelivery = [
   },
   {
     name: 'Order now',
-    link: 'https://deliveroo.be/fr/menu/brussels/boondael/pizza-vino',
-    imageSrc: 'img/takeaway.png',
-    description: "What do you fancy? Browse through countless menus and reviews.",
+    link: 'https://www.proxideal.eu/',
+    imageSrc: 'img/Proxideal_Logo-01.png',
+    description: "Vos plats préférés livrés au prix juste.",
   },
 ]
 
 
 export default {
+
+  data() {
+    return {
+      flag: "",
+    }
+  },
+
+  methods: {
+    homePage() {
+      if(this.$route.path == "/" || this.$route.path == "/home" ) {
+        return this.flag = 'img/flag/belgium.png'
+      } else if(this.$route.path == "/HomeEN") {
+        return this.flag = 'img/flag/british.png'
+      } else {
+        return this.flag = 'img/flag/italy.png'
+      }
+    }
+  },
+
   components: {
     Disclosure,
     DisclosureButton,
@@ -345,3 +339,11 @@ export default {
   },
 }
 </script>
+
+<style>
+
+#flag{
+  border: lightgrey solid 2px !important;
+}
+
+</style>

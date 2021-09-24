@@ -1,6 +1,6 @@
 <template>
 
-<!--  Header Section -->
+  <!--  Header Section -->
 
   <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden" style="background-image: url('img/pizza-outside.png'); background-size: cover;">
     <div class="mx-auto  lg:px-8">
@@ -17,13 +17,13 @@
                   <path d="M0 18h8.7v-5.555c-.024-3.906 1.113-6.841 2.892-9.68L6.452 0C3.188 2.644-.026 7.86 0 12.469V18zm12.408 0h8.7v-5.555C21.083 8.539 22.22 5.604 24 2.765L18.859 0c-3.263 2.644-6.476 7.86-6.451 12.469V18z" fill="currentColor" />
                 </svg>
                 <div class="mt-2 sm:mt-0 sm:ml-6 lg:mt-5 lg:ml-0">
-                  <p class="text-lg text-white" id="header_text1">
+                  <p class="text-lg text-white">
                     Rafè!, nun te piglià collera, è cos‘e niente!
                     Però pure tu con ‘sta pizza Margherita, alla Regina Margherita di Savoia non potevi preparare un piatto di pasta, nu ragù, ‘na genovese, ‘na lasagna.
                     Vedi un po’ che cosa hai combinato!
                   </p>
-                  <cite class="mt-2 block font-extralight text-white italic" id="header_text2">
-                    &mdash; Raffaele Esposito est l'inventeur de la pizza Margherita qu'il a créée pour la reine Margherita de Savoie en hommage aux trois couleurs du drapeau italien. A la pizza napolitaine classique à l'huile et à la tomate, il a ajouté le blanc de la mozzarella, le rouge de la tomate et le vert du basilic.
+                  <cite class="mt-2 block font-extralight text-white italic">
+                    &mdash; Raffaele Esposito is the inventor of the Margherita pizza which he created for Queen Margherita of Savoy as a tribute to the three colors of the Italian flag. To the classic Neapolitan pizza of oil and tomato, he added the white of the mozzarella, the red of the tomato and the green of the basil.
                   </cite>
                 </div>
               </blockquote>
@@ -39,7 +39,7 @@
         <div class="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
           <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
             <!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
-            <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-46 lg:max-w-46" src="img/Pizza%20Lovers%20Typography%20Vector.svg" alt="pizza-lovers" id="pizza_lovers" />
+            <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-46 lg:max-w-46" src="img/Pizza%20Lovers%20Typography%20Vector.svg" alt="" />
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@
   </div>
 
 
-<!--  Food parterners section-->
+  <!--  Food parterners section-->
 
   <div class="bg-gray-500" style="background-image: url('img/carrelage.png');">
     <div class="max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
@@ -83,7 +83,7 @@
       </div>
       <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
         <h1 class="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">Made with love</h1>
-        <p class="mt-6 max-w-3xl text-xl text-gray-300">Une pâte légère, réalisée avec des ingrédients de haute qualité, pour obtenir une corniche prononcée mais évidée à l'intérieur ; une cuisson parfaite, ni humide ni brûlée mais agréable en bouche, permet de conserver les saveurs authentiques de la tomate et de la mozzarella fiordilatte.</p>
+        <p class="mt-6 max-w-3xl text-xl text-gray-300">A light dough, made with high quality ingredients, to obtain a pronounced cornice but hollowed out inside; perfect cooking, neither wet nor burnt but pleasant on the palate, allows to preserve the authentic flavors of tomato and fiordilatte mozzarella.</p>
       </div>
     </div>
 
@@ -111,7 +111,7 @@
 
   <carousel>
     <slide v-for="slide in photos" :key="slide" style="background-image: url('img/carrelage.png');">
-      <div class="carousel__item">
+      <div class="carousel__item hidden md:block">
         <img class="h-34 mx-auto mb-16" :src="slide.imageSrc" alt="photos carousel" id="photo-carousel" />
       </div>
     </slide>
@@ -120,7 +120,7 @@
     </template>
   </carousel>
 
-<!--  Menù section-->
+  <!--  Menù section-->
 
   <div class="bg-white" style="background-image: url('img/patterns/close-up-white-marble-texture-background.jpg');">
     <div aria-hidden="true" class="relative">
@@ -131,7 +131,7 @@
     <div class="relative -mt-12 max-w-7xl mx-auto pb-16 px-4 sm:pb-24 sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl">
         <h2 class="text-3xl font-extrabold tracking-tight text-red-700 sm:text-4xl lg:text-6xl">Pizze Rosse</h2>
-        <p class="mt-4 text-gray-500">Sauce à base de tomate Piennolo, typique de la région vésuvienne de Campanie, elle doit son nom à la manière dont les grappes de tomates sont entrelacées pour être conservées. Ils ont une forme ovale mais allongée et un goût typiquement acide.</p>
+        <p class="mt-4 text-gray-500">Sauce made with Piennolo tomato, typical of the Vesuvian area of Campania, it owes its name to the way in which the tomato clusters are intertwined to be preserved. They have an oval but elongated shape and a typically sour taste.</p>
       </div>
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
@@ -144,7 +144,7 @@
 
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
         <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl">Pizze bianche</h2>
-        <p class="mt-4 text-gray-500">Même sans sauce tomate c'est toujours une pizza ! Capable de satisfaire les palais les plus raffinés. Une combinaison époustouflante qui ravira vos papilles.</p>
+        <p class="mt-4 text-gray-500">Even without tomato sauce it is always a pizza! Able to satisfy the most refined palates. A mind-blowing combination that will tickle your taste buds.</p>
       </div>
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
@@ -157,7 +157,7 @@
     </div>
   </div>
 
-<!--  Testimonial section-->
+  <!--  Testimonial section-->
 
   <div class="bg-white relative overflow-hidden">
     <!-- Decorative background image and gradient -->
@@ -173,9 +173,9 @@
     <section aria-labelledby="sale-heading" class="relative max-w-7xl mx-auto pt-32 px-4 flex flex-col items-center text-center sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto lg:max-w-none">
         <h2 id="sale-heading" class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-          Votre avis est très important pour nous!
+          To give importance to our customers
         </h2>
-        <p class="mt-4 max-w-xl mx-auto text-xl text-gray-600" id="text_comment">Nous vous demandons de laisser un commentaire. Parce que vos commentaires sont notre meilleure publicité. Merci !</p>
+        <p class="mt-4 max-w-xl mx-auto text-xl text-gray-600">we ask you to leave a comment. Because your comments are our best advertisement. Thanks!.</p>
         <a href="https://fr.tripadvisor.be/Restaurant_Review-g1136493-d19872077-Reviews-PizzaVino-Ixelles_Brussels.html" class="inline-flex items-center text-white bg-transparent rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
           <span class="rounded-full"><img class="h-28 mx-auto" src="img/Tripadvisor-Logo.png" alt="tripadvisor" /></span>
           <ChevronRightIcon class=" w-5 h-5 text-black" aria-hidden="true" />
@@ -186,7 +186,7 @@
     <!-- Testimonials -->
     <section aria-labelledby="testimonial-heading" class="relative max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:py-32 lg:px-8">
       <div class="max-w-2xl mx-auto lg:max-w-none">
-        <h2 id="testimonial-heading" class="text-2xl font-extrabold tracking-tight text-gray-900">Que disent les gens ?</h2>
+        <h2 id="testimonial-heading" class="text-2xl font-extrabold tracking-tight text-gray-900">What are people saying?</h2>
 
         <div class="mt-16 space-y-16 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
           <blockquote v-for="testimonial in testimonials" :key="testimonial.id" class="sm:flex lg:block">
@@ -220,54 +220,54 @@ import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Pagination, Navigation,} from 'vue3-carousel';
 
 const redpizzas = [
-  { name: 'Margherita', description: 'Tomate, Basilic et Mozzarella.', price:'9,00' },
-  { name: 'Regina', description: 'Tomate, Basilic et Mozzarella de Bufflonne.', price:'12,00' },
-  { name: 'Principessa', description: 'Tomate, Basilic et Scamorza fumée*. ( Fromage typique italien )', price:'10,00' },
-  { name: 'Burrata', description: 'Tomate, Basilic, Tomates Datterini, burratina d\'Andria*. ( La sœur de la mozzarella, un tendre fromage au lait de vache avec, en son cœur, une épaisse crème de fromage frais.)', price:'15,00' },
-  { name: 'Marinara', description: 'Tomate, Ail, Origan et Basilic.', price:'8,00' },
-  { name: 'Rucola Reggiano', description: 'Tomate, Fior di latte*, Roquette et Parmigiano Reggiano.(  Fromage à pâte filée fabriqué à partir du lait de vache avec une technique similaire à celle de la mozzarella )', price:'11,00' },
-  { name: 'Porchetta Funghi', description: 'Tomate, Basilic, Mozzarella, Porchetta d\'Ariccia* et Champignons. ( Charcuterie à base de porc rôti aux épices préparée traditionnellement sur l\'ensemble du territoire la commune d\'Ariccia )', price:'12,50' },
-  { name: 'Quattro Stagioni', description: 'Tomate, Basilic, Mozzarella, Porchetta d\'Ariccia*, Champignons, Olives Noires et Artichauts au four. ( Charcuterie à base de porc rôti aux épices préparée traditionnellement sur l\'ensemble du territoire la commune d\'Ariccia )', price:'13,50' },
-  { name: 'Napoli', description: 'Tomate, Mozzarella, Câpres, Filets d\'Anchois de Cetara et Origan.', price:'12,00' },
-  { name: 'Siciliana', description: 'Tomate, Basilic, Mozzarella, Câpres, Filets d\'Anchois de Cetara, Olives Noires et Ail.', price:'13,00' },
-  { name: 'Diavola', description: 'Tomate, Basilic, Mozzarella et \'Nduja*. ( Saucisse de porc épicée avec du piment fabriquée en Italie, à l\'origine en Calabre )', price:'12,50' },
-  { name: 'Calabrese', description: 'Tomate, Basilic, Scamorza fumée*, Salami épicé, Oignons rouges de Tropea et Olives Noires. ( Fromage typique italien )', price:'15,00' },
-  { name: 'Boscaiola', description: 'Tomate, Basilic, Scamorza fumée*, Mascarpone, Roquette et copeaux de Parmigiano Reggiano. ( Fromage typique italien )', price:'13,00' },
-  { name: 'Bresaola e tartufo', description: 'Tomate, Mozzarella, Roquette, Bresaola de Punta d\'Anca, copeaux de Grana Padano* et Truffe Noire. ( Variété de parmesan )', price:'19,00' },
-  { name: 'Crudaiola', description: 'Tomate, Roquette, Culatello*, Copeaux de Grana Padano, Crème Burrata, Tomates Datterini, Basilic et Origan. ( Il s\'agit d\'un jambon cru salé et séché obtenu à partir de la cuisse de porc  )', price:'16,00' },
-  { name: 'Vegana', description: 'Tomate, Mélange de légumes, Roquette et Tomates séchées.', price:'13,00' },
-  { name: 'Vegetariana', description: 'Tomate, Mozzarella et Mélange de légumes.', price:'14,00' },
-  { name: 'Calzone', description: 'Surprise du pizzaiolo!', price:'15,00' },
+  { name: 'Margherita', description: 'Tomato, Basil and Mozzarella.', price:'9,00' },
+  { name: 'Regina', description: 'Tomato, Basil and Mozzarella di Bufala.', price:'12,00' },
+  { name: 'Principessa', description: 'Tomato, Basil and Smoked Scamorza Cheese.', price:'10,00' },
+  { name: 'Burrata', description: 'Tomato, Basil, Burratina d\'Andria and Red Datterini Tomatoes.', price:'15,00' },
+  { name: 'Marinara', description: 'Tomato, Garlic, Oregano and Basil.', price:'8,00' },
+  { name: 'Rucola Reggiano', description: 'Tomato, Mozzarella, Rocket and Parmigiano Reggiano Cheese.', price:'11,00' },
+  { name: 'Porchetta Funghi', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia and Mushrooms.', price:'12,50' },
+  { name: 'Quattro Stagioni', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia, Mushrooms, Black Olives and Baked Artichokes.', price:'13,50' },
+  { name: 'Napoli', description: 'Tomato, Mozzarella, Capers, Cetara Anchovy Fillets and Oregano.', price:'12,00' },
+  { name: 'Siciliana', description: 'Tomato, Basil, Mozzarella, Capers, Cetara Anchovy Fillets, Black Olives and Garlic.', price:'13,00' },
+  { name: 'Diavola', description: 'Tomato, Basil, Mozzarella and \'Nduja*. ( Type of Italian salami, spiced sausage )', price:'12,50' },
+  { name: 'Calabrese', description: 'Tomato, Basil, Smoked Scamorza Cheese, Spicy Salami, Tropea Red Onions and Black Olives.', price:'15,00' },
+  { name: 'Boscaiola', description: 'Tomato, Basil, Smoked Scamorza Cheese, Mascarpone, Rocket and Parmigiano Reggiano Cheese flakes.', price:'13,00' },
+  { name: 'Bresaola e tartufo', description: 'Tomato, Mozzarella, Rocket, Punta d\'Anca Bresaola, Parmigiano Reggiano Cheese flakes and Black Truffle.', price:'19,00' },
+  { name: 'Crudaiola', description: 'Tomato, Rocket, Culatello, Parmigiano Reggiano Cheese flakes, Burrata Cream, Datterini Tomatoes, Basil and Oregano.', price:'16,00' },
+  { name: 'Vegana', description: 'Tomato, Mix of Vegetables, Rocket and Dried Tomatoes.', price:'13,00' },
+  { name: 'Vegetariana', description: 'Tomato, Mozzarella and a Mix of Vegetables.', price:'14,00' },
+  { name: 'Calzone', description: 'The "Pizzaiolo" will surprise you!.', price:'15,00' },
 ]
 
 const whitepizzas=[
-  { name: 'Salsiccia Friarelli', description: 'Mozzarella, Basilic, Saucisse and Friarielli*. ( Brocoli-rave ou rapini )', price:'14,00' },
-  { name: '4 Formaggi', description: 'Mozzarella, Scamorza fumée, Gorgonzola*, Copeaux de Parmesan et Basilic. ( Fromage à pâte persillée. À l\'intérieur, sa couleur ivoire est persillée de moisissures. Leur couleur peut être majoritairement grise, bleue ou verte )', price:'12,50' },
-  { name: 'Fresca', description: 'Mozzarella, Tomates datterini jaunes et rouges, Roquette et Copeaux de Parmesan.', price:'13,00' },
-  { name: 'Patate & Tartufo', description: 'Mozzarella, Basilic, Pommes de terre bouillies et Truffe Noire.', price:'19,00' },
-  { name: 'Mortadella', description: 'Mozzarella, Roquette, Mortadelle, Copeaux de Pecorino Romano*, Pesto de tomates séchées et Pistaches grillées. (  Fromage traditionnel à base de lait entier de brebis, à pâte pressée cuite )', price:'16,00' },
-  { name: 'Genovese', description: 'Mozzarella, Pesto Génois, Tomates jaunes et rouges de Piennolo del Vesuvio, Copeaux de Ricotta* et Pignons de pin grillés. ( Fromage à pâte fraîche )', price:'16,00' },
+  { name: 'Salsiccia Friarelli', description: 'Fior di latte, Basil, Sausage and Friarielli*. ( Neapolitan Broccoli )', price:'14,00' },
+  { name: '4 Formaggi', description: 'Fior di latte, Smoked Scamorza cheese, Gorgonzola cheese, Parmigiano Reggiano Cheese and Basil.', price:'12,50' },
+  { name: 'Fresca', description: 'Fior di latte, yellow and red Datterini Tomatoes, Rocket and Parmigiano Reggiano Cheese flakes.', price:'13,00' },
+  { name: 'Patate & Tartufo', description: 'Fior di latte, Basil, boiled Potatoes and Black Truffle.', price:'19,00' },
+  { name: 'Mortadella', description: 'Fior di latte, Rocket, Mortadella, Pecorino Romano cheese flakes, Dried Tomato Pesto and Toasted Pistachios.', price:'16,00' },
+  { name: 'Genovese', description: 'Fior di latte, Genoese Pesto, yellow and red Tomatoes from "Piennolo del Vesuvio", Ricotta cheese flakes and Toasted Pine Nuts.', price:'16,00' },
 ]
 
 const supportLinks = [
   {
-    name: 'Four à bois',
+    name: 'Wood-fired oven',
     description:
-        'Design absolument italien depuis plus d\'un siècle, excellentes performances, les fours Valoriani sont internationalement reconnus. Certifications et certificats reçus de la Napolitan True Pizza Association, de partenaires tels que Slow Food, Gambero Rosso, Witaly etc...',
+        'Absolutely Italian design for more than a century, excellent performance, Valoriani ovens are internationally recognized. Certifications and certificates received from the Neapolitan True Pizza Association, from partners such as Slow Food, Gambero Rosso, Witaly etc...',
     icon: CameraIcon,
     imageSrc:'img/forno.jpeg'
   },
   {
-    name: 'Produits de qualité',
+    name: 'Quality products',
     description:
-        'Pour nous, il est important de servir une pizza de haute qualité. Des produits de haute qualité à des prix abordables pour offrir aux clients un produit final excellent au goût, facile à digérer et à un prix juste. Les ingrédients (et la façon dont ils sont traités) sont, surtout en ce qui concerne la pizza, la partie la plus importante.',
+        'For us it is important to serve a high quality pizza. High quality products at affordable prices to give customers a final product that is excellent to taste, easy to digest and at a fair price. The ingredients (and the way they are processed) are, especially with regards to pizza, the most important part.',
     icon: CameraIcon,
     imageSrc:'img/pizza-primo-piano3.jpeg'
   },
   {
     name: 'Il Pizzaiolo',
     description:
-        'Dès son plus jeune âge, Michele aimait regarder les pizzaïolos bouger leurs mains dans la pâte avec dextérité et élégance. Il a commencé à travailler à l\'âge de 16 ans dans la pizzeria « Lorem ». C\'est à 18 ans qu\'il décide qu\'il est temps de se mettre à l\'épreuve : il quitte donc cette pizzeria, pour entamer son chemin de croissance professionnelle et personnelle.',
+        'From an early age Michele loved to watch pizza makers move their hands in the dough with dexterity and elegance. He started working at the age of 16 in the "Lorem" pizzeria. After at age of 18 he decided that it was time to put himself to the test: he therefore left that pizzeria, to begin his professional and personal growth path.',
     icon: CameraIcon,
     imageSrc:'img/michele-pizza.jpeg'
   },
@@ -301,24 +301,23 @@ const testimonials = [
     id: 1,
     rating: 5,
     quote:
-        'Meilleure pizza ever. La pate est incroyable et les ingrédients aussi. La Boscaiola est une tuerie avec sa scamorza fumée. Je conseille vivement. Le personnel est super sympa et attentionné même quand il s\'agit du rush et que l\'on commande à emporter.',
-    attribution: 'Florian Durie',
+        'This Resteraunt is just amazing. The Staff is very friendly and polite. If you wanna eat an ORIGINAL italian Pizza and drink a real coffee, don\'t miss to go there. I will come again.',
+    attribution: 'Okan35 B.',
   },
   {
     id: 2,
-    rating: 5,
+    rating: 4,
     quote:
-        'Honnêtement, depuis que j\'ai goûté aux succulentes pizzas de Pizza Vino, je ne veux plus manger de pizza dans un autre restaurant. La pâte est délicieuse, cuite à la perfection et les ingrédients sont de qualité et bien mis en valeur. Les assemblages sont savoureux et il y a une carte de suggestions qui change fréquemment.',
-    attribution: 'Warlikka',
+        'Really good pizza and very nice people. We absolutely loved it (thin crust, fresh quality toppings) and will certainly be back to enjoy an evening with a bottle of wine to go with our food. In the meantime we\'ll probably order again. Highly recommended.',
+    attribution: 'Wim Dekkers',
   },
   {
     id: 3,
     rating: 5,
     quote:
-        'Des vrais italiens, un décor moderne. La pizza avec de la vraie farine italienne et du bon jambon fumé (on le voit avec son étiquette italienne dans le frigo à l\'entrée). La pate est fine. Le prix est raisonable vu la qualité des produits.',
-    attribution: 'Gilles Marechal',
+        'This is the right place of you want to enjoy a really good pizza ! You’ll find the traditional tastes and also some nice composition and good choice of wine too.',
+    attribution: 'Lorenzo Vinc',
   },
-
 
 ]
 
@@ -433,7 +432,3 @@ export default {
   color: #B91C1C;
 }
 </style>
-
-
-
-
