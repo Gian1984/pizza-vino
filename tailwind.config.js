@@ -270,9 +270,10 @@ module.exports = {
       lobster:[
         'Lobster',
       ],
-      handlee:[
-        'Handlee',
-      ]
+
+      neucha:[
+        'Neucha',
+      ],
 
     },
     fontSize: {

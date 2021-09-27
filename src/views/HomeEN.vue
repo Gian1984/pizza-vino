@@ -400,9 +400,9 @@ export default {
   font-family: lobster;
 }
 
-dd,
-p{
-  font-family: "Handlee" !important;
+p,
+dd{
+  font-family: "Neucha" !important;
   font-size: larger !important;
 }
 
