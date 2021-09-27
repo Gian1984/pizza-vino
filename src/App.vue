@@ -61,7 +61,7 @@
 
 
           <div class="relative">
-            <h3 class="text-xl font-extrabold text-white tracking-tight sm:text-3xl">
+            <h3 class="text-xl font-extrabold text-white tracking-tight sm:text-3xl" id="sub_contact">
               Contact
             </h3>
             <p class="text-lg text-gray-500 mt-2">
@@ -88,7 +88,7 @@
 
           <div class="mt-10 -mx-4 relative lg:mt-0 gap-8" aria-hidden="true">
             <div class="relative mx-5">
-              <h3 class="text-xl font-extrabold text-white tracking-tight sm:text-3xl sm:px-5">
+              <h3 class="text-xl font-extrabold text-white tracking-tight sm:text-3xl sm:px-5" id="sub_opening">
                 Opening Hours
               </h3>
               <div class="mt-10 border-t border-gray-200">
@@ -340,6 +340,12 @@ export default {
 </script>
 
 <style>
+
+
+#sub_opening,
+#sub_contact{
+  font-family: lobster;
+}
 
 #flag{
   border: lightgrey solid 2px !important;

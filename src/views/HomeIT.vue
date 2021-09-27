@@ -9,7 +9,7 @@
           <div class="lg:py-24">
             <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
               <img class="h-40 items-center" src="img/pizza-vino-logo.jpeg" alt="pizza-vino-logo" />
-              <h2 class="text-4xl mt-2 font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">Per chi ama la pizza</h2>
+              <h2 class="text-4xl mt-2 font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl" id="title">Per chi ama la pizza</h2>
             </h1>
             <div class="mt-5 sm:mt-12">
               <blockquote class="sm:flex lg:block">
@@ -29,7 +29,7 @@
               </blockquote>
             </div>
             <div class="mt-10 sm:mt-12">
-              <a href="doc/pizza-vino-it.pdf" class="inline-flex items-center text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
+              <a href="doc/pizza-vino-it.pdf" class="mr-2 inline-flex items-center text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
                 <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full">Scarica il menù</span>
                 <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
               </a>
@@ -79,7 +79,7 @@
         <div class="absolute inset-0 bg-gray-400 mix-blend-multiply" aria-hidden="true" />
       </div>
       <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">Made with love</h1>
+        <h1 class="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl" id="sub_title_pizzaphoto">Made with love</h1>
         <p class="mt-6 max-w-3xl text-xl text-gray-300">Un impasto leggero, realizzato con ingredienti di alta qualità, per ottenere un cornicione pronunciato ma scavato all'interno; la perfetta cottura, né umida né bruciata ma gradevole al palato, permette di preservare i sapori autentici del pomodoro e della mozzarella fiordilatte.</p>
       </div>
     </div>
@@ -98,7 +98,7 @@
                 <img class="h-46 mx-auto" :src="link.imageSrc" alt="" />
               </div>
             </div>
-            <h3 class="text-xl font-medium text-gray-900 mt-2">{{ link.name }}</h3>
+            <h3 class="text-2xl font-medium text-gray-900 mt-2" id="card_title">{{ link.name }}</h3>
             <p class="mt-4 text-base text-gray-500">{{ link.description }}</p>
           </div>
         </div>
@@ -127,26 +127,26 @@
 
     <div class="relative -mt-12 max-w-7xl mx-auto pb-16 px-4 sm:pb-24 sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl">
-        <h2 class="text-3xl font-extrabold tracking-tight text-red-700 sm:text-4xl lg:text-6xl">Pizze Rosse</h2>
+        <h2 class="text-3xl font-extrabold tracking-tight text-red-700 sm:text-4xl lg:text-6xl" id="pizze_rosse">Pizze Rosse</h2>
         <p class="mt-4 text-gray-500">Sugo a base di pomodoro del Piennolo, tipico dell'area vesuviana campana, deve il suo nome al modo in cui i grappoli di pomodoro vengono intrecciati per essere conservati. Hanno una forma ovale ma allungata e un sapore tipicamente acidulo.</p>
       </div>
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
         <div v-for="pizza in redpizzas" :key="pizza.name" class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">{{ pizza.name }}</dt>
+          <dt class="text-2xl text-gray-900" id="red_pizza_name">{{ pizza.name }}</dt>
           <dd class="mt-2 text-sm text-gray-500">{{ pizza.description }}</dd>
           <dt class="font-medium text-gray-900">{{ pizza.price }}€</dt>
         </div>
       </dl>
 
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
-        <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl">Pizze bianche</h2>
+        <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="pizze_bianche">Pizze bianche</h2>
         <p class="mt-4 text-gray-500">Anche senza salsa di pomodoro è sempre una pizza! Capace di soddisfare i palati più raffinati. Una combinazione strabiliante che solleticherà le vostre papille gustative.</p>
       </div>
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
         <div v-for="pizza in whitepizzas" :key="pizza.name" class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">{{ pizza.name }}</dt>
+          <dt class="text-2xl text-gray-900" id="white_pizza_name">{{ pizza.name }}</dt>
           <dd class="mt-2 text-sm text-gray-500">{{ pizza.description }}</dd>
           <dt class="font-medium text-gray-900">{{ pizza.price }}€</dt>
         </div>
@@ -248,14 +248,14 @@ const whitepizzas=[
 
 const supportLinks = [
   {
-    name: 'Wood-fired oven',
+    name: 'Forno a legna',
     description:
         'Design assolutamente italiano da più di un secolo, ottime prestazioni, i forni Valoriani sono riconosciuti a livello internazionale. Certificazioni e attestati ricevuti dall\'Associazione Napoletana Vera Pizza, da partner come Slow Food, Gambero Rosso, Witaly ecc...',
     icon: CameraIcon,
     imageSrc:'img/forno.jpeg'
   },
   {
-    name: 'Quality products',
+    name: 'Qualità dei prodotti',
     description:
         'Per noi è importante servire una pizza di alta qualità. Prodotti di alta qualità a prezzi convenienti per dare ai clienti un prodotto finale ottimo da gustare, digeribile e dal giusto prezzo. Gli ingredienti (e il modo in cui vengono lavorati) sono, soprattutto per quanto riguarda la pizza, la parte più importante.',
     icon: CameraIcon,
@@ -387,6 +387,25 @@ export default {
 </script>
 
 <style>
+
+#red_pizza_name,
+#white_pizza_name,
+#card_title,
+#sale-heading,
+#pizze_bianche,
+#pizze_rosse,
+#sub_title_pizzaphoto,
+#testimonial-heading,
+#title{
+  font-family: lobster;
+}
+
+dd,
+p{
+  font-family: "Handlee" !important;
+  font-size: larger !important;
+}
+
 .carousel__item {
   min-height: 200px;
   width: 100%;

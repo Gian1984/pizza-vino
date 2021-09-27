@@ -9,7 +9,7 @@
           <div class="lg:py-24">
             <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
               <img class="h-40 items-center" src="img/pizza-vino-logo.jpeg" alt="pizza-vino-logo" />
-              <h2 class="text-4xl mt-2 font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">Per chi ama la pizza</h2>
+              <h2 class="text-4xl mt-2 font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl" id="title">Per chi ama la pizza</h2>
             </h1>
             <div class="mt-5 sm:mt-12">
               <blockquote class="sm:flex lg:block">
@@ -80,7 +80,7 @@
         <div class="absolute inset-0 bg-gray-400 mix-blend-multiply" aria-hidden="true" />
       </div>
       <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">Made with love</h1>
+        <h1 class="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl" id="sub_title_pizzaphoto">Made with love</h1>
         <p class="mt-6 max-w-3xl text-xl text-gray-300">Une pâte légère, réalisée avec des ingrédients de haute qualité, pour obtenir une corniche prononcée mais évidée à l'intérieur ; une cuisson parfaite, ni humide ni brûlée mais agréable en bouche, permet de conserver les saveurs authentiques de la tomate et de la mozzarella fiordilatte.</p>
       </div>
     </div>
@@ -99,7 +99,7 @@
                 <img class="h-46 mx-auto" :src="link.imageSrc" alt="" />
               </div>
             </div>
-            <h3 class="text-xl font-medium text-gray-900 mt-2">{{ link.name }}</h3>
+            <h3 class="text-2xl font-medium text-gray-900 mt-2" id="card_title">{{ link.name }}</h3>
             <p class="mt-4 text-base text-gray-500">{{ link.description }}</p>
           </div>
         </div>
@@ -128,26 +128,26 @@
 
     <div class="relative -mt-12 max-w-7xl mx-auto pb-16 px-4 sm:pb-24 sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl">
-        <h2 class="text-3xl font-extrabold tracking-tight text-red-700 sm:text-4xl lg:text-6xl">Pizze Rosse</h2>
+        <h2 class="text-4xl font-extrabold tracking-tight text-red-700 sm:text-4xl lg:text-6xl" id="pizze_rosse">Pizze Rosse</h2>
         <p class="mt-4 text-gray-500">Sauce à base de tomate Piennolo, typique de la région vésuvienne de Campanie, elle doit son nom à la manière dont les grappes de tomates sont entrelacées pour être conservées. Ils ont une forme ovale mais allongée et un goût typiquement acide.</p>
       </div>
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
         <div v-for="pizza in redpizzas" :key="pizza.name" class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">{{ pizza.name }}</dt>
+          <dt class="text-2xl text-gray-900" id="red_pizza_name">{{ pizza.name }}</dt>
           <dd class="mt-2 text-sm text-gray-500">{{ pizza.description }}</dd>
           <dt class="font-medium text-gray-900">{{ pizza.price }}€</dt>
         </div>
       </dl>
 
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
-        <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl">Pizze bianche</h2>
+        <h2 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="pizze_bianche">Pizze bianche</h2>
         <p class="mt-4 text-gray-500">Même sans sauce tomate c'est toujours une pizza ! Capable de satisfaire les palais les plus raffinés. Une combinaison époustouflante qui ravira vos papilles.</p>
       </div>
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
         <div v-for="pizza in whitepizzas" :key="pizza.name" class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">{{ pizza.name }}</dt>
+          <dt class="text-2xl text-gray-900" id="white_pizza_name">{{ pizza.name }}</dt>
           <dd class="mt-2 text-sm text-gray-500">{{ pizza.description }}</dd>
           <dt class="font-medium text-gray-900">{{ pizza.price }}€</dt>
         </div>
@@ -184,7 +184,7 @@
     <!-- Testimonials -->
     <section aria-labelledby="testimonial-heading" class="relative max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:py-32 lg:px-8">
       <div class="max-w-2xl mx-auto lg:max-w-none">
-        <h2 id="testimonial-heading" class="text-2xl font-extrabold tracking-tight text-gray-900">Que disent les gens ?</h2>
+        <h2 id="testimonial-heading" class="text-2xl font-extrabold tracking-tight text-gray-900" >Que disent les gens ?</h2>
 
         <div class="mt-16 space-y-16 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
           <blockquote v-for="testimonial in testimonials" :key="testimonial.id" class="sm:flex lg:block">
@@ -390,6 +390,26 @@ export default {
 </script>
 
 <style>
+
+#red_pizza_name,
+#testimonial-heading,
+#white_pizza_name,
+#card_title,
+#sale-heading,
+#pizze_bianche,
+#pizze_rosse,
+#sub_title_pizzaphoto,
+#title{
+  font-family: lobster;
+}
+
+dd,
+p{
+  font-family: "Handlee" !important;
+  font-size: larger !important;
+}
+
+
 .carousel__item {
   min-height: 200px;
   width: 100%;

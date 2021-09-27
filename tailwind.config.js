@@ -12,6 +12,7 @@ module.exports = {
       xl: '1280px',
       '2xl': '1536px',
     },
+
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -266,6 +267,13 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
+      lobster:[
+        'Lobster',
+      ],
+      handlee:[
+        'Handlee',
+      ]
+
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
