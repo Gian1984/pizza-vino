@@ -39,7 +39,7 @@
         <div class="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
           <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
             <!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
-            <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-46 lg:max-w-46" src="img/Pizza%20Lovers%20Typography%20Vector.svg" alt="" />
+            <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-46 lg:max-w-46" src="img/Pizza%20Lovers%20Typography%20Vector.svg" alt="" id="pizza_lovers" />
           </div>
         </div>
       </div>
@@ -49,23 +49,16 @@
 
   <!--  Food parterners section-->
 
-  <div class="bg-gray-500" style="background-image: url('img/carrelage.png');">
-    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-      <div class="flow-root mt-8 lg:mt-10 sm:ml-10">
-        <div class="-mt-4  flex flex-wrap justify-between lg:-ml-4 ">
-          <div class="mt-4  flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4 ">
-            <img class="h-36" src="img/farine-caputo.png" alt="farine-caputo" />
-          </div>
-          <div class="mt-4 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
-            <img class="h-36" src="img/viniveneti.png" alt="vini-veneti" />
-          </div>
-          <div class="mt-4  flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
-            <img class="h-36" src="img/pomodorinoDOP.png" alt="pomodorini-dop" />
-          </div>
-          <div class="mt-4  flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
-            <img class="h-36" src="img/Birra_peroni_s.r.l._logo.png" alt="birra-peroni" />
-          </div>
-        </div>
+  <div class="bg-white" style="background-image: url('img/carrelage.png');">
+    <div class=" mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
+      <div class="space-y-8 sm:space-y-12">
+        <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12">
+          <li v-for="partner in partners" :key="partner.name">
+            <div class="space-y-4">
+              <img class="mx-auto h-20  lg:h-36" :src="partner.imageUrl" alt="" />
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -175,7 +168,7 @@
         <h2 id="sale-heading" class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
           To give importance to our customers
         </h2>
-        <p class="mt-4 max-w-xl mx-auto text-xl text-gray-600">Ti chiediamo di lasciare un commento. Perché i tuoi commenti sono la nostra migliore pubblicità. Grazie!</p>
+        <p class="mt-4 max-w-xl mx-auto text-xl text-gray-600" id="text_comment">Ti chiediamo di lasciare un commento. Perché i tuoi commenti sono la nostra migliore pubblicità. Grazie!</p>
         <a href="https://fr.tripadvisor.be/Restaurant_Review-g1136493-d19872077-Reviews-PizzaVino-Ixelles_Brussels.html" class="inline-flex items-center text-white bg-transparent rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
           <span class="rounded-full"><img class="h-28 mx-auto" src="img/Tripadvisor-Logo.png" alt="tripadvisor" /></span>
           <ChevronRightIcon class=" w-5 h-5 text-black" aria-hidden="true" />
@@ -321,6 +314,25 @@ const testimonials = [
 
 ]
 
+const partners = [
+  {
+    imageUrl:
+        'img/farine-caputo.png',
+  },
+  {
+    imageUrl:
+        'img/viniveneti.png',
+  },
+  {
+    imageUrl:
+        'img/pomodorinoDOP.png',
+  },
+  {
+    imageUrl:
+        'img/Birra_peroni_s.r.l._logo.png',
+  },
+]
+
 const fooddelivery = [
   {
     name: 'Ordina Adesso',
@@ -362,7 +374,8 @@ export default {
       SupportIcon,
       supportLinks,
       CameraIcon,
-      photos
+      photos,
+      partners
     }
   },
 }
@@ -404,6 +417,16 @@ export default {
 
   p{
     font-size: medium !important;
+  }
+
+  #text_comment{
+    color: black !important;
+  }
+
+  #pizza_lovers{
+    max-height: 400px;
+    justify-content: center;
+    padding-bottom: 100px;
   }
 
   #photo-carousel{

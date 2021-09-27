@@ -49,23 +49,17 @@
 
 <!--  Food parterners section-->
 
-  <div class="bg-gray-500" style="background-image: url('img/carrelage.png');">
-    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-      <div class="flow-root mt-8 lg:mt-10 sm:ml-10">
-        <div class="-mt-4  flex flex-wrap justify-between lg:-ml-4 ">
-          <div class="mt-4  flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4 ">
-            <img class="h-36" src="img/farine-caputo.png" alt="farine-caputo" id="farine" />
-          </div>
-          <div class="mt-4 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
-            <img class="h-36" src="img/viniveneti.png" alt="vini-veneti" id="vini" />
-          </div>
-          <div class="mt-4  flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
-            <img class="h-36" src="img/pomodorinoDOP.png" alt="pomodorini-dop" id="pomodorini" />
-          </div>
-          <div class="mt-4  flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
-            <img class="h-36" src="img/Birra_peroni_s.r.l._logo.png" alt="birra-peroni" id="birra" />
-          </div>
-        </div>
+
+  <div class="bg-white" style="background-image: url('img/carrelage.png');">
+    <div class=" mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
+      <div class="space-y-8 sm:space-y-12">
+        <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12">
+          <li v-for="partner in partners" :key="partner.name">
+            <div class="space-y-4">
+              <img class="mx-auto h-20  lg:h-36" :src="partner.imageUrl" alt="" />
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -322,6 +316,26 @@ const testimonials = [
 
 ]
 
+const partners = [
+  {
+    imageUrl:
+        'img/farine-caputo.png',
+  },
+  {
+    imageUrl:
+        'img/viniveneti.png',
+  },
+  {
+    imageUrl:
+        'img/pomodorinoDOP.png',
+  },
+  {
+    imageUrl:
+        'img/Birra_peroni_s.r.l._logo.png',
+  },
+]
+
+
 const fooddelivery = [
   {
     name: 'Order now',
@@ -363,7 +377,8 @@ export default {
       SupportIcon,
       supportLinks,
       CameraIcon,
-      photos
+      photos,
+      partners
     }
   },
 }
@@ -407,6 +422,10 @@ export default {
     font-size: medium !important;
   }
 
+  #text_comment{
+    color: black !important;
+  }
+
   #photo-carousel{
     display: none !important;
   }
@@ -418,12 +437,12 @@ export default {
     display: none !important;
   }
 
-  #pomodorini,
-  #farine,
-  #vini,
-  #birra{
-    max-height: 150px !important;
+  #pizza_lovers{
+    max-height: 400px;
+    justify-content: center;
+    padding-bottom: 100px;
   }
+
 }
 
 

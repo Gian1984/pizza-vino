@@ -217,8 +217,7 @@ const transferFeatures = [
     href:'https://www.google.be/maps/place/PizzaVino/@50.8199996,4.3833578,17z/data=!3m1!4b1!4m5!3m4!1s0x47c3c518e8b6ab6b:0xfd6daa37c3d4bc26!8m2!3d50.8200407!4d4.3856159',
     description:
         'Avenue des Saisons 15\n' +
-        '1050 Ixelles\n' +
-        'Belgium.',
+        '1050 Ixelles',
     icon: LocationMarkerIcon,
   },
   {
