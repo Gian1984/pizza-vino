@@ -54,16 +54,16 @@
       <div class="flow-root mt-8 lg:mt-10 sm:ml-10">
         <div class="-mt-4  flex flex-wrap justify-between lg:-ml-4 ">
           <div class="mt-4  flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4 ">
-            <img class="h-36" src="img/farine-caputo.png" alt="farine-caputo" />
+            <img class="h-36" src="img/farine-caputo.png" alt="farine-caputo" id="farine" />
           </div>
           <div class="mt-4 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
-            <img class="h-36" src="img/viniveneti.png" alt="vini-veneti" />
+            <img class="h-36" src="img/viniveneti.png" alt="vini-veneti" id="vini" />
           </div>
           <div class="mt-4  flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
-            <img class="h-36" src="img/pomodorinoDOP.png" alt="pomodorini-dop" />
+            <img class="h-36" src="img/pomodorinoDOP.png" alt="pomodorini-dop" id="pomodorini" />
           </div>
           <div class="mt-4  flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
-            <img class="h-36" src="img/Birra_peroni_s.r.l._logo.png" alt="birra-peroni" />
+            <img class="h-36" src="img/Birra_peroni_s.r.l._logo.png" alt="birra-peroni" id="birra" />
           </div>
         </div>
       </div>
@@ -417,12 +417,15 @@ export default {
   .carousel__next {
     display: none !important;
   }
+
+  #pomodorini,
+  #farine,
+  #vini,
+  #birra{
+    max-height: 150px !important;
+  }
 }
 
-
-.carousel__slide {
-
-}
 
 .carousel__prev,
 .carousel__next {
