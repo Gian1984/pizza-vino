@@ -29,7 +29,7 @@
               </blockquote>
             </div>
             <div class="mt-10 sm:mt-12">
-              <a href="doc/pizza-vino-en.pdf" class="inline-flex items-center text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
+              <a href="doc/pizza-vino-it.pdf" class="inline-flex items-center text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
                 <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full">Download the online menù</span>
                 <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
               </a>
@@ -253,21 +253,21 @@ const supportLinks = [
   {
     name: 'Wood-fired oven',
     description:
-        'Absolutely Italian design for more than a century, excellent performance, Valoriani ovens are internationally recognized. Certifications and certificates received from the Neapolitan True Pizza Association, from partners such as Slow Food, Gambero Rosso, Witaly etc...',
+        'Design assolutamente italiano da più di un secolo, ottime prestazioni, i forni Valoriani sono riconosciuti a livello internazionale. Certificazioni e attestati ricevuti dall\'Associazione Napoletana Vera Pizza, da partner come Slow Food, Gambero Rosso, Witaly ecc...',
     icon: CameraIcon,
     imageSrc:'img/forno.jpeg'
   },
   {
     name: 'Quality products',
     description:
-        'For us it is important to serve a high quality pizza. High quality products at affordable prices to give customers a final product that is excellent to taste, easy to digest and at a fair price. The ingredients (and the way they are processed) are, especially with regards to pizza, the most important part.',
+        'Per noi è importante servire una pizza di alta qualità. Prodotti di alta qualità a prezzi convenienti per dare ai clienti un prodotto finale ottimo da gustare, digeribile e dal giusto prezzo. Gli ingredienti (e il modo in cui vengono lavorati) sono, soprattutto per quanto riguarda la pizza, la parte più importante.',
     icon: CameraIcon,
     imageSrc:'img/pizza-primo-piano3.jpeg'
   },
   {
     name: 'Il Pizzaiolo',
     description:
-        'From an early age Michele loved to watch pizza makers move their hands in the dough with dexterity and elegance. He started working at the age of 16 in the "Lorem" pizzeria. After at age of 18 he decided that it was time to put himself to the test: he therefore left that pizzeria, to begin his professional and personal growth path.',
+        'Fin da piccolo Michele amava guardare i pizzaioli muovere le mani nell\'impasto con destrezza ed eleganza. Ha iniziato a lavorare all\'età di 16 anni. Dopo tanti anni che fa questo mestiere, ha capito che il segreto è non sentirsi mai arrivati: giorno dopo giorno imparare qualcosa di nuovo, approcciando a questo lavoro sempre con lo stesso entusiasmo del primo giorno.',
     icon: CameraIcon,
     imageSrc:'img/michele-pizza.jpeg'
   },

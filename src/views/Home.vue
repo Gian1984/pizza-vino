@@ -29,7 +29,7 @@
               </blockquote>
             </div>
             <div class="mt-10 sm:mt-12">
-              <a href="doc/pizza-vino-en.pdf" class="inline-flex items-center text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
+              <a href="doc/pizza-vino-fr.pdf" class="inline-flex items-center text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
                 <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full">Download the online menù</span>
                 <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
               </a>
@@ -223,9 +223,9 @@ const redpizzas = [
   { name: 'Margherita', description: 'Tomate, Basilic et Mozzarella.', price:'9,00' },
   { name: 'Regina', description: 'Tomate, Basilic et Mozzarella de Bufflonne.', price:'12,00' },
   { name: 'Principessa', description: 'Tomate, Basilic et Scamorza fumée*. ( Fromage typique italien )', price:'10,00' },
-  { name: 'Burrata', description: 'Tomate, Basilic, Tomates Datterini, burratina d\'Andria*. ( La sœur de la mozzarella, un tendre fromage au lait de vache avec, en son cœur, une épaisse crème de fromage frais.)', price:'15,00' },
+  { name: 'Burrata', description: 'Tomate, Basilic, Tomates Datterini, Burratina d\'Andria*. (  Sœur de la mozzarella, un tendre fromage au lait de vache avec, en son cœur, une épaisse crème de fromage frais )', price:'15,00' },
   { name: 'Marinara', description: 'Tomate, Ail, Origan et Basilic.', price:'8,00' },
-  { name: 'Rucola Reggiano', description: 'Tomate, Fior di latte*, Roquette et Parmigiano Reggiano.(  Fromage à pâte filée fabriqué à partir du lait de vache avec une technique similaire à celle de la mozzarella )', price:'11,00' },
+  { name: 'Rucola Reggiano', description: 'Tomate, Mozzarella, Roquette et Parmigiano Reggiano.', price:'11,00' },
   { name: 'Porchetta Funghi', description: 'Tomate, Basilic, Mozzarella, Porchetta d\'Ariccia* et Champignons. ( Charcuterie à base de porc rôti aux épices préparée traditionnellement sur l\'ensemble du territoire la commune d\'Ariccia )', price:'12,50' },
   { name: 'Quattro Stagioni', description: 'Tomate, Basilic, Mozzarella, Porchetta d\'Ariccia*, Champignons, Olives Noires et Artichauts au four. ( Charcuterie à base de porc rôti aux épices préparée traditionnellement sur l\'ensemble du territoire la commune d\'Ariccia )', price:'13,50' },
   { name: 'Napoli', description: 'Tomate, Mozzarella, Câpres, Filets d\'Anchois de Cetara et Origan.', price:'12,00' },
@@ -233,7 +233,7 @@ const redpizzas = [
   { name: 'Diavola', description: 'Tomate, Basilic, Mozzarella et \'Nduja*. ( Saucisse de porc épicée avec du piment fabriquée en Italie, à l\'origine en Calabre )', price:'12,50' },
   { name: 'Calabrese', description: 'Tomate, Basilic, Scamorza fumée*, Salami épicé, Oignons rouges de Tropea et Olives Noires. ( Fromage typique italien )', price:'15,00' },
   { name: 'Boscaiola', description: 'Tomate, Basilic, Scamorza fumée*, Mascarpone, Roquette et copeaux de Parmigiano Reggiano. ( Fromage typique italien )', price:'13,00' },
-  { name: 'Bresaola e tartufo', description: 'Tomate, Mozzarella, Roquette, Bresaola de Punta d\'Anca, copeaux de Grana Padano* et Truffe Noire. ( Variété de parmesan )', price:'19,00' },
+  { name: 'Bresaola e tartufo', description: 'Tomate, Mozzarella, Roquette, Bresaola de Punta d\'Anca, copeaux de Grana Padano* et Truffe Noire. ( Fromage typique italien )', price:'19,00' },
   { name: 'Crudaiola', description: 'Tomate, Roquette, Culatello*, Copeaux de Grana Padano, Crème Burrata, Tomates Datterini, Basilic et Origan. ( Il s\'agit d\'un jambon cru salé et séché obtenu à partir de la cuisse de porc  )', price:'16,00' },
   { name: 'Vegana', description: 'Tomate, Mélange de légumes, Roquette et Tomates séchées.', price:'13,00' },
   { name: 'Vegetariana', description: 'Tomate, Mozzarella et Mélange de légumes.', price:'14,00' },
@@ -242,7 +242,7 @@ const redpizzas = [
 
 const whitepizzas=[
   { name: 'Salsiccia Friarelli', description: 'Mozzarella, Basilic, Saucisse and Friarielli*. ( Brocoli-rave ou rapini )', price:'14,00' },
-  { name: '4 Formaggi', description: 'Mozzarella, Scamorza fumée, Gorgonzola*, Copeaux de Parmesan et Basilic. ( Fromage à pâte persillée. À l\'intérieur, sa couleur ivoire est persillée de moisissures. Leur couleur peut être majoritairement grise, bleue ou verte )', price:'12,50' },
+  { name: '4 Formaggi', description: 'Mozzarella, Scamorza fumée, Gorgonzola, Copeaux de Parmesan et Basilic.', price:'12,50' },
   { name: 'Fresca', description: 'Mozzarella, Tomates datterini jaunes et rouges, Roquette et Copeaux de Parmesan.', price:'13,00' },
   { name: 'Patate & Tartufo', description: 'Mozzarella, Basilic, Pommes de terre bouillies et Truffe Noire.', price:'19,00' },
   { name: 'Mortadella', description: 'Mozzarella, Roquette, Mortadelle, Copeaux de Pecorino Romano*, Pesto de tomates séchées et Pistaches grillées. (  Fromage traditionnel à base de lait entier de brebis, à pâte pressée cuite )', price:'16,00' },
@@ -267,7 +267,7 @@ const supportLinks = [
   {
     name: 'Il Pizzaiolo',
     description:
-        'Dès son plus jeune âge, Michele aimait regarder les pizzaïolos bouger leurs mains dans la pâte avec dextérité et élégance. Il a commencé à travailler à l\'âge de 16 ans dans la pizzeria « Lorem ». C\'est à 18 ans qu\'il décide qu\'il est temps de se mettre à l\'épreuve : il quitte donc cette pizzeria, pour entamer son chemin de croissance professionnelle et personnelle.',
+        'Dès son plus jeune âge, Michele aimait regarder les pizzaïolos bouger leurs mains dans la pâte avec dextérité et élégance. Il a commencé à travailler à l\'âge de 16 ans. Après de nombreuses années dans ce métier, il a compris que le secret est de ne jamais se sentir arrivé : jour après jour, il ne rate jamais une occasion d\'apprendre quelque chose de nouveau, abordant toujours ce métier avec le même enthousiasme qu\'au premier jour.',
     icon: CameraIcon,
     imageSrc:'img/michele-pizza.jpeg'
   },

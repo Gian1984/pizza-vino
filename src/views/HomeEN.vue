@@ -230,7 +230,7 @@ const redpizzas = [
   { name: 'Quattro Stagioni', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia, Mushrooms, Black Olives and Baked Artichokes.', price:'13,50' },
   { name: 'Napoli', description: 'Tomato, Mozzarella, Capers, Cetara Anchovy Fillets and Oregano.', price:'12,00' },
   { name: 'Siciliana', description: 'Tomato, Basil, Mozzarella, Capers, Cetara Anchovy Fillets, Black Olives and Garlic.', price:'13,00' },
-  { name: 'Diavola', description: 'Tomato, Basil, Mozzarella and \'Nduja*. ( Type of Italian salami, spiced sausage )', price:'12,50' },
+  { name: 'Diavola', description: 'Tomato, Basil, Mozzarella and \'Nduja*. ( Spicy, spreadable pork sausage from the region of Calabria )', price:'12,50' },
   { name: 'Calabrese', description: 'Tomato, Basil, Smoked Scamorza Cheese, Spicy Salami, Tropea Red Onions and Black Olives.', price:'15,00' },
   { name: 'Boscaiola', description: 'Tomato, Basil, Smoked Scamorza Cheese, Mascarpone, Rocket and Parmigiano Reggiano Cheese flakes.', price:'13,00' },
   { name: 'Bresaola e tartufo', description: 'Tomato, Mozzarella, Rocket, Punta d\'Anca Bresaola, Parmigiano Reggiano Cheese flakes and Black Truffle.', price:'19,00' },
@@ -267,7 +267,7 @@ const supportLinks = [
   {
     name: 'Il Pizzaiolo',
     description:
-        'From an early age Michele loved to watch pizza makers move their hands in the dough with dexterity and elegance. He started working at the age of 16 in the "Lorem" pizzeria. After at age of 18 he decided that it was time to put himself to the test: he therefore left that pizzeria, to begin his professional and personal growth path.',
+        'From an early age Michele loved to watch pizza makers move their hands in the dough with dexterity and elegance. He started working at the age of 16. After many years he has understood that the secret is never to feel like he has arrived: day after day, he never misses an opportunity to learn something new, always approaching this job with the same enthusiasm as on the first day..',
     icon: CameraIcon,
     imageSrc:'img/michele-pizza.jpeg'
   },
