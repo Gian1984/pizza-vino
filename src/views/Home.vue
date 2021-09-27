@@ -17,7 +17,7 @@
                   <path d="M0 18h8.7v-5.555c-.024-3.906 1.113-6.841 2.892-9.68L6.452 0C3.188 2.644-.026 7.86 0 12.469V18zm12.408 0h8.7v-5.555C21.083 8.539 22.22 5.604 24 2.765L18.859 0c-3.263 2.644-6.476 7.86-6.451 12.469V18z" fill="currentColor" />
                 </svg>
                 <div class="mt-2 sm:mt-0 sm:ml-6 lg:mt-5 lg:ml-0">
-                  <p class="text-lg text-white" id="header_text1">
+                  <p class="text-2xl text-white" id="header_text1">
                     Rafè!, nun te piglià collera, è cos‘e niente!
                     Però pure tu con ‘sta pizza Margherita, alla Regina Margherita di Savoia non potevi preparare un piatto di pasta, nu ragù, ‘na genovese, ‘na lasagna.
                     Vedi un po’ che cosa hai combinato!
@@ -81,7 +81,7 @@
       </div>
       <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
         <h1 class="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl" id="sub_title_pizzaphoto">Made with love</h1>
-        <p class="mt-6 max-w-3xl text-xl text-gray-300">Une pâte légère, réalisée avec des ingrédients de haute qualité, pour obtenir une corniche prononcée mais évidée à l'intérieur ; une cuisson parfaite, ni humide ni brûlée mais agréable en bouche, permet de conserver les saveurs authentiques de la tomate et de la mozzarella fiordilatte.</p>
+        <p class="mt-6 max-w-3xl text-2xl text-white">Une pâte légère, réalisée avec des ingrédients de haute qualité, pour obtenir une corniche prononcée mais évidée à l'intérieur ; une cuisson parfaite, ni humide ni brûlée mais agréable en bouche, permet de conserver les saveurs authentiques de la tomate et de la mozzarella fiordilatte.</p>
       </div>
     </div>
 
@@ -100,7 +100,7 @@
               </div>
             </div>
             <h3 class="text-2xl font-medium text-gray-900 mt-2" id="card_title">{{ link.name }}</h3>
-            <p class="mt-4 text-base text-gray-500">{{ link.description }}</p>
+            <p class="mt-4 text-lg text-gray-500">{{ link.description }}</p>
           </div>
         </div>
       </div>
@@ -128,27 +128,27 @@
 
     <div class="relative -mt-12 max-w-7xl mx-auto pb-16 px-4 sm:pb-24 sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl">
-        <h2 class="text-4xl font-extrabold tracking-tight text-red-700 sm:text-4xl lg:text-6xl" id="pizze_rosse">Pizze Rosse</h2>
-        <p class="mt-4 text-gray-500">Sauce à base de tomate Piennolo, typique de la région vésuvienne de Campanie, elle doit son nom à la manière dont les grappes de tomates sont entrelacées pour être conservées. Ils ont une forme ovale mais allongée et un goût typiquement acide.</p>
+        <h2 class="text-6xl font-extrabold tracking-tight text-red-700 sm:text-5xl lg:text-6xl" id="pizze_rosse">Pizze Rosse</h2>
+        <p class="mt-4 text-gray-500 text-2xl ">Sauce à base de tomate Piennolo, typique de la région vésuvienne de Campanie, elle doit son nom à la manière dont les grappes de tomates sont entrelacées pour être conservées. Ils ont une forme ovale mais allongée et un goût typiquement acide.</p>
       </div>
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
         <div v-for="pizza in redpizzas" :key="pizza.name" class="border-t border-gray-200 pt-4">
           <dt class="text-2xl text-gray-900" id="red_pizza_name">{{ pizza.name }}</dt>
-          <dd class="mt-2 text-sm text-gray-500">{{ pizza.description }}</dd>
+          <dd class="mt-2 text-lg text-gray-500">{{ pizza.description }}</dd>
           <dt class="font-medium text-gray-900">{{ pizza.price }}€</dt>
         </div>
       </dl>
 
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
-        <h2 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="pizze_bianche">Pizze bianche</h2>
-        <p class="mt-4 text-gray-500">Même sans sauce tomate c'est toujours une pizza ! Capable de satisfaire les palais les plus raffinés. Une combinaison époustouflante qui ravira vos papilles.</p>
+        <h2 class="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="pizze_bianche">Pizze bianche</h2>
+        <p class="mt-4 text-gray-500 text-2xl">Même sans sauce tomate c'est toujours une pizza ! Capable de satisfaire les palais les plus raffinés. Une combinaison époustouflante qui ravira vos papilles.</p>
       </div>
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
         <div v-for="pizza in whitepizzas" :key="pizza.name" class="border-t border-gray-200 pt-4">
           <dt class="text-2xl text-gray-900" id="white_pizza_name">{{ pizza.name }}</dt>
-          <dd class="mt-2 text-sm text-gray-500">{{ pizza.description }}</dd>
+          <dd class="mt-2 text-lg text-gray-500">{{ pizza.description }}</dd>
           <dt class="font-medium text-gray-900">{{ pizza.price }}€</dt>
         </div>
       </dl>
@@ -173,7 +173,7 @@
         <h2 id="sale-heading" class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
           Votre avis est très important pour nous!
         </h2>
-        <p class="mt-4 max-w-xl mx-auto text-xl text-gray-600" id="text_comment">Nous vous demandons de laisser un commentaire. Parce que vos commentaires sont notre meilleure publicité. Merci !</p>
+        <p class="mt-4 max-w-xl mx-auto text-2xl text-gray-600" id="text_comment">Nous vous demandons de laisser un commentaire. Parce que vos commentaires sont notre meilleure publicité. Merci !</p>
         <a href="https://fr.tripadvisor.be/Restaurant_Review-g1136493-d19872077-Reviews-PizzaVino-Ixelles_Brussels.html" class="inline-flex items-center text-white bg-transparent rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
           <span class="rounded-full"><img class="h-28 mx-auto" src="img/Tripadvisor-Logo.png" alt="tripadvisor" /></span>
           <ChevronRightIcon class=" w-5 h-5 text-black" aria-hidden="true" />
@@ -197,7 +197,7 @@
                   <StarIcon v-for="rating in [0, 1, 2, 3, 4]" :key="rating" :class="[testimonial.rating > rating ? 'text-yellow-400' : 'text-gray-200', 'h-5 w-5 flex-shrink-0']" aria-hidden="true" />
                 </div>
               </div>
-              <p class="text-lg text-gray-900 mt-2">
+              <p class="text-xl text-gray-900 mt-2">
                 {{ testimonial.quote }}
               </p>
               <cite class="mt-4 block font-semibold not-italic text-gray-900">
@@ -389,96 +389,7 @@ export default {
 
 </script>
 
-<style>
 
-#red_pizza_name,
-#testimonial-heading,
-#white_pizza_name,
-#card_title,
-#sale-heading,
-#pizze_bianche,
-#pizze_rosse,
-#sub_title_pizzaphoto,
-#title{
-  font-family: lobster;
-}
-
-p,
-dd{
-  font-family: "Neucha" !important;
-  font-size: larger !important;
-}
-
-
-.carousel__item {
-  min-height: 200px;
-  width: 100%;
-  color: white;
-  font-size: 20px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#photo-carousel{
-  max-height: 600px;
-  border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-
-@media only screen and (max-width: 736px) {
-
-  #header_text1{
-    font-size: medium !important;
-  }
-
-  #header_text2{
-    font-size: small !important;
-  }
-
-  #text_comment{
-    color: #374151 !important;
-  }
-
-  p{
-    font-size: medium !important;
-  }
-
-  #text_comment{
-    color: black !important;
-  }
-
-  #photo-carousel{
-    display: none !important;
-  }
-  .carousel__item{
-    display: none !important;
-  }
-  .carousel__prev,
-  .carousel__next {
-    display: none !important;
-  }
-
-  #pizza_lovers{
-    max-height: 400px;
-    justify-content: center;
-    padding-bottom: 100px;
-  }
-
-}
-
-
-.carousel__prev,
-.carousel__next {
-  box-sizing: content-box;
-  margin-left: 50px;
-  margin-right: 50px;
-  border: 5px solid #B91C1C;
-  color: #B91C1C;
-}
-</style>
 
 
 

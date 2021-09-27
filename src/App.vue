@@ -61,7 +61,7 @@
 
 
           <div class="relative">
-            <h3 class="text-xl font-extrabold text-white tracking-tight sm:text-3xl" id="sub_contact">
+            <h3 class="text-4xl font-extrabold text-white tracking-tight sm:text-3xl" id="sub_contact">
               Contact
             </h3>
             <p class="text-lg text-gray-500 mt-2">
@@ -88,7 +88,7 @@
 
           <div class="mt-10 -mx-4 relative lg:mt-0 gap-8" aria-hidden="true">
             <div class="relative mx-5">
-              <h3 class="text-xl font-extrabold text-white tracking-tight sm:text-3xl sm:px-5" id="sub_opening">
+              <h3 class="text-4xl font-extrabold text-white tracking-tight sm:text-3xl sm:px-5" id="sub_opening">
                 Opening Hours
               </h3>
               <div class="mt-10 border-t border-gray-200">
@@ -349,6 +349,93 @@ export default {
 
 #flag{
   border: lightgrey solid 2px !important;
+}
+
+#red_pizza_name,
+#testimonial-heading,
+#white_pizza_name,
+#card_title,
+#sale-heading,
+#pizze_bianche,
+#pizze_rosse,
+#sub_title_pizzaphoto,
+#title{
+  font-family: lobster;
+}
+
+p,
+dd{
+  font-family: "Neucha" !important;
+}
+
+
+.carousel__item {
+  min-height: 200px;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#photo-carousel{
+  max-height: 600px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+@media only screen and (max-width: 736px) {
+
+  #header_text1{
+    font-size: medium !important;
+  }
+
+  #header_text2{
+    font-size: small !important;
+  }
+
+  #text_comment{
+    color: #374151 !important;
+  }
+
+  p{
+    font-size: medium !important;
+  }
+
+  #text_comment{
+    color: black !important;
+  }
+
+  #photo-carousel{
+    display: none !important;
+  }
+  .carousel__item{
+    display: none !important;
+  }
+  .carousel__prev,
+  .carousel__next {
+    display: none !important;
+  }
+
+  #pizza_lovers{
+    max-height: 400px;
+    justify-content: center;
+    padding-bottom: 100px;
+  }
+
+}
+
+
+.carousel__prev,
+.carousel__next {
+  box-sizing: content-box;
+  margin-left: 50px;
+  margin-right: 50px;
+  border: 5px solid #B91C1C;
+  color: #B91C1C;
 }
 
 </style>
