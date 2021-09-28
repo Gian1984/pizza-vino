@@ -43,7 +43,7 @@
         <div class="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
           <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
             <!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
-            <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-46 lg:max-w-46" src="img/Pizza%20Lovers%20Typography%20Vector.svg" alt="pizza-lovers" id="pizza_lovers" />
+            <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-46 lg:max-w-46" src="img/pizza-menu.png" alt="pizza-lovers" id="pizza_lovers" />
           </div>
         </div>
       </div>

@@ -17,13 +17,13 @@
           <div class="flex-shrink-0 flex items-center">
             <img class="h-8 w-8 rounded-full" src="img/pizza-vino-logo.jpeg" alt="pizza-vino-logo" />
             <div class="flex-1">
-              <h2 class="ml-2 text-xl font-bold leading-7 text-white sm:text-3xl sm:truncate">
+              <h2 class="ml-2 text-xl font-bold leading-7 text-white sm:text-3xl sm:truncate" id="pizza_vino">
                 Pizza Vino
               </h2>
             </div>
           </div>
           <div class="mt-3 hidden sm:block sm:ml-6">
-            <div class="flex space-x-4">
+            <div class="flex space-x-4" id="menu_nav">
               <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-black text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'px-3 py-2 rounded-md text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
             </div>
           </div>
@@ -342,15 +342,13 @@ export default {
 <style>
 
 
-#sub_opening,
-#sub_contact{
-  font-family: lobster;
-}
-
 #flag{
   border: lightgrey solid 2px !important;
 }
 
+#sub_opening,
+#sub_contact,
+#menu_nav,
 #red_pizza_name,
 #testimonial-heading,
 #white_pizza_name,
@@ -359,10 +357,12 @@ export default {
 #pizze_bianche,
 #pizze_rosse,
 #sub_title_pizzaphoto,
+#pizza_vino,
 #title{
   font-family: lobster;
 }
 
+#header_text2,
 p,
 dd{
   font-family: "Neucha" !important;
