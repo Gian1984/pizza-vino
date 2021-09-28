@@ -8,7 +8,7 @@
         <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
           <div class="lg:py-24">
             <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-              <img class="h-40 items-center" src="img/pizza-vino-logo.jpeg" alt="pizza-vino-logo" />
+              <img class="h-40 items-center" src="img/pizza-vino-logo-black.png" alt="pizza-vino-logo" />
               <h2 class="text-4xl mt-2 font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl" id="title">Per chi ama la pizza</h2>
             </h1>
             <div class="mt-5 sm:mt-12">
@@ -22,7 +22,7 @@
                     Però pure tu con ‘sta pizza Margherita, alla Regina Margherita di Savoia non potevi preparare un piatto di pasta, nu ragù, ‘na genovese, ‘na lasagna.
                     Vedi un po’ che cosa hai combinato!
                   </p>
-                  <cite class="mt-2 block font-extralight text-white italic">
+                  <cite class="mt-2 block font-extralight text-white italic" id="header_text2">
                     &mdash; Raffaele Esposito è l’inventore della pizza Margherita che creò per la Regina Margherita di Savoia in omaggio ai tre colori della bandiera italiana. Alla classica pizza napoletana di olio e pomodoro, aggiunse il bianco della mozzarella, il rosso del pomodoro e il verde del basilico.
                   </cite>
                 </div>
@@ -128,7 +128,7 @@
     <div class="relative -mt-12 max-w-7xl mx-auto pb-16 px-4 sm:pb-24 sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl">
         <h2 class="text-6xl font-extrabold tracking-tight text-red-700 sm:text-4xl lg:text-6xl" id="pizze_rosse">Pizze Rosse</h2>
-        <p class="mt-4 text-gray-500 text-2xl">Sugo a base di pomodoro del Piennolo, tipico dell'area vesuviana campana, deve il suo nome al modo in cui i grappoli di pomodoro vengono intrecciati per essere conservati. Hanno una forma ovale ma allungata e un sapore tipicamente acidulo.</p>
+        <p class="mt-4 text-gray-500 text-2xl">Sugo a base di pomodoro del Piennolo, tipico dell'area vesuviana campana, deve il suo nome al modo in cui i grappoli vengono intrecciati per essere conservati. Hanno una forma ovale ma allungata e un sapore tipicamente acidulo.</p>
       </div>
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">

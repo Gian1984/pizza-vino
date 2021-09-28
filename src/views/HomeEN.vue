@@ -8,7 +8,7 @@
         <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
           <div class="lg:py-24">
             <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-              <img class="h-40 items-center" src="img/pizza-vino-logo.jpeg" alt="pizza-vino-logo" />
+              <img class="h-40 items-center" src="img/pizza-vino-logo-black.png" alt="pizza-vino-logo" />
               <h2 class="text-4xl mt-2 font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl" id="title">Per chi ama la pizza</h2>
             </h1>
             <div class="mt-5 sm:mt-12">
@@ -22,7 +22,7 @@
                     Però pure tu con ‘sta pizza Margherita, alla Regina Margherita di Savoia non potevi preparare un piatto di pasta, nu ragù, ‘na genovese, ‘na lasagna.
                     Vedi un po’ che cosa hai combinato!
                   </p>
-                  <cite class="mt-2 block font-extralight text-white italic">
+                  <cite class="mt-2 block font-extralight text-white italic " id="header_text2">
                     &mdash; Raffaele Esposito is the inventor of the Margherita pizza which he created for Queen Margherita of Savoy as a tribute to the three colors of the Italian flag. To the classic Neapolitan pizza of oil and tomato, he added the white of the mozzarella, the red of the tomato and the green of the basil.
                   </cite>
                 </div>
