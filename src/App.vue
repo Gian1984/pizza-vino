@@ -37,7 +37,7 @@
     </div>
 
     <DisclosurePanel class="sm:hidden">
-      <div class="px-2 pt-2 pb-3 space-y-1">
+      <div class="px-2 pt-2 pb-3 space-y-1" id="menu_nav_mobile">
         <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block px-3 py-2 rounded-md text-base font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
       </div>
     </DisclosurePanel>
@@ -65,8 +65,7 @@
               Contact
             </h3>
             <p class="text-lg text-gray-500 mt-2">
-              Click on the icons to find us on a map or over the social media.
-              Do you want to book a table or order a pizza? Click on the phone! We are waiting for you!
+              {{ description }}
             </p>
             <dl class="mt-14 space-y-3">
               <div v-for="item in transferFeatures" :key="item.id" class="relative">
@@ -288,22 +287,26 @@ const fooddelivery = [
 ]
 
 
+
+
+
 export default {
 
   data() {
     return {
       flag: "",
+      description:""
     }
   },
 
   methods: {
     homePage() {
       if(this.$route.path == "/" || this.$route.path == "/home" ) {
-        return this.flag = 'img/flag/belgium.png'
+        return (this.flag = 'img/flag/belgium.png') && (this.description = 'Cliquez sur les icônes pour nous trouver sur une carte ou sur les réseaux sociaux. Vous souhaitez réserver une table ou commander une pizza ? Cliquez sur le téléphone ! Nous t\'attendons!')
       } else if(this.$route.path == "/HomeEN") {
-        return this.flag = 'img/flag/british.png'
+        return (this.flag = 'img/flag/british.png') && (this.description = 'Click on the icons to find us on a map or over the social media. Do you want to book a table or order a pizza? Click on the phone! We are waiting for you!')
       } else {
-        return this.flag = 'img/flag/italy.png'
+        return (this.flag = 'img/flag/italy.png') && (this.description = 'Clicca sulle icone per trovarci sulla mappa o sui social media. Vuoi prenotare un tavolo o ordinare una pizza? Clicca sul telefono! Ti stiamo aspettando!')
       }
     }
   },
@@ -333,7 +336,7 @@ export default {
     return {
       navigation,
       transferFeatures,
-      fooddelivery
+      fooddelivery,
     }
   },
 }
@@ -346,6 +349,7 @@ export default {
   border: lightgrey solid 2px !important;
 }
 
+#menu_nav_mobile,
 #sub_opening,
 #sub_contact,
 #menu_nav,
@@ -434,8 +438,8 @@ dd{
   box-sizing: content-box;
   margin-left: 50px;
   margin-right: 50px;
-  border: 5px solid #B91C1C;
-  color: #B91C1C;
+  border: 5px solid #B91C1C !important;
+  color: #B91C1C !important;
 }
 
 </style>

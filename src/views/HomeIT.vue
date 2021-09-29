@@ -85,14 +85,11 @@
     </div>
 
     <!-- Overlapping cards -->
-    <section class="-mt-32 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8" aria-labelledby="contact-heading">
+    <section class="-mt-32 mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8" aria-labelledby="contact-heading">
       <h2 class="sr-only" id="contact-heading">Contact us</h2>
       <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
         <div v-for="link in supportLinks" :key="link.name" class="flex flex-col bg-white rounded-2xl shadow-xl">
-          <div class="flex-1 relative pt-16 px-6 pb-8 md:px-8">
-            <div class="absolute top-0 p-5 inline-block bg-red-700 rounded-xl shadow-lg transform -translate-y-1/2">
-              <component :is="link.icon" class="h-6 w-6 text-white" aria-hidden="true" />
-            </div>
+          <div class="flex-1 relative pt-16 px-6 pb-8 md:px-8 border-4 border-red-700 rounded-2xl">
             <div class="sm:flex-shrink-0">
               <div class="flow-root">
                 <img class="h-46 mx-auto" :src="link.imageSrc" alt="" />
@@ -170,7 +167,7 @@
     <section aria-labelledby="sale-heading" class="relative max-w-7xl mx-auto pt-32 px-4 flex flex-col items-center text-center sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto lg:max-w-none">
         <h2 id="sale-heading" class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-          To give importance to our customers
+          La tua opinione conta!
         </h2>
         <p class="mt-4 max-w-xl mx-auto text-2xl text-gray-600" id="text_comment">Ti chiediamo di lasciare un commento. Perché i tuoi commenti sono la nostra migliore pubblicità. Grazie!</p>
         <a href="https://fr.tripadvisor.be/Restaurant_Review-g1136493-d19872077-Reviews-PizzaVino-Ixelles_Brussels.html" class="inline-flex items-center text-white bg-transparent rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
@@ -214,7 +211,7 @@
 import { StarIcon, ChevronRightIcon } from '@heroicons/vue/solid'
 import { NewspaperIcon, PhoneIcon, SupportIcon, CameraIcon, PhoneOutgoingIcon } from '@heroicons/vue/outline'
 import 'vue3-carousel/dist/carousel.css';
-import { Carousel, Slide, Pagination, Navigation,} from 'vue3-carousel';
+import { Carousel, Slide, Navigation,} from 'vue3-carousel';
 
 const redpizzas = [
   { name: 'Margherita', description: 'Pomodoro, basilico e fior di latte.', price:'9,00' },
@@ -364,7 +361,7 @@ export default {
     StarIcon,
     PhoneOutgoingIcon,
     ChevronRightIcon,
-    Carousel, Slide, Pagination, Navigation
+    Carousel, Slide, Navigation
   },
 
   setup() {

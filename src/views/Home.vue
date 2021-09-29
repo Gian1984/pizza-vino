@@ -86,14 +86,11 @@
     </div>
 
     <!-- Overlapping cards -->
-    <section class="-mt-32 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8" aria-labelledby="contact-heading">
+    <section class="-mt-32 mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8" aria-labelledby="contact-heading">
       <h2 class="sr-only" id="contact-heading">Contact us</h2>
       <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
         <div v-for="link in supportLinks" :key="link.name" class="flex flex-col bg-white rounded-2xl shadow-xl">
-          <div class="flex-1 relative pt-16 px-6 pb-8 md:px-8">
-            <div class="absolute top-0 p-5 inline-block bg-red-700 rounded-xl shadow-lg transform -translate-y-1/2">
-              <component :is="link.icon" class="h-6 w-6 text-white" aria-hidden="true" />
-            </div>
+          <div class="flex-1 relative pt-16 px-6 pb-8 md:px-8 border-4 border-red-700 rounded-2xl">
             <div class="sm:flex-shrink-0">
               <div class="flow-root">
                 <img class="h-46 mx-auto" :src="link.imageSrc" alt="" />
@@ -215,7 +212,7 @@
 import { StarIcon, ChevronRightIcon } from '@heroicons/vue/solid'
 import { NewspaperIcon, PhoneIcon, SupportIcon, CameraIcon, PhoneOutgoingIcon } from '@heroicons/vue/outline'
 import 'vue3-carousel/dist/carousel.css';
-import { Carousel, Slide, Pagination, Navigation,} from 'vue3-carousel';
+import { Carousel, Slide, Navigation,} from 'vue3-carousel';
 
 const redpizzas = [
   { name: 'Margherita', description: 'Tomate, Basilic et Mozzarella.', price:'9,00' },
@@ -367,7 +364,7 @@ export default {
     StarIcon,
     PhoneOutgoingIcon,
     ChevronRightIcon,
-    Carousel, Slide, Pagination, Navigation
+    Carousel, Slide, Navigation
   },
 
   setup() {
