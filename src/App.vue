@@ -161,16 +161,16 @@
 
     <div class="bg-white">
       <div class="mx-auto">
-        <div class="bg-gray-50 rounded-2xl pb-5">
+        <div class="bg-gray-50 rounded-2xl pb-5" id="food_delivery_pannel">
           <div class="max-w-xl mx-auto lg:max-w-none">
-            <div class="mt-5 max-w-sm mx-auto grid grid-cols-1 gap-y-5 gap-x-8 sm:max-w-none lg:grid-cols-3">
-              <div v-for="delivery in fooddelivery" :key="delivery.name" class="text-center sm:flex sm:text-left lg:block lg:text-center">
+            <div class="mt-5 max-w-sm mx-auto grid grid-cols-1 gap-y-5 gap-x-8 sm:max-w-none xl:grid-cols-3">
+              <div v-for="delivery in fooddelivery" :key="delivery.name" class="text-center sm:flex sm:text-left lg:block lg:text-center delivey_pannel">
                 <div class="sm:flex-shrink-0">
                   <div class="flow-root">
-                    <img class="h-16 mx-auto" :src="delivery.imageSrc" alt="" />
+                    <img class="h-16 mx-auto delivery_img" :src="delivery.imageSrc" alt="" />
                   </div>
                 </div>
-                <div class="sm:mt-0 sm:ml-3 lg:ml-0">
+                <div class="sm:mt-0 sm:ml-3 lg:ml-0" id="order_button">
                   <a :href="delivery.link" class="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
                     <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full">{{ delivery.name }}</span>
                     <ChevronRightIcon class=" w-5 h-5 text-gray-500" aria-hidden="true" />
@@ -344,6 +344,9 @@ export default {
 
 <style>
 
+#pizza-vino-logo{
+  display: none !important;
+}
 
 #flag{
   border: lightgrey solid 2px !important;
@@ -425,9 +428,35 @@ dd{
   }
 
   #pizza_lovers{
-    max-height: 400px;
+    max-width: 400px;
     justify-content: center;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+  #pizza_lovers{
+    max-width: 400px;
+    max-height: 600px;
+    justify-content: center !important;
+    padding-bottom: 200px !important;
+  }
+
+  #food_delivery_pannel{
+    padding: 20px !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  #order_button{
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .delivey_pannel{
+    justify-content: center !important;
+  }
+  .delivery_img{
   }
 
 }

@@ -41,9 +41,9 @@
           </div>
         </div>
         <div class="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
-          <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+          <div class="mx-auto max-w-md px-4 sm:px-6 lg:max-w-none lg:px-0">
             <!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
-            <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-46 lg:max-w-46" src="img/pizza-menu.png" alt="" id="pizza_lovers" />
+            <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-46 lg:max-w-46" src="img/pizza-vino-logo-black.png" alt="" id="pizza_lovers" />
           </div>
         </div>
       </div>
@@ -85,7 +85,7 @@
     </div>
 
     <!-- Overlapping cards -->
-    <section class="-mt-32 mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8" aria-labelledby="contact-heading">
+    <section class="max-w-screen-2xl -mt-32 mx-auto relative z-10 pb-16 px-4 sm:px-6 lg:px-8" aria-labelledby="contact-heading">
       <h2 class="sr-only" id="contact-heading">Contact us</h2>
       <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
         <div v-for="link in supportLinks" :key="link.name" class="flex flex-col bg-white rounded-2xl shadow-xl">

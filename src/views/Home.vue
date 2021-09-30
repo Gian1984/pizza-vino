@@ -8,7 +8,7 @@
         <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
           <div class="lg:py-24">
             <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-              <img class="h-40 items-center" src="img/pizza-vino-logo-black.png" alt="pizza-vino-logo" />
+              <img class="h-40 items-center" src="img/pizza-vino-logo-black.png" alt="pizza-vino-logo" id="pizza-vino-logo"/>
               <h2 class="text-4xl mt-2 font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl" id="title">Per chi ama la pizza</h2>
             </h1>
             <div class="mt-5 sm:mt-12">
@@ -41,9 +41,9 @@
           </div>
         </div>
         <div class="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
-          <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+          <div class="mx-auto max-w-md px-4 sm:px-6 lg:max-w-none lg:px-0">
             <!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
-            <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-46 lg:max-w-46" src="img/pizza-menu.png" alt="pizza-lovers" id="pizza_lovers" />
+            <img class="h-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-46 lg:max-w-46" src="img/pizza-vino-logo-black.png" alt="pizza-lovers" id="pizza_lovers" />
           </div>
         </div>
       </div>
@@ -86,7 +86,7 @@
     </div>
 
     <!-- Overlapping cards -->
-    <section class="-mt-32 mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8" aria-labelledby="contact-heading">
+    <section class="max-w-screen-2xl -mt-32 mx-auto relative z-10 pb-16 px-4 sm:px-6 lg:px-8" aria-labelledby="contact-heading">
       <h2 class="sr-only" id="contact-heading">Contact us</h2>
       <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
         <div v-for="link in supportLinks" :key="link.name" class="flex flex-col bg-white rounded-2xl shadow-xl">
@@ -111,7 +111,7 @@
       </div>
     </slide>
     <template #addons>
-      <Navigation />
+      <Navigation/>
     </template>
   </carousel>
 
@@ -126,7 +126,7 @@
     <div class="relative -mt-12 max-w-7xl mx-auto pb-16 px-4 sm:pb-24 sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl">
         <h2 class="text-6xl font-extrabold tracking-tight text-red-700 sm:text-5xl lg:text-6xl" id="pizze_rosse">Pizze Rosse</h2>
-        <p class="mt-4 text-gray-500 text-2xl ">Sauce à base de tomate Piennolo, typique de la région vésuvienne de Campanie, elle doit son nom à la manière dont les grappes de tomates sont entrelacées pour être conservées. Ils ont une forme ovale mais allongée et un goût typiquement acide.</p>
+        <p class="mt-4 text-gray-500 text-2xl ">Sauce à base de tomate Piennolo, typique de la région vésuvienne de Campanie, elle doit son nom à la manière dont les grappes sont entrelacées pour être conservées. Ils ont une forme ovale mais allongée et un goût typiquement acide.</p>
       </div>
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
@@ -379,7 +379,7 @@ export default {
       supportLinks,
       CameraIcon,
       photos,
-      partners
+      partners,
     }
   },
 }
