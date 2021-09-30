@@ -16,16 +16,16 @@
                   <path d="M0 18h8.7v-5.555c-.024-3.906 1.113-6.841 2.892-9.68L6.452 0C3.188 2.644-.026 7.86 0 12.469V18zm12.408 0h8.7v-5.555C21.083 8.539 22.22 5.604 24 2.765L18.859 0c-3.263 2.644-6.476 7.86-6.451 12.469V18z" fill="currentColor" />
                 </svg>
                 <div class="mt-2 sm:mt-0 sm:ml-6 lg:mt-5 lg:ml-0">
-                  <h1 class="text-6xl text-white" id="rinunciare" lang="en">
+                  <h1 class="text-4xl text-white" id="rinunciare" lang="en">
                     Three things you can't say no:
                   </h1>
-                  <cite class="text-4xl mt-2 block font-extralight text-white italic" id="header_text1" lang="en">
+                  <cite class="text-2xl mt-2 block font-extralight text-white italic" id="header_text1" lang="en">
                     1 &mdash; A delicious pizza.
                   </cite>
-                  <cite class="text-4xl mt-2 block font-extralight text-white italic" id="header_text2" lang="en">
+                  <cite class="text-2xl mt-2 block font-extralight text-white italic" id="header_text2" lang="en">
                     2 &mdash; A good glass of wine.
                   </cite>
-                  <cite class="text-4xl mt-2 block font-extralight text-white italic" id="header_text3" lang="en">
+                  <cite class="text-2xl mt-2 block font-extralight text-white italic" id="header_text3" lang="en">
                     3 &mdash;
                   </cite>
                 </div>

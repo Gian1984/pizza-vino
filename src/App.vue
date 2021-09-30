@@ -352,6 +352,10 @@ export default {
   border: lightgrey solid 2px !important;
 }
 
+#rinunciare,
+#header_text1,
+#header_text2,
+#header_text3,
 #menu_nav_mobile,
 #sub_opening,
 #sub_contact,
@@ -369,12 +373,12 @@ export default {
   font-family: lobster !important;
 }
 
-#rinunciare,
-#header_text1,
-#header_text2,
-#header_text3{
-  font-family: ephesis !important;
-}
+/*#rinunciare,*/
+/*#header_text1,*/
+/*#header_text2,*/
+/*#header_text3{*/
+/*  font-family: ephesis !important;*/
+/*}*/
 
 p,
 dd{
@@ -402,20 +406,20 @@ dd{
 
 @media only screen and (max-width: 736px) {
 
-  /*#rinunciare{*/
-  /*  font-size: xxx-large !important;*/
-  /*}*/
+  #rinunciare{
+    font-size: x-large !important;
+  }
 
   #header_text1{
-    font-size: xx-large !important;
+    font-size: large !important;
   }
 
   #header_text2{
-    font-size: xx-large !important;
+    font-size: large !important;
   }
 
   #header_text3{
-    font-size: xx-large !important;
+    font-size: large !important;
   }
 
   #text_comment{
