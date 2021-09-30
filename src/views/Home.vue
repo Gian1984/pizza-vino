@@ -267,7 +267,7 @@ const supportLinks = [
   {
     name: 'Il Pizzaiolo',
     description:
-        'Passionné de cuisine depuis l\'âge de 14 ans, Michele décide pendant la period du lycée de commencer à travailler dans un restaurant-pizzeria dans la province de Vérone, où se trouvent ses racines. Il arrive à Bruxelles à 21 ans après un an d\'expérience en Allemagne. Enfin en 2009 à 27 ans, il couronne le rêve d\'ouvrir son propre restaurant où il est libre d\'exprimer son meilleur concept de pizza.',
+        'Passionné de cuisine depuis l\'âge de 14 ans, Michele décide pendant la period du lycée de commencer à travailler dans un restaurant-pizzeria dans la province de Vérone, où se trouvent ses racines. Il arrive à Bruxelles à 21 ans après un an d\'expérience en Allemagne. En 2009 à 27 ans, il couronne le rêve d\'ouvrir son propre restaurant où il est libre d\'exprimer son meilleur concept de pizza.',
     icon: CameraIcon,
     imageSrc:'img/michele-pizza.jpeg'
   },
