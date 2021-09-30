@@ -366,7 +366,7 @@ export default {
 #sub_title_pizzaphoto,
 #pizza_vino,
 #title{
-  font-family: lobster;
+  font-family: lobster !important;
 }
 
 #header_text2,
@@ -428,10 +428,11 @@ dd{
   }
 
   #pizza_lovers{
-    max-width: 380px;
+    max-width: 300px;
     justify-content: center;
     padding-bottom: 100px !important;
-    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }
@@ -440,7 +441,6 @@ dd{
 
   #pizza_lovers{
     padding-bottom: 200px !important;
-    padding-right: 50px;
   }
 
 
