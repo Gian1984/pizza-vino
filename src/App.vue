@@ -428,7 +428,7 @@ dd{
   }
 
   #pizza_lovers{
-    max-width: 400px;
+    max-width: 380px;
     justify-content: center;
     padding-bottom: 50px;
   }
