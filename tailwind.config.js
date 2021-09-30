@@ -275,6 +275,10 @@ module.exports = {
         'Neucha',
       ],
 
+      ephesis:[
+          'Ephesis',
+      ]
+
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

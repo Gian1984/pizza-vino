@@ -16,13 +16,17 @@
                   <path d="M0 18h8.7v-5.555c-.024-3.906 1.113-6.841 2.892-9.68L6.452 0C3.188 2.644-.026 7.86 0 12.469V18zm12.408 0h8.7v-5.555C21.083 8.539 22.22 5.604 24 2.765L18.859 0c-3.263 2.644-6.476 7.86-6.451 12.469V18z" fill="currentColor" />
                 </svg>
                 <div class="mt-2 sm:mt-0 sm:ml-6 lg:mt-5 lg:ml-0">
-                  <p class="text-2xl text-white" id="header_text1">
-                    Rafè!, nun te piglià collera, è cos‘e niente!
-                    Però pure tu con ‘sta pizza Margherita, alla Regina Margherita di Savoia non potevi preparare un piatto di pasta, nu ragù, ‘na genovese, ‘na lasagna.
-                    Vedi un po’ che cosa hai combinato!
-                  </p>
-                  <cite class="mt-2 block font-extralight text-white italic" id="header_text2">
-                    &mdash; Raffaele Esposito est l'inventeur de la pizza Margherita qu'il a créée pour la reine Margherita de Savoie en hommage aux trois couleurs du drapeau italien. A la pizza napolitaine classique à l'huile et à la tomate, il a ajouté le blanc de la mozzarella, le rouge de la tomate et le vert du basilic.
+                  <h1 class="text-6xl text-white" id="rinunciare">
+                    Trois choses auxquelles vous ne pouvez absolument pas renoncer:
+                  </h1>
+                  <cite class="text-4xl mt-2 block font-extralight text-white italic" id="header_text1">
+                    1 &mdash; Une excellente pizza..
+                  </cite>
+                  <cite class="text-4xl mt-2 block font-extralight text-white italic" id="header_text2">
+                    2 &mdash; Un bon verre de vin.
+                  </cite>
+                  <cite class="text-4xl mt-2 block font-extralight text-white italic" id="header_text3">
+                    3 &mdash;
                   </cite>
                 </div>
               </blockquote>
@@ -59,7 +63,7 @@
         <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12">
           <li v-for="partner in partners" :key="partner.name">
             <div class="space-y-4">
-              <img class="mx-auto h-20  lg:h-36" :src="partner.imageUrl" alt="" />
+              <img class="mx-auto h-20  lg:h-36" :src="partner.imageUrl" alt="partner_logo" />
             </div>
           </li>
         </ul>
@@ -75,12 +79,12 @@
     <!-- Header -->
     <div class="relative pb-32 bg-gray-800">
       <div class="absolute inset-0">
-        <img class="w-full h-full object-cover" src="img/pizza-primo-piano5.jpeg" alt="" />
+        <img class="w-full h-full object-cover" src="img/pizza-primo-piano5.jpeg" alt="pizza_firstlook" />
         <div class="absolute inset-0 bg-gray-400 mix-blend-multiply" aria-hidden="true" />
       </div>
       <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
         <h1 class="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl" id="sub_title_pizzaphoto">Made with love</h1>
-        <p class="mt-6 max-w-3xl text-2xl text-white">Une pâte légère, réalisée avec des ingrédients de haute qualité, pour obtenir une corniche prononcée mais évidée à l'intérieur ; une cuisson parfaite, ni humide ni brûlée mais agréable en bouche, permet de conserver les saveurs authentiques de la tomate et de la mozzarella fiordilatte.</p>
+        <p class="mt-6 max-w-3xl text-2xl text-white">Une pâte légère qui repose entre 48 et 72 heures avant d'être utilisée, réalisée avec des ingrédients de haute qualité, pour obtenir une corniche prononcée mais évidée; la cuisson dans un four rotatif combiné gaz / bois à 450°C permet de conserver les saveurs authentiques de la tomate et de la mozzarella fiordilatte.</p>
       </div>
     </div>
 
@@ -103,6 +107,8 @@
     </section>
   </div>
 
+  <!--  Carousel section-->
+
   <carousel>
     <slide v-for="slide in photos" :key="slide" style="background-image: url('img/carrelage.png');">
       <div class="carousel__item">
@@ -118,7 +124,7 @@
 
   <div class="bg-white" style="background-image: url('img/patterns/close-up-white-marble-texture-background.jpg');">
     <div aria-hidden="true" class="relative">
-      <img src="img/pizza-burratina.png" alt="" class="w-full h-96 object-center object-cover" />
+      <img src="img/pizza-burratina.png" alt="pizza-burratina" class="w-full h-96 object-center object-cover" />
       <div class="absolute inset-0 bg-gradient-to-t from-white" />
     </div>
 
@@ -138,7 +144,7 @@
 
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
         <h2 class="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="pizze_bianche">Pizze bianche</h2>
-        <p class="mt-4 text-gray-500 text-2xl">Même sans sauce tomate c'est toujours une pizza ! Capable de satisfaire les palais les plus raffinés. Une combinaison époustouflante qui ravira vos papilles.</p>
+        <p class="mt-4 text-gray-500 text-2xl">Expressément conçu sans sauce tomate pour rehausser les saveurs typiques des produits italiens uniques. Une combinaison époustouflante qui ravira vos papilles.</p>
       </div>
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
@@ -157,7 +163,7 @@
     <!-- Decorative background image and gradient -->
     <div aria-hidden="true" class="absolute inset-0">
       <div class="absolute inset-0 mx-auto overflow-hidden">
-        <img src="img/pexels-koolshooters-7142952.jpg" alt="" class="w-full h-full object-center object-cover " />
+        <img src="img/pexels-koolshooters-7142952.jpg" alt="pizza_together" class="w-full h-full object-center object-cover " />
       </div>
       <div class="absolute inset-0 bg-white bg-opacity-10" />
       <div class="absolute inset-0 bg-gradient-to-r from-white via-white" />
@@ -254,14 +260,14 @@ const supportLinks = [
   {
     name: 'Produits de qualité',
     description:
-        'Pour nous, il est important de servir une pizza de haute qualité. Des produits de haute qualité à des prix abordables pour offrir aux clients un produit final excellent au goût, facile à digérer et à un prix juste. Les ingrédients (et la façon dont ils sont traités) sont, surtout en ce qui concerne la pizza, la partie la plus importante.',
+        'Pour nous, il est important de servir une pizza de haute qualité. Des produits de haute qualité à des prix abordables pour offrir aux clients un produit final excellent au goût et facile à digérer. Les ingrédients strictement d\'origine italienne (et la façon dont ils sont traités) sont, surtout en ce qui concerne la pizza, la partie la plus importante.',
     icon: CameraIcon,
     imageSrc:'img/pizza-primo-piano3.jpeg'
   },
   {
     name: 'Il Pizzaiolo',
     description:
-        'Dès son plus jeune âge, Michele aimait regarder les pizzaïolos bouger leurs mains dans la pâte avec dextérité et élégance. Il a commencé à travailler à l\'âge de 16 ans. Après de nombreuses années dans ce métier, il a compris que le secret est de ne jamais se sentir arrivé : jour après jour, il ne rate jamais une occasion d\'apprendre quelque chose de nouveau, abordant toujours ce métier avec le même enthousiasme qu\'au premier jour.',
+        'Passionné de cuisine depuis l\'âge de 14 ans, Michele décide pendant la period du lycée de commencer à travailler dans un restaurant-pizzeria dans la province de Vérone, où se trouvent ses racines. Il arrive à Bruxelles à 21 ans après un an d\'expérience en Allemagne. Enfin en 2009 à 27 ans, il couronne le rêve d\'ouvrir son propre restaurant où il est libre d\'exprimer son meilleur concept de pizza.',
     icon: CameraIcon,
     imageSrc:'img/michele-pizza.jpeg'
   },

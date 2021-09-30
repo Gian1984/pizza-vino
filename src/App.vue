@@ -61,7 +61,7 @@
 
 
           <div class="relative">
-            <h3 class="text-4xl font-extrabold text-white tracking-tight sm:text-3xl" id="sub_contact">
+            <h3 class="text-4xl font-extrabold text-white tracking-tight sm:text-3xl" id="sub_contact" lang="en">
               Contact
             </h3>
             <p class="text-lg text-gray-500 mt-2">
@@ -87,7 +87,7 @@
 
           <div class="mt-10 -mx-4 relative lg:mt-0 gap-8" aria-hidden="true">
             <div class="relative mx-5">
-              <h3 class="text-4xl font-extrabold text-white tracking-tight sm:text-3xl sm:px-5" id="sub_opening">
+              <h3 class="text-4xl font-extrabold text-white tracking-tight sm:text-3xl sm:px-5" id="sub_opening" lang="en">
                 Opening Hours
               </h3>
               <div class="mt-10 border-t border-gray-200">
@@ -369,7 +369,13 @@ export default {
   font-family: lobster !important;
 }
 
+#rinunciare,
+#header_text1,
 #header_text2,
+#header_text3{
+  font-family: ephesis !important;
+}
+
 p,
 dd{
   font-family: "Neucha" !important;
@@ -396,12 +402,20 @@ dd{
 
 @media only screen and (max-width: 736px) {
 
+  /*#rinunciare{*/
+  /*  font-size: xxx-large !important;*/
+  /*}*/
+
   #header_text1{
-    font-size: medium !important;
+    font-size: xx-large !important;
   }
 
   #header_text2{
-    font-size: small !important;
+    font-size: xx-large !important;
+  }
+
+  #header_text3{
+    font-size: xx-large !important;
   }
 
   #text_comment{

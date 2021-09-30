@@ -8,7 +8,7 @@
         <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
           <div class="lg:py-24">
             <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-              <h2 class="text-4xl mt-2 font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl" id="title">Per chi ama la pizza</h2>
+              <h2 class="text-4xl mt-2 font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl" id="title" lang="it">Per chi ama la pizza</h2>
             </h1>
             <div class="mt-5 sm:mt-12">
               <blockquote class="sm:flex lg:block">
@@ -16,24 +16,28 @@
                   <path d="M0 18h8.7v-5.555c-.024-3.906 1.113-6.841 2.892-9.68L6.452 0C3.188 2.644-.026 7.86 0 12.469V18zm12.408 0h8.7v-5.555C21.083 8.539 22.22 5.604 24 2.765L18.859 0c-3.263 2.644-6.476 7.86-6.451 12.469V18z" fill="currentColor" />
                 </svg>
                 <div class="mt-2 sm:mt-0 sm:ml-6 lg:mt-5 lg:ml-0">
-                  <p class="text-2xl text-white">
-                    Rafè!, nun te piglià collera, è cos‘e niente!
-                    Però pure tu con ‘sta pizza Margherita, alla Regina Margherita di Savoia non potevi preparare un piatto di pasta, nu ragù, ‘na genovese, ‘na lasagna.
-                    Vedi un po’ che cosa hai combinato!
-                  </p>
-                  <cite class="mt-2 block font-extralight text-white italic " id="header_text2">
-                    &mdash; Raffaele Esposito is the inventor of the Margherita pizza which he created for Queen Margherita of Savoy as a tribute to the three colors of the Italian flag. To the classic Neapolitan pizza of oil and tomato, he added the white of the mozzarella, the red of the tomato and the green of the basil.
+                  <h1 class="text-6xl text-white" id="rinunciare" lang="en">
+                    Three things you can't say no:
+                  </h1>
+                  <cite class="text-4xl mt-2 block font-extralight text-white italic" id="header_text1" lang="en">
+                    1 &mdash; A delicious pizza.
+                  </cite>
+                  <cite class="text-4xl mt-2 block font-extralight text-white italic" id="header_text2" lang="en">
+                    2 &mdash; A good glass of wine.
+                  </cite>
+                  <cite class="text-4xl mt-2 block font-extralight text-white italic" id="header_text3" lang="en">
+                    3 &mdash;
                   </cite>
                 </div>
               </blockquote>
             </div>
             <div class="mt-10 sm:mt-12">
               <a href="doc/pizza-vino-en.pdf" class="mr-2 inline-flex items-center text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
-                <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full">Download the menù</span>
+                <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full" lang="en">Download the menù</span>
                 <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
               </a>
               <a type="button" href="TEL: 0494 69 30 28" class="mt-2 inline-flex items-center text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
-                <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full">Call</span>
+                <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full" lang="en">Call</span>
                 <phone-outgoing-icon class="ml-2 w-5 h-5" aria-hidden="true" />
               </a>
             </div>
@@ -58,7 +62,7 @@
         <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12">
           <li v-for="partner in partners" :key="partner.name">
             <div class="space-y-4">
-              <img class="mx-auto h-20  lg:h-36" :src="partner.imageUrl" alt="" />
+              <img class="mx-auto h-20  lg:h-36" :src="partner.imageUrl" alt="partner_logo" />
             </div>
           </li>
         </ul>
@@ -74,12 +78,12 @@
     <!-- Header -->
     <div class="relative pb-32 bg-gray-800">
       <div class="absolute inset-0">
-        <img class="w-full h-full object-cover" src="img/pizza-primo-piano5.jpeg" alt="" />
+        <img class="w-full h-full object-cover" src="img/pizza-primo-piano5.jpeg" alt="pizza_firstlook" />
         <div class="absolute inset-0 bg-gray-400 mix-blend-multiply" aria-hidden="true" />
       </div>
       <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl" id="sub_title_pizzaphoto">Made with love</h1>
-        <p class="mt-6 max-w-3xl text-2xl text-white">A light dough, made with high quality ingredients, to obtain a pronounced cornice but hollowed out inside; perfect cooking, neither wet nor burnt but pleasant on the palate, allows to preserve the authentic flavors of tomato and fiordilatte mozzarella.</p>
+        <h1 class="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl" id="sub_title_pizzaphoto" lang="en">Made with love</h1>
+        <p class="mt-6 max-w-3xl text-2xl text-white" lang="en">A light dough that rests between 48 and 72 hours before being used, made with high quality ingredients, to obtain a pronounced but hollowed out cornice; cooking in a combined gas / wood rotary oven at 450 ° C allows to preserve the authentic flavors of tomato and fiordilatte mozzarella.</p>
       </div>
     </div>
 
@@ -94,13 +98,15 @@
                 <img class="h-46 mx-auto" :src="link.imageSrc" alt="" />
               </div>
             </div>
-            <h3 class="text-2xl font-medium text-gray-900 mt-2" id="card_title">{{ link.name }}</h3>
-            <p class="mt-4 text-lg text-gray-500">{{ link.description }}</p>
+            <h3 class="text-2xl font-medium text-gray-900 mt-2" id="card_title" lang="en">{{ link.name }}</h3>
+            <p class="mt-4 text-lg text-gray-500" lang="en">{{ link.description }} </p>
           </div>
         </div>
       </div>
     </section>
   </div>
+
+  <!--  Carousel section-->
 
   <carousel>
     <slide v-for="slide in photos" :key="slide" style="background-image: url('img/carrelage.png');">
@@ -117,33 +123,33 @@
 
   <div class="bg-white" style="background-image: url('img/patterns/close-up-white-marble-texture-background.jpg');">
     <div aria-hidden="true" class="relative">
-      <img src="img/pizza-burratina.png" alt="" class="w-full h-96 object-center object-cover" />
+      <img src="img/pizza-burratina.png" alt="pizza-burratina" class="w-full h-96 object-center object-cover" />
       <div class="absolute inset-0 bg-gradient-to-t from-white" />
     </div>
 
     <div class="relative -mt-12 max-w-7xl mx-auto pb-16 px-4 sm:pb-24 sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl">
-        <h2 class="text-6xl font-extrabold tracking-tight text-red-700 sm:text-4xl lg:text-6xl" id="pizze_rosse">Pizze Rosse</h2>
-        <p class="mt-4 text-gray-500 text-2xl">Sauce made with Piennolo tomato, typical of the Vesuvian area of Campania, it owes its name to the way in which the tomato clusters are intertwined to be preserved. They have an oval but elongated shape and a typically sour taste.</p>
+        <h2 class="text-6xl font-extrabold tracking-tight text-red-700 sm:text-4xl lg:text-6xl" id="pizze_rosse" lang="it">Pizze Rosse</h2>
+        <p class="mt-4 text-gray-500 text-2xl" lang="en">Sauce made with Piennolo tomato, typical of the Vesuvian area of Campania, it owes its name to the way in which the tomato clusters are intertwined to be preserved. They have an oval but elongated shape and a typically sour taste.</p>
       </div>
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
         <div v-for="pizza in redpizzas" :key="pizza.name" class="border-t border-gray-200 pt-4">
-          <dt class="text-2xl text-gray-900" id="red_pizza_name">{{ pizza.name }}</dt>
-          <dd class="mt-2 text-lg text-gray-500">{{ pizza.description }}</dd>
+          <dt class="text-2xl text-gray-900" id="red_pizza_name" lang="it">{{ pizza.name }}</dt>
+          <dd class="mt-2 text-lg text-gray-500" lang="en">{{ pizza.description }}</dd>
           <dt class="font-medium text-gray-900">{{ pizza.price }}€</dt>
         </div>
       </dl>
 
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
-        <h2 class="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="pizze_bianche">Pizze bianche</h2>
-        <p class="mt-4 text-gray-500 text-2xl">Even without tomato sauce it is always a pizza! Able to satisfy the most refined palates. A mind-blowing combination that will tickle your taste buds.</p>
+        <h2 class="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="pizze_bianche" lang="it">Pizze bianche</h2>
+        <p class="mt-4 text-gray-500 text-2xl" lang="en">Expressly designed without tomato sauce to enhance the typical flavors of unique Italian products. An amazing combination that will tickle your taste buds.</p>
       </div>
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
         <div v-for="pizza in whitepizzas" :key="pizza.name" class="border-t border-gray-200 pt-4">
-          <dt class="text-2xl text-gray-900" id="white_pizza_name">{{ pizza.name }}</dt>
-          <dd class="mt-2 text-lg text-gray-500">{{ pizza.description }}</dd>
+          <dt class="text-2xl text-gray-900" id="white_pizza_name" lang="it">{{ pizza.name }}</dt>
+          <dd class="mt-2 text-lg text-gray-500" lang="en">{{ pizza.description }}</dd>
           <dt class="font-medium text-gray-900">{{ pizza.price }}€</dt>
         </div>
       </dl>
@@ -156,7 +162,7 @@
     <!-- Decorative background image and gradient -->
     <div aria-hidden="true" class="absolute inset-0">
       <div class="absolute inset-0 mx-auto overflow-hidden">
-        <img src="img/pexels-koolshooters-7142952.jpg" alt="" class="w-full h-full object-center object-cover " />
+        <img src="img/pexels-koolshooters-7142952.jpg" alt="pizza_together" class="w-full h-full object-center object-cover " />
       </div>
       <div class="absolute inset-0 bg-white bg-opacity-10" />
       <div class="absolute inset-0 bg-gradient-to-r from-white via-white" />
@@ -165,10 +171,10 @@
     <!-- Callout -->
     <section aria-labelledby="sale-heading" class="relative max-w-7xl mx-auto pt-32 px-4 flex flex-col items-center text-center sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto lg:max-w-none">
-        <h2 id="sale-heading" class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+        <h2 id="sale-heading" class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl" lang="en">
           To give importance to our customers
         </h2>
-        <p class="mt-4 max-w-xl mx-auto text-2xl text-gray-600" id="text_comment">we ask you to leave a comment. Because your comments are our best advertisement. Thanks!.</p>
+        <p class="mt-4 max-w-xl mx-auto text-2xl text-gray-600" id="text_comment" lang="en">we ask you to leave a comment. Because your comments are our best advertisement. Thanks!.</p>
         <a href="https://fr.tripadvisor.be/Restaurant_Review-g1136493-d19872077-Reviews-PizzaVino-Ixelles_Brussels.html" class="inline-flex items-center text-white bg-transparent rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
           <span class="rounded-full"><img class="h-28 mx-auto" src="img/Tripadvisor-Logo.png" alt="tripadvisor" /></span>
           <ChevronRightIcon class=" w-5 h-5 text-black" aria-hidden="true" />
@@ -179,7 +185,7 @@
     <!-- Testimonials -->
     <section aria-labelledby="testimonial-heading" class="relative max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:py-32 lg:px-8">
       <div class="max-w-2xl mx-auto lg:max-w-none">
-        <h2 id="testimonial-heading" class="text-2xl font-extrabold tracking-tight text-gray-900">What are people saying?</h2>
+        <h2 id="testimonial-heading" class="text-2xl font-extrabold tracking-tight text-gray-900" lang="en">What are people saying?</h2>
 
         <div class="mt-16 space-y-16 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
           <blockquote v-for="testimonial in testimonials" :key="testimonial.id" class="sm:flex lg:block">
@@ -192,7 +198,7 @@
                   <StarIcon v-for="rating in [0, 1, 2, 3, 4]" :key="rating" :class="[testimonial.rating > rating ? 'text-yellow-400' : 'text-gray-200', 'h-5 w-5 flex-shrink-0']" aria-hidden="true" />
                 </div>
               </div>
-              <p class="text-lg text-gray-900 mt-2">
+              <p class="text-lg text-gray-900 mt-2" lang="en">
                 {{ testimonial.quote }}
               </p>
               <cite class="mt-4 block font-semibold not-italic text-gray-900">
@@ -253,14 +259,14 @@ const supportLinks = [
   {
     name: 'Quality products',
     description:
-        'For us it is important to serve a high quality pizza. High quality products at affordable prices to give customers a final product that is excellent to taste, easy to digest and at a fair price. The ingredients (and the way they are processed) are, especially with regards to pizza, the most important part.',
+        'For us it is important to serve a high quality pizza. High quality products at affordable prices to give customers a final product that is excellent to taste and easy to digest. The ingredients only Made in Italy (and the way they are processed) are, especially with regards to pizza, the most important part.',
     icon: CameraIcon,
     imageSrc:'img/pizza-primo-piano3.jpeg'
   },
   {
     name: 'Il Pizzaiolo',
     description:
-        'From an early age Michele loved to watch pizza makers move their hands in the dough with dexterity and elegance. He started working at the age of 16. After many years he has understood that the secret is never to feel like he has arrived: day after day, he never misses an opportunity to learn something new, always approaching this job with the same enthusiasm as on the first day..',
+        'Passionate about cooking since the age of 14, Michele decides during high school to start working in a restaurant-pizzeria in the province of Verona, where his roots lie. He arrives in Brussels at the age of 21 after a year of experience in Germany. In 2009 at the age of 27, he crowns the dream of opening his own restaurant where he is finally free to express his best concept of pizza.',
     icon: CameraIcon,
     imageSrc:'img/michele-pizza.jpeg'
   },
