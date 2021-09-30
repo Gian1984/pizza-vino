@@ -430,18 +430,19 @@ dd{
   #pizza_lovers{
     max-width: 380px;
     justify-content: center;
-    padding-bottom: 50px;
+    padding-bottom: 100px !important;
+    padding-right: 50px;
   }
 
 }
 
 @media only screen and (max-width: 1024px) {
+
   #pizza_lovers{
-    max-width: 400px;
-    max-height: 600px;
-    justify-content: center !important;
     padding-bottom: 200px !important;
+    padding-right: 50px;
   }
+
 
   #food_delivery_pannel{
     padding: 20px !important;
