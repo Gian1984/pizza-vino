@@ -373,12 +373,6 @@ export default {
   font-family: lobster !important;
 }
 
-/*#rinunciare,*/
-/*#header_text1,*/
-/*#header_text2,*/
-/*#header_text3{*/
-/*  font-family: ephesis !important;*/
-/*}*/
 
 p,
 dd{
