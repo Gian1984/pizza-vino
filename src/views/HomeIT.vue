@@ -108,6 +108,14 @@
 
   <!--  Carousel section-->
 
+  <div class="bg-white" style="background-image: url('img/carrelage.png');">
+    <div class=" mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-12">
+      <div class="space-y-4 sm:space-y-12">
+        <h2 class="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="gallery">Gallery</h2>
+      </div>
+    </div>
+  </div>
+
   <div class="bg-white relative overflow-hidden">
     <div class="gallery-wrap" style="background-image: url('img/carousel/4-200x100.jpg');">
       <div class="item" style="background-image: url('img/carousel/5-200x100.jpg');"></div>
@@ -122,6 +130,7 @@
   <div class="bg-white" style="background-image: url('img/carrelage.png');">
     <div class=" mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-12">
       <div class="space-y-4 sm:space-y-12">
+        <h2 class="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="place">Ma adesso spazio alle ...</h2>
       </div>
     </div>
   </div>
@@ -140,6 +149,8 @@
         <p class="mt-4 text-gray-500 text-2xl" lang="it">Sugo a base di pomodoro del Piennolo, tipico dell'area vesuviana campana, deve il suo nome al modo in cui i grappoli vengono intrecciati per essere conservati. Hanno una forma ovale ma allungata e un sapore tipicamente acidulo.</p>
       </div>
 
+      <!--  Red pizzas-->
+
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
         <div v-for="pizza in redpizzas" :key="pizza.name" class="border-t border-gray-200 pt-4">
           <dt class="text-2xl text-gray-900" id="red_pizza_name" lang="it">{{ pizza.name }}</dt>
@@ -147,6 +158,8 @@
           <dt class="font-medium text-gray-900" lang="it">{{ pizza.price }}€</dt>
         </div>
       </dl>
+
+      <!--  White pizzas-->
 
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
         <h2 class="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="pizze_bianche" lang="it">Pizze bianche</h2>
@@ -158,6 +171,21 @@
           <dt class="text-2xl text-gray-900" id="white_pizza_name" lang="it">{{ pizza.name }}</dt>
           <dd class="mt-2 text-lg text-gray-500" lang="it">{{ pizza.description }}</dd>
           <dt class="font-medium text-gray-900">{{ pizza.price }}€</dt>
+        </div>
+      </dl>
+
+      <!--  Wines selection-->
+
+      <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
+        <h2 class="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="wines">Selezione di vini</h2>
+        <p class="mt-4 text-gray-500 text-2xl">Quello che conte è che questa volta ci sarà un buon vino ad accompagnarla.</p>
+      </div>
+
+      <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
+        <div v-for="wine in wines" :key="wine.name" class="border-t border-gray-200 pt-4">
+          <dt class="text-2xl text-gray-900" id="wine_name">{{ wine.name }}</dt>
+          <dd class="mt-2 text-lg text-gray-500">{{ wine.description }}</dd>
+          <dt class="font-medium text-gray-900">Bicchiere: {{ wine.glass }}€ - Bottiglia: {{ wine.bottle }}€</dt>
         </div>
       </dl>
     </div>
@@ -251,6 +279,76 @@ const whitepizzas=[
   { name: 'Patate & Tartufo', description: 'Fior di latte, basilico, patate lesse e tartufo nero.', price:'19,00' },
   { name: 'Mortadella', description: 'Fior di latte, rucola, mortadella, scaglie di pecorino Romano, pesto di pomodori secchi e pistacchi tostati.', price:'16,00' },
   { name: 'Genovese', description: 'Fior di latte, pesto alla genovese, pomodorini gialli e rossi del Piennolo del Vesuvio, ricottan scaglie di grana e pinoli tostati.', price:'16,00' },
+]
+
+const wines=[
+  {
+    name:'Prosecco Doc Settolo Bio',
+    description:'CÉPAGES: GLERA - PRODUCTEUR: FRATELLI COLLAVO ORIGINE: VENETO - SUGGESTION: PIZZA FRESCA',
+    glass:'6,50',
+    bottle:'30,00'
+  },
+  {
+    name:'Trebbiano Charisma Biodinamico',
+    description:'CÉPAGES: TREBBIANO - PRODUCTEUR: LUNARIA - ORIGINE: ABRUZZO - SUGGESTION: PIZZA RUCOLA REGGIANO',
+    glass:'6,00',
+    bottle:'27,00'
+  },
+  {
+    name:'Malvasia Labelle Biodinamico',
+    description:'CÉPAGES: MALVASIA - PRODUCTEUR: LUNARIA - ORIGINE: ABRUZZO - SUGGESTION: PIZZA SICILIANA',
+    glass:'6,00',
+    bottle:'27,00'
+  },
+  {
+    name:'Pinot Grigio Biodinamico',
+    description:'CÉPAGES: PINOT GRIGIO - PRODUCTEUR: LUNARIA - ORIGINE: ABRUZZO - SUGGESTION: PIZZA PRINCIPESSA',
+    glass:'6,00',
+    bottle:'26,00'
+  },
+  {
+    name:'Lambrusco Emilia Secco Bio',
+    description:'CÉPAGES: LAMBRUSCO - PRODUCTEUR: MEDICI ERMETE - ORIGINE: EMILIA ROMAGNA - SUGGESTION: PIZZA REGINA',
+    glass:'5,50',
+    bottle:'25,00'
+  },
+  {
+    name:'Nero D\'Avola Bio',
+    description:'CÉPAGES: NERO D\'AVOLA - PRODUCTEUR: DUE TERRE WINES - ORIGINE: SICILIA\n' +
+        'SUGGESTION: PIZZA NAPOLI',
+    glass:'6,00',
+    bottle:'26,00'
+  },
+  {
+    name:'Negroamaro Torre Nova Bio',
+    description:'CÉPAGES: NEGROAMARO PRODUCTEUR: NATALINO DEL PRETE ORIGINE: PUGLIA SUGGESTION: PIZZA CALABRESE',
+    glass:'6,00',
+    bottle:'28,00'
+  },
+  {
+    name:'Primitivo Ruminat Bio',
+    description:'CÉPAGES: PRMITIVO - PRODUCTEUR: LUNARIA - ORIGINE: ABRUZZO - SUGGESTION: PIZZA BOSCAIOLA',
+    glass:'6,00',
+    bottle:'30,00'
+  },
+  {
+    name:'Montepulciano Coste di Moro Bio',
+    description:'CÉPAGES: MONTEPULCIANO - PRODUCTEUR: LUNARIA - ORIGINE: ABRUZZO - SUGGESTION: PIZZA 4 STAGIONI',
+    glass:'6,00',
+    bottle:'27,00'
+  },
+  {
+    name:'Dolcetto D\'Alba Bio',
+    description:'CÉPAGES: DOLCETTO - PRODUCTEUR: BREZZA - ORIGINE: PIEMONTE - SUGGESTION: PIZZA PORCHETTA FUNGHI',
+    glass:'7,50',
+    bottle:'33,00'
+  },
+  {
+    name:'Nebbiolo Delle Langhe Bio',
+    description:'CÉPAGES: NEBBIOLO - PRODUCTEUR: BREZZA - ORIGINE: PIEMONTE - SUGGESTION: PIZZA PATATE E TARTUFO',
+    glass:'7,50',
+    bottle:'34,00'
+  },
 ]
 
 const supportLinks = [
@@ -355,6 +453,7 @@ export default {
     return {
       redpizzas,
       whitepizzas,
+      wines,
       testimonials,
       fooddelivery,
       NewspaperIcon,

@@ -352,6 +352,10 @@ export default {
   border: lightgrey solid 2px !important;
 }
 
+#wine_name,
+#wines,
+#place,
+#gallery,
 #rinunciare,
 #header_text1,
 #header_text2,
@@ -382,18 +386,19 @@ dd{
 
 @media only screen and (max-width: 736px) {
 
+  .gallery-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 45vh !important;
+  }
+
   #rinunciare{
     font-size: x-large !important;
   }
 
-  #header_text1{
-    font-size: large !important;
-  }
-
-  #header_text2{
-    font-size: large !important;
-  }
-
+  #header_text1,
+  #header_text2,
   #header_text3{
     font-size: large !important;
   }

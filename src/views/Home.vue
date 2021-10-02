@@ -109,6 +109,14 @@
 
   <!--  Carousel section-->
 
+  <div class="bg-white" style="background-image: url('img/carrelage.png');">
+    <div class=" mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-12">
+      <div class="space-y-4 sm:space-y-12">
+        <h2 class="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="gallery">Gallery</h2>
+      </div>
+    </div>
+  </div>
+
 
   <div class="bg-white relative overflow-hidden">
     <div class="gallery-wrap" style="background-image: url('img/carousel/4-200x100.jpg');">
@@ -124,6 +132,7 @@
   <div class="bg-white" style="background-image: url('img/carrelage.png');">
     <div class=" mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-12">
       <div class="space-y-4 sm:space-y-12">
+        <h2 class="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="place">Mais maintenant place a ...</h2>
       </div>
     </div>
   </div>
@@ -136,6 +145,8 @@
       <img src="img/pizza-burratina.png" alt="pizza-burratina" class="w-full h-96 object-center object-cover" />
       <div class="absolute inset-0 bg-gradient-to-t from-white" />
     </div>
+
+    <!--  Red Pizzas -->
 
     <div class="relative -mt-12 max-w-7xl mx-auto pb-16 px-4 sm:pb-24 sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl">
@@ -151,6 +162,8 @@
         </div>
       </dl>
 
+      <!--  White pizzas-->
+
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
         <h2 class="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="pizze_bianche">Pizze bianche</h2>
         <p class="mt-4 text-gray-500 text-2xl">Expressément conçu sans sauce tomate pour rehausser les saveurs typiques des produits italiens uniques. Une combinaison époustouflante qui ravira vos papilles.</p>
@@ -161,6 +174,21 @@
           <dt class="text-2xl text-gray-900" id="white_pizza_name">{{ pizza.name }}</dt>
           <dd class="mt-2 text-lg text-gray-500">{{ pizza.description }}</dd>
           <dt class="font-medium text-gray-900">{{ pizza.price }}€</dt>
+        </div>
+      </dl>
+
+      <!--  Wines selection-->
+
+      <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
+        <h2 class="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="wines">Sélection de vins</h2>
+        <p class="mt-4 text-gray-500 text-2xl">Ce qui compte c'est que cette fois pour accompagner ta pizza il y aura du bon vin.</p>
+      </div>
+
+      <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
+        <div v-for="wine in wines" :key="wine.name" class="border-t border-gray-200 pt-4">
+          <dt class="text-2xl text-gray-900" id="wine_name">{{ wine.name }}</dt>
+          <dd class="mt-2 text-lg text-gray-500">{{ wine.description }}</dd>
+          <dt class="font-medium text-gray-900">Verre: {{ wine.glass }}€ - Bouteille: {{ wine.bottle }}€</dt>
         </div>
       </dl>
     </div>
@@ -254,6 +282,76 @@ const whitepizzas=[
   { name: 'Patate & Tartufo', description: 'Mozzarella, Basilic, Pommes de terre bouillies et Truffe Noire.', price:'19,00' },
   { name: 'Mortadella', description: 'Mozzarella, Roquette, Mortadelle, Copeaux de Pecorino Romano*, Pesto de tomates séchées et Pistaches grillées. (  Fromage traditionnel à base de lait entier de brebis, à pâte pressée cuite )', price:'16,00' },
   { name: 'Genovese', description: 'Mozzarella, Pesto Génois, Tomates jaunes et rouges de Piennolo del Vesuvio, Copeaux de Ricotta* et Pignons de pin grillés. ( Fromage à pâte fraîche )', price:'16,00' },
+]
+
+const wines=[
+  {
+    name:'Prosecco Doc Settolo Bio',
+    description:'CÉPAGES: GLERA PRODUCTEUR: FRATELLI COLLAVO ORIGINE: VENETO - SUGGESTION: PIZZA FRESCA',
+    glass:'6,50',
+    bottle:'30,00'
+  },
+  {
+    name:'Trebbiano Charisma Biodinamico',
+    description:'CÉPAGES: TREBBIANO - PRODUCTEUR: LUNARIA - ORIGINE: ABRUZZO - SUGGESTION: PIZZA RUCOLA REGGIANO',
+    glass:'6,00',
+    bottle:'27,00'
+  },
+  {
+    name:'Malvasia Labelle Biodinamico',
+    description:'CÉPAGES: MALVASIA - PRODUCTEUR: LUNARIA - ORIGINE: ABRUZZO - SUGGESTION: PIZZA SICILIANA',
+    glass:'6,00',
+    bottle:'27,00'
+  },
+  {
+    name:'Pinot Grigio Biodinamico',
+    description:'CÉPAGES: PINOT GRIGIO - PRODUCTEUR: LUNARIA - ORIGINE: ABRUZZO - SUGGESTION: PIZZA PRINCIPESSA',
+    glass:'6,00',
+    bottle:'26,00'
+  },
+  {
+    name:'Lambrusco Emilia Secco Bio',
+    description:'CÉPAGES: LAMBRUSCO - PRODUCTEUR: MEDICI ERMETE - ORIGINE: EMILIA ROMAGNA - SUGGESTION: PIZZA REGINA',
+    glass:'5,50',
+    bottle:'25,00'
+  },
+  {
+    name:'Nero D\'Avola Bio',
+    description:'CÉPAGES: NERO D\'AVOLA - PRODUCTEUR: DUE TERRE WINES - ORIGINE: SICILIA\n' +
+        'SUGGESTION: PIZZA NAPOLI',
+    glass:'6,00',
+    bottle:'26,00'
+  },
+  {
+    name:'Negroamaro Torre Nova Bio',
+    description:'CÉPAGES: NEGROAMARO PRODUCTEUR: NATALINO DEL PRETE ORIGINE: PUGLIA SUGGESTION: PIZZA CALABRESE',
+    glass:'6,00',
+    bottle:'28,00'
+  },
+  {
+    name:'Primitivo Ruminat Bio',
+    description:'CÉPAGES: PRMITIVO - PRODUCTEUR: LUNARIA - ORIGINE: ABRUZZO - SUGGESTION: PIZZA BOSCAIOLA',
+    glass:'6,00',
+    bottle:'30,00'
+  },
+  {
+    name:'Montepulciano Coste di Moro Bio',
+    description:'CÉPAGES: MONTEPULCIANO - PRODUCTEUR: LUNARIA - ORIGINE: ABRUZZO - SUGGESTION: PIZZA 4 STAGIONI',
+    glass:'6,00',
+    bottle:'27,00'
+  },
+  {
+    name:'Dolcetto D\'Alba Bio',
+    description:'CÉPAGES: DOLCETTO - PRODUCTEUR: BREZZA - ORIGINE: PIEMONTE - SUGGESTION: PIZZA PORCHETTA FUNGHI',
+    glass:'7,50',
+    bottle:'33,00'
+  },
+  {
+    name:'Nebbiolo Delle Langhe Bio',
+    description:'CÉPAGES: NEBBIOLO - PRODUCTEUR: BREZZA - ORIGINE: PIEMONTE - SUGGESTION: PIZZA PATATE E TARTUFO',
+    glass:'7,50',
+    bottle:'34,00'
+  },
 ]
 
 const supportLinks = [
@@ -382,6 +480,7 @@ export default {
     return {
       redpizzas,
       whitepizzas,
+      wines,
       testimonials,
       fooddelivery,
       NewspaperIcon,
