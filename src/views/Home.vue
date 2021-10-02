@@ -180,14 +180,16 @@
       <!--  Wines selection-->
 
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
-        <h2 class="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="wines">Sélection de vins</h2>
+        <h2 class="text-6xl font-extrabold tracking-tight text-red-700 sm:text-4xl lg:text-6xl" id="wines">Sélection de vins</h2>
         <p class="mt-4 text-gray-500 text-2xl">Ce qui compte c'est que cette fois pour accompagner ta pizza il y aura du bon vin.</p>
       </div>
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
         <div v-for="wine in wines" :key="wine.name" class="border-t border-gray-200 pt-4">
           <dt class="text-2xl text-gray-900" id="wine_name">{{ wine.name }}</dt>
-          <dd class="mt-2 text-lg text-gray-500">{{ wine.description }}</dd>
+          <dd class="mt-2 text-lg text-gray-500">Cepages: {{ wine.grapes }} - Producer: {{ wine.producer }}</dd>
+          <dd class="mt-2 text-lg text-gray-500">Origine: {{ wine.origin }}</dd>
+          <dd class="mt-2 text-lg text-gray-500">Suggestion: {{ wine.suggestion }}</dd>
           <dt class="font-medium text-gray-900">Verre: {{ wine.glass }}€ - Bouteille: {{ wine.bottle }}€</dt>
         </div>
       </dl>
@@ -287,68 +289,100 @@ const whitepizzas=[
 const wines=[
   {
     name:'Prosecco Doc Settolo Bio',
-    description:'CÉPAGES: GLERA PRODUCTEUR: FRATELLI COLLAVO ORIGINE: VENETO - SUGGESTION: PIZZA FRESCA',
+    grapes:'Glera',
+    producer:'Fratelli Collavo',
+    origin:'Veneto',
+    suggestion:'Pizza Fresca',
     glass:'6,50',
     bottle:'30,00'
   },
   {
     name:'Trebbiano Charisma Biodinamico',
-    description:'CÉPAGES: TREBBIANO - PRODUCTEUR: LUNARIA - ORIGINE: ABRUZZO - SUGGESTION: PIZZA RUCOLA REGGIANO',
+    grapes:'Trebbiano',
+    producer:'Lunaria',
+    origin:'Abruzzo',
+    suggestion:'Pizza Rucola Reggiano',
     glass:'6,00',
     bottle:'27,00'
   },
   {
     name:'Malvasia Labelle Biodinamico',
-    description:'CÉPAGES: MALVASIA - PRODUCTEUR: LUNARIA - ORIGINE: ABRUZZO - SUGGESTION: PIZZA SICILIANA',
+    grapes:'Malvasia',
+    producer:'Lunaria',
+    origin:'Abruzzo',
+    suggestion:'Pizza Siciliana',
     glass:'6,00',
     bottle:'27,00'
   },
   {
     name:'Pinot Grigio Biodinamico',
-    description:'CÉPAGES: PINOT GRIGIO - PRODUCTEUR: LUNARIA - ORIGINE: ABRUZZO - SUGGESTION: PIZZA PRINCIPESSA',
+    grapes:'Pinot Grigio',
+    producer:'Lunaria',
+    origin:'Abruzzo',
+    suggestion:'Pizza Principessa',
     glass:'6,00',
     bottle:'26,00'
   },
   {
     name:'Lambrusco Emilia Secco Bio',
-    description:'CÉPAGES: LAMBRUSCO - PRODUCTEUR: MEDICI ERMETE - ORIGINE: EMILIA ROMAGNA - SUGGESTION: PIZZA REGINA',
+    grapes:'Lambrusco',
+    producer:'Medici Ermete',
+    origin:'Emilia Romagna',
+    suggestion:'Pizza Regina',
     glass:'5,50',
     bottle:'25,00'
   },
   {
     name:'Nero D\'Avola Bio',
-    description:'CÉPAGES: NERO D\'AVOLA - PRODUCTEUR: DUE TERRE WINES - ORIGINE: SICILIA\n' +
-        'SUGGESTION: PIZZA NAPOLI',
+    grapes:'Nero D\'Avola',
+    producer:'Due Terre Wines',
+    origin:'Sicilia',
+    suggestion:'Pizza Napoli',
     glass:'6,00',
     bottle:'26,00'
   },
   {
     name:'Negroamaro Torre Nova Bio',
-    description:'CÉPAGES: NEGROAMARO PRODUCTEUR: NATALINO DEL PRETE ORIGINE: PUGLIA SUGGESTION: PIZZA CALABRESE',
+    grapes:'Negroamaro',
+    producer:'Natalino Del Prete',
+    origin:'Puglia',
+    suggestion:'Pizza Calabrese',
     glass:'6,00',
     bottle:'28,00'
   },
   {
     name:'Primitivo Ruminat Bio',
-    description:'CÉPAGES: PRMITIVO - PRODUCTEUR: LUNARIA - ORIGINE: ABRUZZO - SUGGESTION: PIZZA BOSCAIOLA',
+    grapes:'Primitivo',
+    producer:'Lunaria',
+    origin:'Abruzzo',
+    suggestion:'Pizza Boscaiola',
     glass:'6,00',
     bottle:'30,00'
   },
   {
     name:'Montepulciano Coste di Moro Bio',
-    description:'CÉPAGES: MONTEPULCIANO - PRODUCTEUR: LUNARIA - ORIGINE: ABRUZZO - SUGGESTION: PIZZA 4 STAGIONI',
+    grapes:'Montepulciano',
+    producer:'Lunaria',
+    origin:'Abruzzo',
+    suggestion:'Pizza 4 Stagioni',
     glass:'6,00',
     bottle:'27,00'
   },
   {
     name:'Dolcetto D\'Alba Bio',
-    description:'CÉPAGES: DOLCETTO - PRODUCTEUR: BREZZA - ORIGINE: PIEMONTE - SUGGESTION: PIZZA PORCHETTA FUNGHI',
+    grapes:'Dolcetto',
+    producer:'Brezza',
+    origin:'Piemonte',
+    suggestion:'Pizza Porchetta Funghi',
     glass:'7,50',
     bottle:'33,00'
   },
   {
     name:'Nebbiolo Delle Langhe Bio',
-    description:'CÉPAGES: NEBBIOLO - PRODUCTEUR: BREZZA - ORIGINE: PIEMONTE - SUGGESTION: PIZZA PATATE E TARTUFO',
+    grapes:'Nebbiolo',
+    producer:'Brezza',
+    origin:'Piemonte',
+    suggestion:'Pizza Patate e Tartufo',
     glass:'7,50',
     bottle:'34,00'
   },
