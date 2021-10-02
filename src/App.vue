@@ -209,6 +209,9 @@
           &copy; 2021  Gianluca Tiengo. All rights reserved.
         </p>
       </a>
+      <a class="top-link hide" href="" id="js-top" v-on:click="scrolltotop()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+      </a>
     </div>
   </footer>
 
@@ -341,6 +344,11 @@ export default {
 
     scrolltocontact() {
       const element = document.getElementById('contact-me');
+      element.scrollIntoView({ behavior: 'smooth' });
+    },
+
+    scrolltotop() {
+      const element = document.getElementById('title');
       element.scrollIntoView({ behavior: 'smooth' });
     },
 
@@ -509,5 +517,54 @@ dd{
 .item:hover {
    flex: 7;
  }
+
+.intro-copy {
+  padding: 1em;
+  margin: 50vh auto;
+  max-width: 15em;
+  font-family: Helvetica;
+  font-weight: lighter;
+  font-size: 2em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.top-link {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1em 1em 0;
+  border-radius: 50%;
+  padding: 0.25em;
+  width: 30px;
+  height: 30px;
+  background-color: #f8f8f8;
+}
+
+.show {
+   visibility: visible;
+   opacity: 1;
+ }
+
+
+svg {
+  fill: #000;
+  width: 24px;
+  height: 12px;
+  fill: #000000;
+}
+
+
+
+
+
+
+
+
 
 </style>
