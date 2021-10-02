@@ -380,24 +380,6 @@ dd{
 }
 
 
-.carousel__item {
-  min-height: 200px;
-  width: 100%;
-  color: white;
-  font-size: 20px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#photo-carousel{
-  max-height: 600px;
-  border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-
 @media only screen and (max-width: 736px) {
 
   #rinunciare{
@@ -428,16 +410,6 @@ dd{
     color: black !important;
   }
 
-  #photo-carousel{
-    display: none !important;
-  }
-  .carousel__item{
-    display: none !important;
-  }
-  .carousel__prev,
-  .carousel__next {
-    display: none !important;
-  }
 
   #pizza_lovers{
     max-width: 300px;
@@ -474,14 +446,24 @@ dd{
 
 }
 
-
-.carousel__prev,
-.carousel__next {
-  box-sizing: content-box;
-  margin-left: 50px;
-  margin-right: 50px;
-  border: 5px solid #B91C1C !important;
-  color: #B91C1C !important;
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
 }
+
+.item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
+}
+
+.item:hover {
+   flex: 7;
+ }
 
 </style>

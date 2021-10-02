@@ -108,16 +108,25 @@
 
   <!--  Carousel section-->
 
-  <carousel>
-    <slide v-for="slide in photos" :key="slide" style="background-image: url('img/carrelage.png');">
-      <div class="carousel__item hidden md:block">
-        <img class="h-34 mx-auto mb-16" :src="slide.imageSrc" alt="photos carousel" id="photo-carousel" />
+  <div class="bg-white relative overflow-hidden">
+    <div class="gallery-wrap" style="background-image: url('img/carousel/4-200x100.jpg');">
+      <div class="item" style="background-image: url('img/carousel/5-200x100.jpg');"></div>
+      <div class="item" style="background-image: url('img/carousel/carousel-2.jpeg');"></div>
+      <div class="item" style="background-image: url('img/carousel/carousel-1.png');"></div>
+      <div class="item" style="background-image: url('img/carousel/outside-pizzeria.jpeg');"></div>
+      <div class="item" style="background-image: url('img/carousel/carousel-3.png');"></div>
+      <div class="item" style="background-image: url('img/pizza-primo-piano3.jpeg');"></div>
+    </div>
+  </div>
+
+  <div class="bg-white" style="background-image: url('img/carrelage.png');">
+    <div class=" mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-12">
+      <div class="space-y-4 sm:space-y-12">
       </div>
-    </slide>
-    <template #addons>
-      <Navigation />
-    </template>
-  </carousel>
+    </div>
+  </div>
+
+
 
   <!--  Menù section-->
 
@@ -215,8 +224,6 @@
 <script>
 import { StarIcon, ChevronRightIcon } from '@heroicons/vue/solid'
 import { NewspaperIcon, PhoneIcon, SupportIcon, CameraIcon, PhoneOutgoingIcon } from '@heroicons/vue/outline'
-import 'vue3-carousel/dist/carousel.css';
-import { Carousel, Slide, Navigation,} from 'vue3-carousel';
 
 const redpizzas = [
   { name: 'Margherita', description: 'Tomato, Basil and Mozzarella.', price:'9,00' },
@@ -270,28 +277,6 @@ const supportLinks = [
     icon: CameraIcon,
     imageSrc:'img/michele-pizza.jpeg'
   },
-]
-
-const photos =[
-  {
-    imageSrc: 'img/carousel/4-200x100.jpg',
-  },
-  {
-    imageSrc: 'img/carousel/5-200x100.jpg',
-  },
-  {
-    imageSrc: 'img/carousel/carousel-2.jpeg',
-  },
-  {
-    imageSrc: 'img/carousel/carousel-1.png',
-  },
-  {
-    imageSrc: 'img/carousel/outside-pizzeria.jpeg',
-  },
-  {
-    imageSrc: 'img/carousel/carousel-3.png',
-  }
-
 ]
 
 
@@ -366,7 +351,6 @@ export default {
     StarIcon,
     PhoneOutgoingIcon,
     ChevronRightIcon,
-    Carousel, Slide, Navigation
   },
 
   setup() {
@@ -380,7 +364,6 @@ export default {
       SupportIcon,
       supportLinks,
       CameraIcon,
-      photos,
       partners
     }
   },
