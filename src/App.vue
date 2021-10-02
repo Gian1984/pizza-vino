@@ -5,7 +5,7 @@
   <Disclosure as="nav" class="bg-black" v-slot="{ open }">
     <div class="mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden   mb-30">
           <!-- Mobile menu button-->
           <DisclosureButton class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
             <span class="sr-only">Open main menu</span>
@@ -24,13 +24,30 @@
           </div>
           <div class="mt-3 hidden sm:block sm:ml-6">
             <div class="flex space-x-4" id="menu_nav">
-              <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-black text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'px-3 py-2 rounded-md text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
+              <button class=" text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium" v-on:click="scrolltopizze()">Le Pizze</button>
+              <button class=" text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium" v-on:click="scrolltovini()">I Vini</button>
+              <button class=" text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium" v-on:click="scrolltocontact()">Contact</button>
             </div>
           </div>
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
           <div>
-            <img v-if="homePage()" class="h-8 w-8 rounded-full" id="flag" :src="flag" alt="pizza-vino-logo" />
+
+            <Menu as="div" class="ml-3 relative">
+              <div>
+                <MenuButton class="max-w-xs bg-white flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  <span class="sr-only">Open user menu</span>
+                  <img v-if="homePage()" class="h-8 w-8 rounded-full" id="flag" :src="flag" alt="pizza-vino-logo" />
+                </MenuButton>
+              </div>
+              <transition enter-active-class="transition ease-out duration-200" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
+                <MenuItems class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <MenuItem v-for="item in navigation" :key="item.name" v-slot="{ active }" class="overflow-visible">
+                    <a :href="item.href" :class="[active ? 'bg-black text-white' : 'text-white bg-gray-900 hover:text-white', 'block px-2 py-2 text-sm text-white border-2 border-white lang']" >{{ item.name }}</a>
+                  </MenuItem>
+                </MenuItems>
+              </transition>
+            </Menu>
           </div>
         </div>
       </div>
@@ -38,7 +55,9 @@
 
     <DisclosurePanel class="sm:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1" id="menu_nav_mobile">
-        <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block px-3 py-2 rounded-md text-base font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
+        <a class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-mediu" v-on:click="scrolltopizze">Le Pizze</a>
+        <a class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-mediu" v-on:click="scrolltovini">I Vini</a>
+        <a class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-mediu" v-on:click="scrolltocontact">Contact</a>
       </div>
     </DisclosurePanel>
   </Disclosure>
@@ -55,7 +74,7 @@
 
 
   <footer class="bg-black">
-    <div class="py-18 overflow-hidden lg:py-18 mb-10">
+    <div class="py-18 overflow-hidden lg:py-18 mb-10" id="contact-me">
       <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
         <div class="relative mt-10 lg:mt-10 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
 
@@ -308,7 +327,23 @@ export default {
       } else {
         return (this.flag = 'img/flag/italy.png') && (this.description = 'Clicca sulle icone per trovarci sulla mappa o sui social media. Vuoi prenotare un tavolo o ordinare una pizza? Clicca sul telefono! Ti stiamo aspettando!')
       }
-    }
+    },
+
+    scrolltopizze() {
+      const element = document.getElementById('pizze_rosse');
+      element.scrollIntoView({ behavior: 'smooth' });
+    },
+
+    scrolltovini() {
+      const element = document.getElementById('wines');
+      element.scrollIntoView({ behavior: 'smooth' });
+    },
+
+    scrolltocontact() {
+      const element = document.getElementById('contact-me');
+      element.scrollIntoView({ behavior: 'smooth' });
+    },
+
   },
 
   components: {
@@ -352,14 +387,12 @@ export default {
   border: lightgrey solid 2px !important;
 }
 
+.lang,
 #wine_name,
 #wines,
 #place,
 #gallery,
 #rinunciare,
-#header_text1,
-#header_text2,
-#header_text3,
 #menu_nav_mobile,
 #sub_opening,
 #sub_contact,
@@ -377,7 +410,9 @@ export default {
   font-family: lobster !important;
 }
 
-
+#header_text1,
+#header_text2,
+#header_text3,
 p,
 dd{
   font-family: "Neucha" !important;
@@ -385,6 +420,10 @@ dd{
 
 
 @media only screen and (max-width: 736px) {
+
+  #space{
+    display: none !important;
+  }
 
   .gallery-wrap {
     display: flex;
@@ -400,7 +439,7 @@ dd{
   #header_text1,
   #header_text2,
   #header_text3{
-    font-size: large !important;
+    font-size: x-large !important;
   }
 
   #text_comment{

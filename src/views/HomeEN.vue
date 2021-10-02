@@ -3,6 +3,7 @@
   <!--  Header Section -->
 
   <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden" style="background-image: url('img/pizza-outside.png'); background-size: cover;">
+    <div class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="space"></div>
     <div class="mx-auto  lg:px-8">
       <div class="lg:grid lg:grid-cols-2 lg:gap-8">
         <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
@@ -187,8 +188,8 @@
         <div v-for="wine in wines" :key="wine.name" class="border-t border-gray-200 pt-4">
           <dt class="text-2xl text-gray-900" id="wine_name">{{ wine.name }}</dt>
           <dd class="mt-2 text-lg text-gray-500">Grapes: {{ wine.grapes }} - Producer: {{ wine.producer }}</dd>
-          <dd class="mt-2 text-lg text-gray-500">Origin: {{ wine.origin }}</dd>
-          <dd class="mt-2 text-lg text-gray-500">Suggestion: {{ wine.suggestion }}</dd>
+          <dd class="text-lg text-gray-500">Origin: {{ wine.origin }}</dd>
+          <dd class="text-lg text-gray-500">Suggestion: {{ wine.suggestion }}</dd>
           <dt class="font-medium text-gray-900">Glass: {{ wine.glass }}€ - Bottle: {{ wine.bottle }}€</dt>
         </div>
       </dl>
