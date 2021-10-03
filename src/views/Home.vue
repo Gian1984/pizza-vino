@@ -32,12 +32,12 @@
                 </div>
               </blockquote>
             </div>
-            <div class="mt-10 sm:mt-12">
-              <a href="doc/pizza-vino-fr.pdf" class="mr-2 inline-flex items-center text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
+            <div class="mt-10 sm:mt-12 pb-6">
+              <a href="doc/pizza-vino-fr.pdf" class="mr-2 inline-flex items-center border-2 border-black text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
                 <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full">Télécharger la carte</span>
                 <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
               </a>
-              <a type="button" href="TEL: 0494 69 30 28" class="mt-2 inline-flex items-center text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
+              <a type="button" href="TEL: 0494 69 30 28" class="mt-2 inline-flex items-center border-2 border-black text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
                 <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full">Appel</span>
                 <phone-outgoing-icon class="ml-2 w-5 h-5" aria-hidden="true" />
               </a>

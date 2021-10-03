@@ -210,7 +210,7 @@
         </p>
       </a>
       <a class="top-link hide" href="" id="js-top" v-on:click="scrolltotop()">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" id="totop"><path d="M12 6H0l6-6z"/></svg>
       </a>
     </div>
   </footer>
@@ -464,11 +464,12 @@ dd{
 
 
   #pizza_lovers{
-    max-width: 300px;
-    justify-content: center;
-    padding-bottom: 100px !important;
-    margin-left: auto;
-    margin-right: auto;
+    /*max-width: 300px;*/
+    /*justify-content: center;*/
+    /*padding-bottom: 100px !important;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    display: none !important;
   }
 
 }
@@ -552,7 +553,7 @@ dd{
  }
 
 
-svg {
+#totop {
   fill: #000;
   width: 24px;
   height: 12px;
