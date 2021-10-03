@@ -21,13 +21,13 @@
                     Trois choses auxquelles vous ne pouvez absolument pas renoncer:
                   </h1>
                   <cite class="text-2xl mt-2 block font-extralight text-white italic" id="header_text1">
-                    1 &mdash; Une excellente pizza..
+                    # 1 &mdash; Une excellente pizza..
                   </cite>
                   <cite class="text-2xl mt-2 block font-extralight text-white italic" id="header_text2">
-                    2 &mdash; Un bon verre de vin.
+                    # 2 &mdash; Un bon verre de vin.
                   </cite>
                   <cite class="text-2xl mt-2 block font-extralight text-white italic" id="header_text3">
-                    3 &mdash;
+                    # 3 &mdash; ...
                   </cite>
                 </div>
               </blockquote>

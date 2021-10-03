@@ -21,13 +21,13 @@
                     Three things you can't say no:
                   </h1>
                   <cite class="text-2xl mt-2 block font-extralight text-white italic" id="header_text1" lang="en">
-                    1 &mdash; A delicious pizza.
+                    # 1 &mdash; A delicious pizza.
                   </cite>
                   <cite class="text-2xl mt-2 block font-extralight text-white italic" id="header_text2" lang="en">
-                    2 &mdash; A good glass of wine.
+                    # 2 &mdash; A good glass of wine.
                   </cite>
                   <cite class="text-2xl mt-2 block font-extralight text-white italic" id="header_text3" lang="en">
-                    3 &mdash;
+                    # 3 &mdash; ...
                   </cite>
                 </div>
               </blockquote>

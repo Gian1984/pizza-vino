@@ -21,13 +21,13 @@
                     A tre cose non si può assolutamente rinunciare:
                   </h1>
                   <cite class="text-2xl mt-2 block font-extralight text-white italic" id="header_text1" lang="it">
-                    1 &mdash; Un ottima pizza.
+                    # 1 &mdash; Un ottima pizza.
                   </cite>
                   <cite class="text-2xl mt-2 block font-extralight text-white italic" id="header_text2" lang="it">
-                    2 &mdash; Un buon bicchiere di vino.
+                    # 2 &mdash; Un buon bicchiere di vino.
                   </cite>
                   <cite class="text-2xl mt-2 block font-extralight text-white italic" id="header_text3" lang="it">
-                    3 &mdash;
+                    # 3 &mdash; ...
                   </cite>
                 </div>
               </blockquote>
@@ -179,7 +179,7 @@
 
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
         <h2 class="text-6xl font-extrabold tracking-tight text-red-700 sm:text-4xl lg:text-6xl" id="wines">Selezione di vini</h2>
-        <p class="mt-4 text-gray-500 text-2xl">Quello che conte è che questa volta ci sarà un buon vino ad accompagnarla.</p>
+        <p class="mt-4 text-gray-500 text-2xl">Quello che conta è che questa volta ci sarà un buon vino ad accompagnarla.</p>
       </div>
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
