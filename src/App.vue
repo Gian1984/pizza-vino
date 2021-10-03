@@ -429,10 +429,6 @@ dd{
 
 @media only screen and (max-width: 736px) {
 
-  #space{
-    display: none !important;
-  }
-
   .gallery-wrap {
     display: flex;
     flex-direction: row;
