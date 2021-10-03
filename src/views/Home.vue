@@ -7,7 +7,7 @@
     <div class="mx-auto  lg:px-8">
       <div class="lg:grid lg:grid-cols-2 lg:gap-8">
         <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
-          <div class="lg:py-24">
+          <div class="lg:py-24 pb-40">
             <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
               <h2 class="text-4xl mt-2 font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl" id="title">Per chi ama la pizza</h2>
             </h1>
@@ -32,7 +32,7 @@
                 </div>
               </blockquote>
             </div>
-            <div class="mt-10 sm:mt-12 pb-40">
+            <div class="mt-10 sm:mt-12">
               <a href="doc/pizza-vino-fr.pdf" class="mr-2 inline-flex items-center border-2 border-black text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
                 <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full">Télécharger la carte</span>
                 <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
