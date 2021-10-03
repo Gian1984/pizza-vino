@@ -188,7 +188,7 @@
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
         <div v-for="wine in wines" :key="wine.name" class="border-t border-gray-200 pt-4">
           <dt class="text-2xl text-gray-900" id="wine_name">{{ wine.name }}</dt>
-          <dd class="mt-2 text-lg text-gray-500">Cépages: {{ wine.grapes }} - Producer: {{ wine.producer }}</dd>
+          <dd class="mt-2 text-lg text-gray-500">Cépages: {{ wine.grapes }} - Producteur: {{ wine.producer }}</dd>
           <dd class="text-lg text-gray-500">Origine: {{ wine.origin }}</dd>
           <dd class="text-lg text-gray-500">Suggestion: {{ wine.suggestion }}</dd>
           <dt class="font-medium text-gray-900">Verre: {{ wine.glass }}€ - Bouteille: {{ wine.bottle }}€</dt>
