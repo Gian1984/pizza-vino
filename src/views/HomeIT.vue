@@ -7,7 +7,7 @@
     <div class="mx-auto  lg:px-8">
       <div class="lg:grid lg:grid-cols-2 lg:gap-8">
         <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
-          <div class="lg:py-24 pb-6">
+          <div class="lg:py-24 pb-40">
             <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
               <h2 class="text-4xl mt-2 font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl" id="title" lang="it">Per chi ama la pizza</h2>
             </h1>
