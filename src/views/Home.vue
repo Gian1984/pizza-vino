@@ -90,7 +90,7 @@
     </div>
 
     <!-- Overlapping cards -->
-    <section class="max-w-screen-2xl -mt-32 mx-auto relative z-10 pb-16 px-4 sm:px-6 lg:px-8" aria-labelledby="contact-heading">
+    <section class="max-w-screen-2xl -mt-32 mx-auto relative z-10 px-4 sm:px-6 lg:px-8" aria-labelledby="contact-heading">
       <h2 class="sr-only" id="contact-heading">Contact us</h2>
       <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
         <div v-for="link in supportLinks" :key="link.name" class="flex flex-col bg-white rounded-2xl shadow-xl">
@@ -113,7 +113,7 @@
   <div class="bg-white" style="background-image: url('img/carrelage.png');">
     <div class=" mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-12">
       <div class="space-y-4 sm:space-y-12">
-        <h2 class="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="gallery">Gallery</h2>
+        <h2 class="text-4xl font-extrabold tracking-tight text-black md:text-5xl lg:text-6xl" id="gallery">Gallery</h2>
       </div>
     </div>
   </div>
@@ -133,7 +133,7 @@
   <div class="bg-white" style="background-image: url('img/carrelage.png');">
     <div class=" mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-12">
       <div class="space-y-4 sm:space-y-12">
-        <h2 class="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="place">Mais maintenant place a ...</h2>
+        <h2 class="text-4xl font-extrabold tracking-tight text-black md:text-5xl lg:text-6xl" id="place">Mais maintenant place a ...</h2>
       </div>
     </div>
   </div>
@@ -151,7 +151,7 @@
 
     <div class="relative -mt-12 max-w-7xl mx-auto pb-16 px-4 sm:pb-24 sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl">
-        <h2 class="text-6xl font-extrabold tracking-tight text-red-700 sm:text-5xl lg:text-6xl" id="pizze_rosse">Pizze Rosse</h2>
+        <h2 class="text-4xl font-extrabold tracking-tight text-red-700 md:text-5xl lg:text-6xl" id="pizze_rosse">Pizze Rosse</h2>
         <p class="mt-4 text-gray-500 text-2xl ">Sauce à base de tomate Piennolo, typique de la région vésuvienne de Campanie, elle doit son nom à la manière dont les grappes sont entrelacées pour être conservées. Ils ont une forme ovale mais allongée et un goût typiquement acide.</p>
       </div>
 
@@ -166,7 +166,7 @@
       <!--  White pizzas-->
 
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
-        <h2 class="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl" id="pizze_bianche">Pizze bianche</h2>
+        <h2 class="text-4xl font-extrabold tracking-tight text-black md:text-5xl lg:text-6xl" id="pizze_bianche">Pizze bianche</h2>
         <p class="mt-4 text-gray-500 text-2xl">Expressément conçu sans sauce tomate pour rehausser les saveurs typiques des produits italiens uniques. Une combinaison époustouflante qui ravira vos papilles.</p>
       </div>
 
@@ -181,7 +181,7 @@
       <!--  Wines selection-->
 
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
-        <h2 class="text-6xl font-extrabold tracking-tight text-red-700 sm:text-4xl lg:text-6xl" id="wines">Sélection de vins</h2>
+        <h2 class="text-4xl font-extrabold tracking-tight text-red-700 md:text-5xl lg:text-6xl" id="wines">Sélection de vins</h2>
         <p class="mt-4 text-gray-500 text-2xl">Ce qui compte c'est que cette fois pour accompagner ta pizza il y aura du bon vin.</p>
       </div>
 
