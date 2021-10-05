@@ -431,10 +431,24 @@ dd{
 
   .gallery-wrap {
     display: flex;
-    flex-direction: row;
+    flex-direction: column !important;
     width: 100%;
-    height: 45vh !important;
+    height: 70vh;
   }
+
+  .item {
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    transition: flex 0.8s ease;
+  }
+
+  .item:hover{
+    flex: 7;
+  }
+
 
   #rinunciare{
     font-size: x-large !important;
