@@ -37,7 +37,7 @@
                 <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full">Télécharger carte</span>
                 <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
               </a>
-              <a type="button" href="TEL: 0032494693028" class="mt-2 inline-flex items-center border-2 border-black text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
+              <a type="button" href="tel:0032494693028" class="mt-2 inline-flex items-center border-2 border-black text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
                 <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full">Appel</span>
                 <phone-outgoing-icon class="ml-2 w-5 h-5" aria-hidden="true" />
               </a>
@@ -632,67 +632,6 @@ export default {
 .zoom:hover img {
   transform: scale(1.5) !important;
 }
-
-
-
-
-.agile__nav-button {
-  background: transparent;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 24px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  transition-duration: 0.3s;
-  width: 80px;
-}
-.agile__nav-button:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 1;
-}
-.agile__nav-button--prev {
-  left: 0;
-  color: black;
-}
-.agile__nav-button--next {
-  right: 0;
-  color: black;
-}
-.agile__dots {
-  bottom: 10px;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-}
-.agile__dot {
-  margin: 0 10px;
-}
-.agile__dot button {
-  background-color: transparent;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  cursor: pointer;
-  display: block;
-  height: 10px;
-  font-size: 0;
-  line-height: 0;
-  margin: 0;
-  padding: 0;
-  transition-duration: 0.3s;
-  width: 10px;
-}
-.agile__dot--current button, .agile__dot:hover button {
-  background-color: #fff;
-}
-
-.slide {
- height: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 
 </style>
 
