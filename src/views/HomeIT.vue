@@ -37,7 +37,7 @@
                 <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full" lang="it">Scarica menù</span>
                 <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
               </a>
-              <a type="button" href="TEL: 0494 69 30 28" class="mt-2 inline-flex items-center border-2 border-black text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
+              <a type="button" href="TEL: 0032494693028" class="mt-2 inline-flex items-center border-2 border-black text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
                 <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full" lang="it">Chiama</span>
                 <phone-outgoing-icon class="ml-2 w-5 h-5" aria-hidden="true" />
               </a>
@@ -47,7 +47,7 @@
         <div class="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
           <div class="mx-auto max-w-md px-4 sm:px-6 lg:max-w-none lg:px-0">
             <!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
-            <img class="h-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-46 lg:max-w-46" src="img/pizza-vino-logo-black.png" alt="" id="pizza_lovers" />
+<!--            <img class="h-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-46 lg:max-w-46" src="img/pizza-vino-logo-black.png" alt="" id="pizza_lovers" />-->
           </div>
         </div>
       </div>
@@ -107,31 +107,60 @@
     </section>
   </div>
 
-  <!--  Carousel section-->
 
-  <div class="bg-white" style="background-image: url('img/carrelage.png');">
-    <div class=" mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-12">
-      <div class="space-y-4 sm:space-y-12">
-        <h2 class="text-4xl font-extrabold tracking-tight text-black md:text-5xl lg:text-6xl" id="gallery">Gallery</h2>
+  <!--  Gallery section-->
+
+  <div>
+    <div class="relative pt-20" style="background-image: url('img/carrelage.png');">
+      <div class="absolute inset-x-0 bottom-0" />
+      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="relative  sm:rounded-2xl sm:overflow-hidden">
+
+          <div class="space-y-4 sm:space-y-12 pb-20">
+            <h2 class="text-4xl font-extrabold tracking-tight text-black md:text-5xl lg:text-6xl text-center" id="gallery">Gallery</h2>
+          </div>
+
+          <div class="mt-4 flow-root">
+            <div class="-my-2">
+              <div class="box-content py-2 relative h-80 overflow-x-auto xl:overflow-visible">
+                <div class="absolute min-w-screen-xl px-4 flex space-x-8 sm:px-6 lg:px-8 xl:relative xl:px-0 xl:space-x-0 xl:grid xl:grid-cols-5 xl:gap-x-8">
+                  <p v-for="category in categories" :key="category.name" class="relative w-56 h-80 rounded-lg p-6 flex flex-col overflow-hidden hover:opacity-75 xl:w-auto">
+                <span aria-hidden="true" class="absolute inset-0 zoom">
+                  <img :src="category.imageSrc" alt="" class="w-full h-full object-center object-cover" />
+                </span>
+                    <span aria-hidden="true" class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50" />
+                    <span class="relative mt-auto text-center text-xl font-bold text-white">{{ category.name }}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 flow-root">
+            <div class="-my-2">
+              <div class="box-content py-2 relative h-80 overflow-x-auto xl:overflow-visible">
+                <div class="absolute min-w-screen-xl px-4 flex space-x-8 sm:px-6 lg:px-8 xl:relative xl:px-0 xl:space-x-0 xl:grid xl:grid-cols-5 xl:gap-x-8">
+                  <p v-for="category in galleries" :key="category.name" class="relative w-56 h-80 rounded-lg p-6 flex flex-col overflow-hidden hover:opacity-75 xl:w-auto">
+                <span aria-hidden="true" class="absolute inset-0 zoom">
+                  <img :src="category.imageSrc" alt="" class="w-full h-full object-center object-cover" />
+                </span>
+                    <span aria-hidden="true" class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50" />
+                    <span class="relative mt-auto text-center text-xl font-bold text-white">{{ category.name }}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="bg-white relative overflow-hidden">
-    <div class="gallery-wrap" style="background-image: url('img/carousel/4-200x100.jpg');">
-      <div class="item" style="background-image: url('img/carousel/5-200x100.jpg');"></div>
-      <div class="item" style="background-image: url('img/carousel/carousel-2.jpeg');"></div>
-      <div class="item" style="background-image: url('img/carousel/carousel-1.png');"></div>
-      <div class="item" style="background-image: url('img/carousel/outside-pizzeria.jpeg');"></div>
-      <div class="item" style="background-image: url('img/carousel/carousel-3.png');"></div>
-      <div class="item" style="background-image: url('img/pizza-primo-piano3.jpeg');"></div>
-    </div>
-  </div>
-
   <div class="bg-white" style="background-image: url('img/carrelage.png');">
     <div class=" mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-12">
       <div class="space-y-4 sm:space-y-12">
-        <h2 class="text-4xl font-extrabold tracking-tight text-black md:text-5xl lg:text-6xl" id="place">Ma adesso spazio alle ...</h2>
+        <h2 class="text-4xl font-extrabold tracking-tight text-black md:text-5xl lg:text-6xl py-20" id="place">Ma adesso spazio alle ...</h2>
       </div>
     </div>
   </div>
@@ -253,6 +282,53 @@
 <script>
 import { StarIcon, ChevronRightIcon } from '@heroicons/vue/solid'
 import { NewspaperIcon, PhoneIcon, SupportIcon, CameraIcon, PhoneOutgoingIcon } from '@heroicons/vue/outline'
+
+const categories = [
+  {
+    name: 'Napoli',
+    imageSrc: 'img/carousel/4-200x100.jpg',
+  },
+  {
+    name: 'Michele',
+    imageSrc: 'img/carousel/5-200x100.jpg',
+  },
+  {
+    name: 'Calzone',
+    imageSrc: 'img/carousel/carousel-2.jpeg',
+  },
+  {
+    name: 'Bresaola e tartufo',
+    imageSrc: 'img/carousel/carousel-1.png',
+  },
+  {
+    name: 'Dehors',
+    imageSrc: 'img/carousel/outside-pizzeria.jpeg'
+  },
+]
+
+
+const galleries = [
+  {
+    name: 'Mortadella',
+    imageSrc: 'img/uno.png',
+  },
+  {
+    name: 'Burrata',
+    imageSrc: 'img/due.png',
+  },
+  {
+    name: 'Asporto',
+    imageSrc: 'img/tre.png',
+  },
+  {
+    name: 'Michele',
+    imageSrc: 'img/quattro.png',
+  },
+  {
+    name: 'Special',
+    imageSrc: 'img/cinque.png'
+  },
+]
 
 const redpizzas = [
   { name: 'Margherita', description: 'Pomodoro, basilico e fior di latte.', price:'9,00' },
@@ -496,7 +572,9 @@ export default {
       SupportIcon,
       supportLinks,
       CameraIcon,
-      partners
+      partners,
+      categories,
+      galleries
     }
   },
 }

@@ -244,7 +244,7 @@ const transferFeatures = [
   {
     id: 2,
     name: 'Contact',
-    href:'tel:0494693028',
+    href:'tel:0032494693028',
     description:
         'TEL: 0494 69 30 28',
     icon: PhoneOutgoingIcon,
