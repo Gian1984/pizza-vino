@@ -37,7 +37,7 @@
                 <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full" lang="it">Scarica menù</span>
                 <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
               </a>
-              <a type="button" href="tel:0032494693028" class="mt-2 inline-flex items-center border-2 border-black text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
+              <a type="button" href="tel:0032494693028" class="inline-flex items-center border-2 border-black text-black bg-white rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-gray-300">
                 <span class="px-3 py-0.5 text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full" lang="it">Chiama</span>
                 <phone-outgoing-icon class="ml-2 w-5 h-5" aria-hidden="true" />
               </a>
@@ -79,7 +79,7 @@
     <!-- Header -->
     <div class="relative pb-32 bg-gray-800">
       <div class="absolute inset-0">
-        <img class="w-full h-full object-cover" src="img/pizza-primo-piano5.jpeg" alt="pizza_firstlook" />
+        <img class="w-full h-full object-cover" src="img/pizza-primo-piano5.webp" alt="pizza_firstlook" />
         <div class="absolute inset-0 bg-gray-400 mix-blend-multiply" aria-hidden="true" />
       </div>
       <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
@@ -286,7 +286,7 @@ import { NewspaperIcon, PhoneIcon, SupportIcon, CameraIcon, PhoneOutgoingIcon } 
 const categories = [
   {
     name: 'Napoli',
-    imageSrc: 'img/carousel/4-200x100.jpg',
+    imageSrc: 'img/carousel/4-200x100.webp',
   },
   {
     name: 'Michele',
@@ -294,15 +294,15 @@ const categories = [
   },
   {
     name: 'Calzone',
-    imageSrc: 'img/carousel/carousel-2.jpeg',
+    imageSrc: 'img/carousel/carousel-2.webp',
   },
   {
     name: 'Bresaola e tartufo',
-    imageSrc: 'img/carousel/carousel-1.png',
+    imageSrc: 'img/carousel/carousel-1.webp',
   },
   {
     name: 'Dehors',
-    imageSrc: 'img/carousel/outside-pizzeria.jpeg'
+    imageSrc: 'img/carousel/outside-pizzeria.webp'
   },
 ]
 
@@ -314,7 +314,7 @@ const galleries = [
   },
   {
     name: 'Burrata',
-    imageSrc: 'img/due.png',
+    imageSrc: 'img/due.webp',
   },
   {
     name: 'Asporto',
@@ -326,38 +326,38 @@ const galleries = [
   },
   {
     name: 'Special',
-    imageSrc: 'img/cinque.png'
+    imageSrc: 'img/cinque.webp'
   },
 ]
 
 const redpizzas = [
-  { name: 'Margherita', description: 'Pomodoro, basilico e fior di latte.', price:'9,00' },
-  { name: 'Regina', description: 'Pomodoro, basilico e mozzarella di bufala.', price:'12,00' },
-  { name: 'Principessa', description: 'Pomodoro, basilico e scamorza affumicata.', price:'10,00' },
-  { name: 'Burrata', description: 'Pomodoro, basilico, burratina d\'Andria e datterini.', price:'15,00' },
-  { name: 'Marinara', description: 'Pomodoro, aglio, origano e basilico.', price:'8,00' },
-  { name: 'Rucola Reggiano', description: 'Pomodoro, fior di latte, rucola e Parmigiano Reggiano.', price:'11,00' },
-  { name: 'Porchetta Funghi', description: 'Pomodoro, basilico, fior di latte, porchetta d\'Ariccia e funghi.', price:'12,50' },
-  { name: 'Quattro Stagioni', description: 'Pomodoro, basilico, fior di latte, porchetta d\'Ariccia, funghi, olive nere e carciofi al forno.', price:'13,50' },
-  { name: 'Napoli', description: 'Pomodoro, fior di latte, capperi, filetti di alici di Cetara e origano.', price:'12,00' },
-  { name: 'Siciliana', description: 'Pomodoro, basilico, fior di latte, capperi, filetti di alici di Cetara, olive nere e aglio.', price:'13,00' },
-  { name: 'Diavola', description: 'Pomodoro, basilico, fior di latte e \'Nduja', price:'12,50' },
-  { name: 'Calabrese', description: 'Pomodoro, basilico, scamorza affumicata, salamino piccante, cipolle rosse di Tropea e olive nere.', price:'15,00' },
-  { name: 'Boscaiola', description: 'Pomodoro, basilico, scamorza affumicata, mascarpone, rucola e scaglie di grana.', price:'13,00' },
+  { name: 'Margherita', description: 'Pomodoro, basilico e fior di latte.', price:'10,00' },
+  { name: 'Regina', description: 'Pomodoro, basilico e mozzarella di bufala.', price:'13,00' },
+  { name: 'Principessa', description: 'Pomodoro, basilico e scamorza affumicata.', price:'11,00' },
+  { name: 'Burrata', description: 'Pomodoro, basilico, burratina d\'Andria e datterini.', price:'16,00' },
+  { name: 'Marinara', description: 'Pomodoro, aglio, origano e basilico.', price:'8,50' },
+  { name: 'Rucola Reggiano', description: 'Pomodoro, fior di latte, rucola e Parmigiano Reggiano.', price:'12,00' },
+  { name: 'Porchetta Funghi', description: 'Pomodoro, basilico, fior di latte, porchetta d\'Ariccia e funghi.', price:'13,50' },
+  { name: 'Quattro Stagioni', description: 'Pomodoro, basilico, fior di latte, porchetta d\'Ariccia, funghi, olive nere e carciofi al forno.', price:'14,50' },
+  { name: 'Napoli', description: 'Pomodoro, fior di latte, capperi, filetti di alici di Cetara e origano.', price:'13,00' },
+  { name: 'Siciliana', description: 'Pomodoro, basilico, fior di latte, capperi, filetti di alici di Cetara, olive nere e aglio.', price:'14,00' },
+  { name: 'Diavola', description: 'Pomodoro, basilico, fior di latte e \'Nduja', price:'13,50' },
+  { name: 'Calabrese', description: 'Pomodoro, basilico, scamorza affumicata, salamino piccante, cipolle rosse di Tropea e olive nere.', price:'16,00' },
+  { name: 'Boscaiola', description: 'Pomodoro, basilico, scamorza affumicata, mascarpone, rucola e scaglie di grana.', price:'14,00' },
   { name: 'Bresaola e tartufo', description: 'Pomodoro, fior di latte, rucola, bresaola Punta d\'Anca, scaglie di grana e tartufo nero.', price:'19,00' },
-  { name: 'Crudaiola', description: 'Pomodoro, rucola, culatello, scaglie di grana, crema di burrata, datterini, basilico ed origano.', price:'16,00' },
-  { name: 'Vegana', description: 'Pomodoro, mix di verdure, rucola e pomodori secchi.', price:'13,00' },
-  { name: 'Vegetariana', description: 'Pomodoro, fior di latte e mix di verdure.', price:'14,00' },
-  { name: 'Calzone', description: 'Sorpresa del pizzaiolo!.', price:'15,00' },
+  { name: 'Crudaiola', description: 'Pomodoro, rucola, culatello, scaglie di grana, crema di burrata, datterini, basilico ed origano.', price:'18,00' },
+  { name: 'Vegana', description: 'Pomodoro, mix di verdure, rucola e pomodori secchi.', price:'13,50' },
+  { name: 'Vegetariana', description: 'Pomodoro, fior di latte e mix di verdure.', price:'14,50' },
+  { name: 'Calzone', description: 'Sorpresa del pizzaiolo!.', price:'16,00' },
 ]
 
 const whitepizzas=[
-  { name: 'Salsiccia Friarelli', description: 'Fior di latte, basilico, salsiccia e friarielli Napoletani.', price:'14,00' },
-  { name: '4 Formaggi', description: 'Fior di latte, scamorza affumicata, gorgonzola, scaglie di grana e basilico.', price:'12,50' },
-  { name: 'Fresca', description: 'Fior di latte, datterini gialli e rossi, rucola e scaglie di grana.', price:'13,00' },
+  { name: 'Salsiccia Friarelli', description: 'Fior di latte, basilico, salsiccia e friarielli Napoletani.', price:'15,00' },
+  { name: '4 Formaggi', description: 'Fior di latte, scamorza affumicata, gorgonzola, scaglie di grana e basilico.', price:'13,50' },
+  { name: 'Fresca', description: 'Fior di latte, datterini gialli e rossi, rucola e scaglie di grana.', price:'14,00' },
   { name: 'Patate & Tartufo', description: 'Fior di latte, basilico, patate lesse e tartufo nero.', price:'19,00' },
-  { name: 'Mortadella', description: 'Fior di latte, rucola, mortadella, scaglie di pecorino Romano, pesto di pomodori secchi e pistacchi tostati.', price:'16,00' },
-  { name: 'Genovese', description: 'Fior di latte, pesto alla genovese, pomodorini gialli e rossi del Piennolo del Vesuvio, ricottan scaglie di grana e pinoli tostati.', price:'16,00' },
+  { name: 'Mortadella', description: 'Fior di latte, rucola, mortadella, scaglie di pecorino Romano, pesto di pomodori secchi e pistacchi tostati.', price:'17,00' },
+  { name: 'Genovese', description: 'Fior di latte, pesto alla genovese, pomodorini gialli e rossi del Piennolo del Vesuvio, ricottan scaglie di grana e pinoli tostati.', price:'17,00' },
 ]
 
 const wines=[
@@ -367,7 +367,7 @@ const wines=[
     producer:'Fratelli Collavo',
     origin:'Veneto',
     suggestion:'Pizza Fresca',
-    glass:'6,50',
+    glass:'7,00',
     bottle:'30,00'
   },
   {
@@ -376,8 +376,8 @@ const wines=[
     producer:'Lunaria',
     origin:'Abruzzo',
     suggestion:'Pizza Rucola Reggiano',
-    glass:'6,00',
-    bottle:'27,00'
+    glass:'6,50',
+    bottle:'28,00'
   },
   {
     name:'Malvasia Labelle Biodinamico',
@@ -385,8 +385,8 @@ const wines=[
     producer:'Lunaria',
     origin:'Abruzzo',
     suggestion:'Pizza Siciliana',
-    glass:'6,00',
-    bottle:'27,00'
+    glass:'7,00',
+    bottle:'30,00'
   },
   {
     name:'Pinot Grigio Biodinamico',
@@ -395,7 +395,7 @@ const wines=[
     origin:'Abruzzo',
     suggestion:'Pizza Principessa',
     glass:'6,00',
-    bottle:'26,00'
+    bottle:'28,00'
   },
   {
     name:'Lambrusco Emilia Secco Bio',
@@ -403,7 +403,7 @@ const wines=[
     producer:'Medici Ermete',
     origin:'Emilia Romagna',
     suggestion:'Pizza Regina',
-    glass:'5,50',
+    glass:'6,00',
     bottle:'25,00'
   },
   {
@@ -412,26 +412,26 @@ const wines=[
     producer:'Due Terre Wines',
     origin:'Sicilia',
     suggestion:'Pizza Napoli',
-    glass:'6,00',
-    bottle:'26,00'
-  },
-  {
-    name:'Negroamaro Torre Nova Bio',
-    grapes:'Negroamaro',
-    producer:'Natalino Del Prete',
-    origin:'Puglia',
-    suggestion:'Pizza Calabrese',
-    glass:'6,00',
+    glass:'7,00',
     bottle:'28,00'
   },
   {
-    name:'Primitivo Ruminat Bio',
+    name:'Negroamaro del Salento IGP',
+    grapes:'Negroamaro',
+    producer:'Vecchia Torre',
+    origin:'Puglia',
+    suggestion:'Pizza Calabrese',
+    glass:'7,00',
+    bottle:'28,00'
+  },
+  {
+    name:'Primitivo Elementa',
     grapes:'Primitivo',
-    producer:'Lunaria',
+    producer:'Orsogna',
     origin:'Abruzzo',
     suggestion:'Pizza Boscaiola',
-    glass:'6,00',
-    bottle:'30,00'
+    glass:'8,00',
+    bottle:'33,00'
   },
   {
     name:'Montepulciano Coste di Moro Bio',
@@ -439,8 +439,8 @@ const wines=[
     producer:'Lunaria',
     origin:'Abruzzo',
     suggestion:'Pizza 4 Stagioni',
-    glass:'6,00',
-    bottle:'27,00'
+    glass:'7,00',
+    bottle:'31,00'
   },
   {
     name:'Dolcetto D\'Alba Bio',
@@ -448,8 +448,8 @@ const wines=[
     producer:'Brezza',
     origin:'Piemonte',
     suggestion:'Pizza Porchetta Funghi',
-    glass:'7,50',
-    bottle:'33,00'
+    glass:'8,00',
+    bottle:'36,00'
   },
   {
     name:'Nebbiolo Delle Langhe Bio',
@@ -457,8 +457,17 @@ const wines=[
     producer:'Brezza',
     origin:'Piemonte',
     suggestion:'Pizza Patate e Tartufo',
-    glass:'7,50',
-    bottle:'34,00'
+    glass:'8,00',
+    bottle:'36,00'
+  },
+  {
+    name:'Valpolicella Classico Superiore Persegà',
+    grapes:'corvina, corvinone, rondinella',
+    producer:'Antolini',
+    origin:'Veneto',
+    suggestion:'Salsiccia Friarielli',
+    glass:'8,00',
+    bottle:'33,00'
   },
 ]
 
@@ -475,7 +484,7 @@ const supportLinks = [
     description:
         'Per noi è importante servire una pizza di alta qualità. Prodotti di alta qualità a prezzi convenienti per dare ai clienti un prodotto finale ottimo da gustare. Gli ingredienti rigorosamente italiani (e il modo in cui vengono lavorati) sono, soprattutto per quanto riguarda la pizza, la parte più importante.',
     icon: CameraIcon,
-    imageSrc:'img/pizza-primo-piano3.jpeg'
+    imageSrc:'img/pizza-primo-piano3.webp'
   },
   {
     name: 'Il Pizzaiolo',
