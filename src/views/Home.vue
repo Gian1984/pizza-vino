@@ -343,19 +343,20 @@ const redpizzas = [
   { name: 'Principessa', description: 'Tomate, Basilic et Scamorza fumée*. ( Fromage typique italien )', price:'11,00' },
   { name: 'Burrata', description: 'Tomate, Basilic, Tomates Datterini, Burratina d\'Andria*. (  Sœur de la mozzarella, un tendre fromage au lait de vache avec, en son cœur, une épaisse crème de fromage frais )', price:'16,00' },
   { name: 'Marinara', description: 'Tomate, Ail, Origan et Basilic.', price:'8,50' },
-  { name: 'Rucola Reggiano', description: 'Tomate, Mozzarella, Roquette et Parmigiano Reggiano.', price:'12,00' },
-  { name: 'Porchetta Funghi', description: 'Tomate, Basilic, Mozzarella, Porchetta d\'Ariccia* et Champignons. ( Charcuterie à base de porc rôti aux épices préparée traditionnellement sur l\'ensemble du territoire la commune d\'Ariccia )', price:'14,50' },
-  { name: 'Quattro Stagioni', description: 'Tomate, Basilic, Mozzarella, Porchetta d\'Ariccia*, Champignons, Olives Noires et Artichauts au four. ( Charcuterie à base de porc rôti aux épices préparée traditionnellement sur l\'ensemble du territoire la commune d\'Ariccia )', price:'14,50' },
+  { name: 'Rucola Reggiano', description: 'Tomate, Mozzarella, Roquette et Parmigiano Reggiano.', price:'12,50' },
+  { name: 'Porchetta Funghi', description: 'Tomate, Basilic, Mozzarella, Porchetta d\'Ariccia* et Champignons. ( Charcuterie à base de porc rôti aux épices préparée traditionnellement sur l\'ensemble du territoire la commune d\'Ariccia )', price:'14,00' },
+  { name: 'Quattro Stagioni', description: 'Tomate, Basilic, Mozzarella, Porchetta d\'Ariccia*, Champignons, Olives Noires et Artichauts au four. ( Charcuterie à base de porc rôti aux épices préparée traditionnellement sur l\'ensemble du territoire la commune d\'Ariccia )', price:'15,00' },
   { name: 'Napoli', description: 'Tomate, Mozzarella, Câpres, Filets d\'Anchois de Cetara et Origan.', price:'13,00' },
   { name: 'Siciliana', description: 'Tomate, Basilic, Mozzarella, Câpres, Filets d\'Anchois de Cetara, Olives Noires et Ail.', price:'14,00' },
-  { name: 'Diavola', description: 'Tomate, Basilic, Mozzarella et \'Nduja*. ( Saucisse de porc épicée avec du piment fabriquée en Italie, à l\'origine en Calabre )', price:'13,50' },
+  { name: 'Capricciosa', description: 'Tomate, Basilic, Mozzarella, Porchetta d\'Ariccia*, Champignons, Olives Noires et Artichauts au four. ( Charcuterie à base de porc rôti aux épices préparée traditionnellement sur l\'ensemble du territoire la commune d\'Ariccia )', price:'15,00' },
+  { name: 'Diavola', description: 'Tomate, Basilic, Mozzarella et \'Nduja*. ( Saucisse de porc épicée avec du piment fabriquée en Italie, à l\'origine en Calabre )', price:'14,00' },
   { name: 'Calabrese', description: 'Tomate, Basilic, Scamorza fumée*, Salami épicé, Oignons rouges de Tropea et Olives Noires. ( Fromage typique italien )', price:'16,00' },
   { name: 'Boscaiola', description: 'Tomate, Basilic, Scamorza fumée*, Mascarpone, Roquette et copeaux de Parmigiano Reggiano. ( Fromage typique italien )', price:'14,00' },
   { name: 'Bresaola e tartufo', description: 'Tomate, Mozzarella, Roquette, Bresaola de Punta d\'Anca, copeaux de Grana Padano* et Truffe Noire. ( Fromage typique italien )', price:'19,00' },
   { name: 'Crudaiola', description: 'Tomate, Roquette, Culatello*, Copeaux de Grana Padano, Crème Burrata, Tomates Datterini, Basilic et Origan. ( Il s\'agit d\'un jambon cru salé et séché obtenu à partir de la cuisse de porc  )', price:'18,00' },
   { name: 'Vegana', description: 'Tomate, Mélange de légumes, Roquette et Tomates séchées.', price:'13,50' },
   { name: 'Vegetariana', description: 'Tomate, Mozzarella et Mélange de légumes.', price:'14,50' },
-  { name: 'Calzone', description: 'Surprise du pizzaiolo!', price:'16,00' },
+  { name: 'Calzone', description: 'Surprise du pizzaiolo!', price:'17,00' },
 ]
 
 const whitepizzas=[
@@ -363,8 +364,8 @@ const whitepizzas=[
   { name: '4 Formaggi', description: 'Mozzarella, Scamorza fumée, Gorgonzola, Copeaux de Parmesan et Basilic.', price:'13,50' },
   { name: 'Fresca', description: 'Mozzarella, Tomates datterini jaunes et rouges, Roquette et Copeaux de Parmesan.', price:'14,00' },
   { name: 'Patate & Tartufo', description: 'Mozzarella, Basilic, Pommes de terre bouillies et Truffe Noire.', price:'19,00' },
-  { name: 'Mortadella', description: 'Mozzarella, Roquette, Mortadelle, Copeaux de Pecorino Romano*, Pesto de tomates séchées et Pistaches grillées. (  Fromage traditionnel à base de lait entier de brebis, à pâte pressée cuite )', price:'17,00' },
-  { name: 'Genovese', description: 'Mozzarella, Pesto Génois, Tomates jaunes et rouges de Piennolo del Vesuvio, Copeaux de Ricotta* et Pignons de pin grillés. ( Fromage à pâte fraîche )', price:'17,00' },
+  { name: 'Mortadella', description: 'Mozzarella, Roquette, Mortadelle, Copeaux de Pecorino Romano*, Pesto de tomates séchées et Pistaches grillées. (  Fromage traditionnel à base de lait entier de brebis, à pâte pressée cuite )', price:'18,00' },
+  { name: 'Genovese', description: 'Mozzarella, Pesto Génois, Tomates jaunes et rouges de Piennolo del Vesuvio, Copeaux de Ricotta* et Pignons de pin grillés. ( Fromage à pâte fraîche )', price:'18,00' },
 ]
 
 const wines=[
@@ -383,7 +384,7 @@ const wines=[
     producer:'Lunaria',
     origin:'Abruzzo',
     suggestion:'Pizza Rucola Reggiano',
-    glass:'6,50',
+    glass:'7,00',
     bottle:'28,00'
   },
   {
@@ -396,12 +397,12 @@ const wines=[
     bottle:'30,00'
   },
   {
-    name:'Pinot Grigio Biodinamico',
+    name:'Pinot Grigio Ramoro Biodinamico ',
     grapes:'Pinot Grigio',
     producer:'Lunaria',
     origin:'Abruzzo',
     suggestion:'Pizza Principessa',
-    glass:'6,00',
+    glass:'7,00',
     bottle:'28,00'
   },
   {
@@ -437,7 +438,7 @@ const wines=[
     producer:'Orsogna',
     origin:'Abruzzo',
     suggestion:'Pizza Boscaiola',
-    glass:'8,00',
+    glass:'7,50',
     bottle:'33,00'
   },
   {
@@ -455,7 +456,7 @@ const wines=[
     producer:'Brezza',
     origin:'Piemonte',
     suggestion:'Pizza Porchetta Funghi',
-    glass:'8,00',
+    glass:'7,50',
     bottle:'36,00'
   },
   {
@@ -464,7 +465,7 @@ const wines=[
     producer:'Brezza',
     origin:'Piemonte',
     suggestion:'Pizza Patate e Tartufo',
-    glass:'8,00',
+    glass:'7,50',
     bottle:'36,00'
   },
   {
@@ -473,7 +474,7 @@ const wines=[
     producer:'Antolini',
     origin:'Veneto',
     suggestion:'Salsiccia Friarielli',
-    glass:'8,00',
+    glass:'7,50',
     bottle:'33,00'
   },
 ]

@@ -338,19 +338,20 @@ const redpizzas = [
   { name: 'Principessa', description: 'Tomato, Basil and Smoked Scamorza Cheese.', price:'11,00' },
   { name: 'Burrata', description: 'Tomato, Basil, Burratina d\'Andria and Red Datterini Tomatoes.', price:'16,00' },
   { name: 'Marinara', description: 'Tomato, Garlic, Oregano and Basil.', price:'8,50' },
-  { name: 'Rucola Reggiano', description: 'Tomato, Mozzarella, Rocket and Parmigiano Reggiano Cheese.', price:'12,00' },
-  { name: 'Porchetta Funghi', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia and Mushrooms.', price:'13,50' },
-  { name: 'Quattro Stagioni', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia, Mushrooms, Black Olives and Baked Artichokes.', price:'14,50' },
+  { name: 'Rucola Reggiano', description: 'Tomato, Mozzarella, Rocket and Parmigiano Reggiano Cheese.', price:'12,050' },
+  { name: 'Porchetta Funghi', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia and Mushrooms.', price:'14,00' },
+  { name: 'Quattro Stagioni', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia, Mushrooms, Black Olives and Baked Artichokes.', price:'15,00' },
   { name: 'Napoli', description: 'Tomato, Mozzarella, Capers, Cetara Anchovy Fillets and Oregano.', price:'13,00' },
   { name: 'Siciliana', description: 'Tomato, Basil, Mozzarella, Capers, Cetara Anchovy Fillets, Black Olives and Garlic.', price:'14,00' },
-  { name: 'Diavola', description: 'Tomato, Basil, Mozzarella and \'Nduja*. ( Spicy, spreadable pork sausage from the region of Calabria )', price:'13,50' },
+  { name: 'Capricciosa', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia, Mushrooms, Black Olives and Baked Artichokes.', price:'15,00' },
+  { name: 'Diavola', description: 'Tomato, Basil, Mozzarella and \'Nduja*. ( Spicy, spreadable pork sausage from the region of Calabria )', price:'14,00' },
   { name: 'Calabrese', description: 'Tomato, Basil, Smoked Scamorza Cheese, Spicy Salami, Tropea Red Onions and Black Olives.', price:'16,00' },
   { name: 'Boscaiola', description: 'Tomato, Basil, Smoked Scamorza Cheese, Mascarpone, Rocket and Parmigiano Reggiano Cheese flakes.', price:'14,00' },
   { name: 'Bresaola e tartufo', description: 'Tomato, Mozzarella, Rocket, Punta d\'Anca Bresaola, Parmigiano Reggiano Cheese flakes and Black Truffle.', price:'19,00' },
   { name: 'Crudaiola', description: 'Tomato, Rocket, Culatello, Parmigiano Reggiano Cheese flakes, Burrata Cream, Datterini Tomatoes, Basil and Oregano.', price:'18,00' },
   { name: 'Vegana', description: 'Tomato, Mix of Vegetables, Rocket and Dried Tomatoes.', price:'13,50' },
   { name: 'Vegetariana', description: 'Tomato, Mozzarella and a Mix of Vegetables.', price:'14,50' },
-  { name: 'Calzone', description: 'The "Pizzaiolo" will surprise you!.', price:'16,00' },
+  { name: 'Calzone', description: 'The "Pizzaiolo" will surprise you!.', price:'17,00' },
 ]
 
 const whitepizzas=[
@@ -358,8 +359,8 @@ const whitepizzas=[
   { name: '4 Formaggi', description: 'Fior di latte, Smoked Scamorza cheese, Gorgonzola cheese, Parmigiano Reggiano Cheese and Basil.', price:'13,50' },
   { name: 'Fresca', description: 'Fior di latte, yellow and red Datterini Tomatoes, Rocket and Parmigiano Reggiano Cheese flakes.', price:'14,00' },
   { name: 'Patate & Tartufo', description: 'Fior di latte, Basil, boiled Potatoes and Black Truffle.', price:'19,00' },
-  { name: 'Mortadella', description: 'Fior di latte, Rocket, Mortadella, Pecorino Romano cheese flakes, Dried Tomato Pesto and Toasted Pistachios.', price:'17,00' },
-  { name: 'Genovese', description: 'Fior di latte, Genoese Pesto, yellow and red Tomatoes from "Piennolo del Vesuvio", Ricotta cheese flakes and Toasted Pine Nuts.', price:'17,00' },
+  { name: 'Mortadella', description: 'Fior di latte, Rocket, Mortadella, Pecorino Romano cheese flakes, Dried Tomato Pesto and Toasted Pistachios.', price:'18,00' },
+  { name: 'Genovese', description: 'Fior di latte, Genoese Pesto, yellow and red Tomatoes from "Piennolo del Vesuvio", Ricotta cheese flakes and Toasted Pine Nuts.', price:'18,00' },
 ]
 
 const wines=[
@@ -378,7 +379,7 @@ const wines=[
     producer:'Lunaria',
     origin:'Abruzzo',
     suggestion:'Pizza Rucola Reggiano',
-    glass:'6,50',
+    glass:'7,00',
     bottle:'28,00'
   },
   {
@@ -391,12 +392,12 @@ const wines=[
     bottle:'30,00'
   },
   {
-    name:'Pinot Grigio Biodinamico',
+    name:'Pinot Grigio Ramoro Biodinamico',
     grapes:'Pinot Grigio',
     producer:'Lunaria',
     origin:'Abruzzo',
     suggestion:'Pizza Principessa',
-    glass:'6,00',
+    glass:'7,00',
     bottle:'28,00'
   },
   {
@@ -432,7 +433,7 @@ const wines=[
     producer:'Orsogna',
     origin:'Abruzzo',
     suggestion:'Pizza Boscaiola',
-    glass:'8,00',
+    glass:'7,50',
     bottle:'33,00'
   },
   {
@@ -450,7 +451,7 @@ const wines=[
     producer:'Brezza',
     origin:'Piemonte',
     suggestion:'Pizza Porchetta Funghi',
-    glass:'8,00',
+    glass:'7,50',
     bottle:'36,00'
   },
   {
@@ -459,7 +460,7 @@ const wines=[
     producer:'Brezza',
     origin:'Piemonte',
     suggestion:'Pizza Patate e Tartufo',
-    glass:'8,00',
+    glass:'7,50',
     bottle:'36,00'
   },
   {
@@ -468,7 +469,7 @@ const wines=[
     producer:'Antolini',
     origin:'Veneto',
     suggestion:'Salsiccia Friarielli',
-    glass:'8,00',
+    glass:'7,50',
     bottle:'33,00'
   },
 ]
