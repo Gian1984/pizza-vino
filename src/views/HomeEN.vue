@@ -338,7 +338,7 @@ const redpizzas = [
   { name: 'Principessa', description: 'Tomato, Basil and Smoked Scamorza Cheese.', price:'11,00' },
   { name: 'Burrata', description: 'Tomato, Basil, Burratina d\'Andria and Red Datterini Tomatoes.', price:'16,00' },
   { name: 'Marinara', description: 'Tomato, Garlic, Oregano and Basil.', price:'8,50' },
-  { name: 'Rucola Reggiano', description: 'Tomato, Mozzarella, Rocket and Parmigiano Reggiano Cheese.', price:'12,050' },
+  { name: 'Rucola Reggiano', description: 'Tomato, Mozzarella, Rocket and Parmigiano Reggiano Cheese.', price:'12,50' },
   { name: 'Porchetta Funghi', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia and Mushrooms.', price:'14,00' },
   { name: 'Quattro Stagioni', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia, Mushrooms, Black Olives and Baked Artichokes.', price:'15,00' },
   { name: 'Napoli', description: 'Tomato, Mozzarella, Capers, Cetara Anchovy Fillets and Oregano.', price:'13,00' },
