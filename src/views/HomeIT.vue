@@ -344,7 +344,7 @@ const redpizzas = [
   { name: 'Capricciosa', description: 'Pomodoro, basilico, fior di latte, porchetta d\'Ariccia, funghi, olive nere e carciofi al forno.', price:'15,00' },
   { name: 'Diavola', description: 'Pomodoro, basilico, fior di latte e \'Nduja', price:'14,00' },
   { name: 'Calabrese', description: 'Pomodoro, basilico, scamorza affumicata, salamino piccante, cipolle rosse di Tropea e olive nere.', price:'16,00' },
-  { name: 'Boscaiola', description: 'Pomodoro, basilico, scamorza affumicata, mascarpone, rucola e scaglie di grana.', price:'14,00' },
+  { name: 'Boscaiola', description: 'Pomodoro, basilico, scamorza affumicata, mascarpone, funghi, rucola e scaglie di grana.', price:'14,00' },
   { name: 'Bresaola e tartufo', description: 'Pomodoro, fior di latte, rucola, bresaola Punta d\'Anca, scaglie di grana e tartufo nero.', price:'19,00' },
   { name: 'Crudaiola', description: 'Pomodoro, rucola, culatello, scaglie di grana, crema di burrata, datterini, basilico ed origano.', price:'18,00' },
   { name: 'Vegana', description: 'Pomodoro, mix di verdure, rucola e pomodori secchi.', price:'13,50' },

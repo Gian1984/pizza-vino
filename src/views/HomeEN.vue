@@ -346,7 +346,7 @@ const redpizzas = [
   { name: 'Capricciosa', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia, Mushrooms, Black Olives and Baked Artichokes.', price:'15,00' },
   { name: 'Diavola', description: 'Tomato, Basil, Mozzarella and \'Nduja*. ( Spicy, spreadable pork sausage from the region of Calabria )', price:'14,00' },
   { name: 'Calabrese', description: 'Tomato, Basil, Smoked Scamorza Cheese, Spicy Salami, Tropea Red Onions and Black Olives.', price:'16,00' },
-  { name: 'Boscaiola', description: 'Tomato, Basil, Smoked Scamorza Cheese, Mascarpone, Rocket and Parmigiano Reggiano Cheese flakes.', price:'14,00' },
+  { name: 'Boscaiola', description: 'Tomato, Basil, Smoked Scamorza Cheese, Mascarpone, Mushrooms, Rocket and Parmigiano Reggiano Cheese flakes.', price:'14,00' },
   { name: 'Bresaola e tartufo', description: 'Tomato, Mozzarella, Rocket, Punta d\'Anca Bresaola, Parmigiano Reggiano Cheese flakes and Black Truffle.', price:'19,00' },
   { name: 'Crudaiola', description: 'Tomato, Rocket, Culatello, Parmigiano Reggiano Cheese flakes, Burrata Cream, Datterini Tomatoes, Basil and Oregano.', price:'18,00' },
   { name: 'Vegana', description: 'Tomato, Mix of Vegetables, Rocket and Dried Tomatoes.', price:'13,50' },
