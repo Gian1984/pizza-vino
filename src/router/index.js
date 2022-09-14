@@ -8,7 +8,7 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: 'Home Page Français - Pizza Vino',
+      title: 'Pizza Vino - Home Page Français',
       metaTags: [
         {
           name: 'description',
@@ -26,7 +26,7 @@ const routes = [
     name: 'HomeEN',
     component: () => import(/* webpackChunkName: "about" */ '../views/HomeEN.vue'),
     meta: {
-      title: 'Home English - Pizza Vino',
+      title: 'Pizza Vino - Home page english',
       metaTags: [
         {
           name: 'description',
@@ -44,7 +44,7 @@ const routes = [
     name: 'HomeIT',
     component: () => import(/* webpackChunkName: "about" */ '../views/HomeIT.vue'),
     meta: {
-      title: 'Home Page Italiano - Pizza Vino',
+      title: 'Pizza Vino - Home Page Italiano ',
       metaTags: [
         {
           name: 'description',
