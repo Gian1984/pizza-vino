@@ -106,7 +106,7 @@
 
           <div class="mt-10 -mx-4 relative lg:mt-0 gap-8" aria-hidden="true">
             <div class="relative mx-5">
-              <h3 class="text-4xl font-extrabold text-white tracking-tight sm:text-3xl sm:px-5" id="sub_opening" lang="en">
+              <h3 class="text-4xl font-extrabold text-white tracking-tight sm:text-3xl" id="sub_opening" lang="en">
                 Opening Hours
               </h3>
               <div class="mt-10 border-t border-gray-200">
