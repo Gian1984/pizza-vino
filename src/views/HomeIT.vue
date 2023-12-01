@@ -75,7 +75,7 @@
   <!--  Pizza photo section-->
 
 
-  <div class="bg-white" style="background-image: url('img/carrelage.png');">
+  <div class="bg-white" style="background-image: url('img/header-def.jpg');">
     <!-- Header -->
     <div class="relative pb-32 bg-gray-800">
       <div class="absolute inset-0">

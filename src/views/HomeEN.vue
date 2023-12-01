@@ -2,7 +2,7 @@
 
   <!--  Header Section -->
 
-  <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden" style="background-image: url('img/new-header.jpg'); background-size: cover;">
+  <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden" style="background-image: url('img/header-def.jpg'); background-size: cover;">
     <div class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="space"></div>
     <div class="mx-auto  lg:px-8">
       <div class="lg:grid lg:grid-cols-2 lg:gap-8">
@@ -79,7 +79,7 @@
     <!-- Header -->
     <div class="relative pb-32 bg-gray-800">
       <div class="absolute inset-0">
-        <img class="w-full h-full object-cover" src="img/pizza-primo-piano5.webp" alt="pizza_firstlook" />
+        <img class="w-full h-full object-cover" src="img/new-burratina.jpg" alt="pizza_firstlook" />
         <div class="absolute inset-0 bg-gray-400 mix-blend-multiply" aria-hidden="true" />
       </div>
       <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
