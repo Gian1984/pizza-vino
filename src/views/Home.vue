@@ -295,7 +295,7 @@ const categories = [
   },
   {
     name: 'Michele',
-    imageSrc: 'img/carousel/5-200x100.jpg',
+    imageSrc: 'img/michele-due.webp',
   },
   {
     name: 'Calzone',
@@ -327,7 +327,7 @@ const galleries = [
   },
   {
     name: 'Michele',
-    imageSrc: 'img/quattro.webp',
+    imageSrc: 'img/michele-three.webp',
   },
   {
     name: 'Special',
@@ -499,7 +499,7 @@ const supportLinks = [
     description:
         'Passionné de cuisine depuis l\'âge de 14 ans, Michele décide pendant la period du lycée de commencer à travailler dans un restaurant-pizzeria dans la province de Vérone, où se trouvent ses racines. Il arrive à Bruxelles à 21 ans après un an d\'expérience en Allemagne. En 2019 à 27 ans, il couronne le rêve d\'ouvrir son propre restaurant où il est libre d\'exprimer son meilleur concept de pizza.',
     icon: CameraIcon,
-    imageSrc:'img/michele-pizza.jpeg'
+    imageSrc:'img/michele-one.jpeg'
   },
 ]
 
