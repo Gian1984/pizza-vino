@@ -106,7 +106,7 @@
 
           <div class="mt-10 -mx-4 relative lg:mt-0 gap-8" aria-hidden="true">
             <div class="relative mx-5">
-              <h3 class="text-4xl font-extrabold text-white tracking-tight sm:text-3xl sm:px-5" id="sub_opening" lang="en">
+              <h3 class="text-4xl font-extrabold text-white tracking-tight sm:text-3xl" id="sub_opening" lang="en">
                 Opening Hours
               </h3>
               <div class="mt-10 border-t border-gray-200">
@@ -204,9 +204,12 @@
 
 
     <div class="mx-auto max-w-md px-4 overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-      <a href="https://www.gianlucatiengo.com/">
+        <p class="text-center text-base text-gray-400 hover:text-white">
+          &copy; 2022 Pizza Vino - Mic.pi.da s.r.l. - Avenue des Saisons 15, 1050 Ixelles - TVA: BE 0727796146 Phone 0494693028.
+        </p>
+        <a href="https://www.gianlucatiengo.com/">
         <p class="text-center text-base text-gray-400 hover:text-white underline">
-          &copy; 2021  Gianluca Tiengo. All rights reserved.
+          Powered by Gianluca Tiengo.
         </p>
       </a>
       <a class="top-link hide" href="" id="js-top" v-on:click="scrolltotop()">
