@@ -2,7 +2,7 @@
 
 <!--  Header Section -->
 
-  <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden" style="background-image: url('img/pizza-outside.png'); background-size: cover;">
+  <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden" style="background-image: url('img/pizza-outside.webp'); background-size: cover;">
     <div class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="space"></div>
     <div class="mx-auto  lg:px-8">
       <div class="lg:grid lg:grid-cols-2 lg:gap-8">
@@ -315,7 +315,7 @@ const categories = [
 const galleries = [
   {
     name: 'Mortadella',
-    imageSrc: 'img/uno.png',
+    imageSrc: 'img/uno.webp',
   },
   {
     name: 'Burrata',
@@ -323,11 +323,11 @@ const galleries = [
   },
   {
     name: 'Emporter',
-    imageSrc: 'img/tre.png',
+    imageSrc: 'img/tre.webp',
   },
   {
     name: 'Michele',
-    imageSrc: 'img/quattro.png',
+    imageSrc: 'img/quattro.webp',
   },
   {
     name: 'Special',
