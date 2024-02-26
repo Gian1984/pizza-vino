@@ -333,145 +333,145 @@ const galleries = [
 ]
 
 const redpizzas = [
-  { name: 'Margherita', description: 'Tomato, Basil and Mozzarella.', price:'10,00' },
-  { name: 'Regina', description: 'Tomato, Basil and Mozzarella di Bufala.', price:'14,00' },
-  { name: 'Principessa', description: 'Tomato, Basil and Smoked Scamorza Cheese.', price:'12,00' },
-  { name: 'Burrata', description: 'Tomato, Basil, Burratina d\'Andria and Red Datterini Tomatoes.', price:'17,00' },
-  { name: 'Marinara', description: 'Tomato, Garlic, Oregano and Basil.', price:'9,00' },
-  { name: 'Rucola Reggiano', description: 'Tomato, Mozzarella, Rocket and Parmigiano Reggiano Cheese.', price:'13,00' },
-  { name: 'Porchetta Funghi', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia and Mushrooms.', price:'15,00' },
-  { name: 'Quattro Stagioni', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia, Mushrooms, Black Olives and Baked Artichokes.', price:'16,00' },
-  { name: 'Napoli', description: 'Tomato, Mozzarella, Capers, Cetara Anchovy Fillets and Oregano.', price:'14,00' },
-  { name: 'Siciliana', description: 'Tomato, Basil, Mozzarella, Capers, Cetara Anchovy Fillets, Black Olives and Garlic.', price:'15,00' },
-  { name: 'Capricciosa', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia, Mushrooms, Black Olives and Baked Artichokes.', price:'16,00' },
-  { name: 'Diavola', description: 'Tomato, Basil, Mozzarella and \'Nduja*. ( Spicy, spreadable pork sausage from the region of Calabria )', price:'14,50' },
-  { name: 'Calabrese', description: 'Tomato, Basil, Smoked Scamorza Cheese, Spicy Salami, Tropea Red Onions and Black Olives.', price:'17,00' },
-  { name: 'Boscaiola', description: 'Tomato, Basil, Smoked Scamorza Cheese, Mascarpone, Mushrooms, Rocket and Parmigiano Reggiano Cheese flakes.', price:'15,00' },
+  { name: 'Margherita', description: 'Tomato, Basil and Mozzarella.', price:'11,00' },
+  { name: 'Regina', description: 'Tomato, Basil and Mozzarella di Bufala.', price:'15,00' },
+  { name: 'Principessa', description: 'Tomato, Basil and Smoked Scamorza Cheese.', price:'13,00' },
+  { name: 'Burrata', description: 'Tomato, Basil, Burratina d\'Andria and Red Datterini Tomatoes.', price:'18,00' },
+  { name: 'Marinara', description: 'Tomato, Garlic, Oregano and Basil.', price:'10,00' },
+  { name: 'Rucola Reggiano', description: 'Tomato, Mozzarella, Rocket and Parmigiano Reggiano Cheese.', price:'14,00' },
+  { name: 'Porchetta Funghi', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia and Mushrooms.', price:'16,00' },
+  { name: 'Quattro Stagioni', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia, Mushrooms, Black Olives and Baked Artichokes.', price:'17,00' },
+  { name: 'Napoli', description: 'Tomato, Mozzarella, Capers, Cetara Anchovy Fillets and Oregano.', price:'15,00' },
+  { name: 'Siciliana', description: 'Tomato, Basil, Mozzarella, Capers, Cetara Anchovy Fillets, Black Olives and Garlic.', price:'16,00' },
+  { name: 'Capricciosa', description: 'Tomato, Basil, Mozzarella, Porchetta d\'Ariccia, Mushrooms, Black Olives and Baked Artichokes.', price:'17,00' },
+  { name: 'Diavola', description: 'Tomato, Basil, Mozzarella and \'Nduja*. ( Spicy, spreadable pork sausage from the region of Calabria )', price:'15,50' },
+  { name: 'Calabrese', description: 'Tomato, Basil, Smoked Scamorza Cheese, Spicy Salami, Tropea Red Onions and Black Olives.', price:'18,00' },
+  { name: 'Boscaiola', description: 'Tomato, Basil, Smoked Scamorza Cheese, Mascarpone, Mushrooms, Rocket and Parmigiano Reggiano Cheese flakes.', price:'16,00' },
   { name: 'Bresaola e tartufo', description: 'Tomato, Mozzarella, Rocket, Punta d\'Anca Bresaola, Parmigiano Reggiano Cheese flakes and Black Truffle.', price:'20,00' },
-  { name: 'Crudaiola', description: 'Tomato, Rocket, Culatello, Parmigiano Reggiano Cheese flakes, Burrata Cream, Datterini Tomatoes, Basil and Oregano.', price:'19,00' },
-  { name: 'Vegana', description: 'Tomato, Mix of Vegetables, Rocket and Dried Tomatoes.', price:'14,00' },
-  { name: 'Vegetariana', description: 'Tomato, Mozzarella and a Mix of Vegetables.', price:'15,00' },
-  { name: 'Calzone', description: 'The "Pizzaiolo" will surprise you!.', price:'18,00' },
+  { name: 'Crudaiola', description: 'Tomato, Rocket, Culatello, Parmigiano Reggiano Cheese flakes, Burrata Cream, Datterini Tomatoes, Basil and Oregano.', price:'20,00' },
+  { name: 'Vegana', description: 'Tomato, Mix of Vegetables, Rocket and Dried Tomatoes.', price:'15,00' },
+  { name: 'Vegetariana', description: 'Tomato, Mozzarella and a Mix of Vegetables.', price:'16,00' },
+  { name: 'Calzone', description: 'The "Pizzaiolo" will surprise you!.', price:'19,00' },
 ]
 
 const whitepizzas=[
-  { name: 'Salsiccia Friarelli', description: 'Fior di latte, Basil, Sausage and Friarielli*. ( Neapolitan Broccoli )', price:'16,00' },
-  { name: '4 Formaggi', description: 'Fior di latte, Smoked Scamorza cheese, Gorgonzola cheese, Parmigiano Reggiano Cheese and Basil.', price:'15,00' },
-  { name: 'Fresca', description: 'Fior di latte, yellow and red Datterini Tomatoes, Rocket and Parmigiano Reggiano Cheese flakes.', price:'15,00' },
+  { name: 'Salsiccia Friarelli', description: 'Fior di latte, Basil, Sausage and Friarielli*. ( Neapolitan Broccoli )', price:'17,00' },
+  { name: '4 Formaggi', description: 'Fior di latte, Smoked Scamorza cheese, Gorgonzola cheese, Parmigiano Reggiano Cheese and Basil.', price:'16,00' },
+  { name: 'Fresca', description: 'Fior di latte, yellow and red Datterini Tomatoes, Rocket and Parmigiano Reggiano Cheese flakes.', price:'16,00' },
   { name: 'Patate & Tartufo', description: 'Fior di latte, Basil, boiled Potatoes and Black Truffle.', price:'20,00' },
-  { name: 'Mortadella', description: 'Fior di latte, Rocket, Mortadella, Pecorino Romano cheese flakes, Dried Tomato Pesto and Toasted Pistachios.', price:'19,00' },
-  { name: 'Genovese', description: 'Fior di latte, Genoese Pesto, yellow and red Tomatoes from "Piennolo del Vesuvio", Ricotta cheese flakes and Toasted Pine Nuts.', price:'19,00' },
+  { name: 'Mortadella', description: 'Fior di latte, Rocket, Mortadella, Pecorino Romano cheese flakes, Dried Tomato Pesto and Toasted Pistachios.', price:'20,00' },
+  { name: 'Genovese', description: 'Fior di latte, Genoese Pesto, yellow and red Tomatoes from "Piennolo del Vesuvio", Ricotta cheese flakes and Toasted Pine Nuts.', price:'20,00' },
 ]
 
 const wines=[
-  {
-    name:'Prosecco Doc Settolo Bio',
-    grapes:'Glera',
-    producer:'Fratelli Collavo',
-    origin:'Veneto',
-    suggestion:'Pizza Fresca',
-    glass:'7,50',
-    bottle:'33,00'
-  },
-  {
-    name:'Trebbiano Charisma Biodinamico',
-    grapes:'Trebbiano',
-    producer:'Lunaria',
-    origin:'Abruzzo',
-    suggestion:'Pizza Rucola Reggiano',
-    glass:'7,50',
-    bottle:'30,00'
-  },
-  {
-    name:'Malvasia Labelle Biodinamico',
-    grapes:'Malvasia',
-    producer:'Lunaria',
-    origin:'Abruzzo',
-    suggestion:'Pizza Siciliana',
-    glass:'7,50',
-    bottle:'32,00'
-  },
-  {
-    name:'Pinot Grigio Ramoro Biodinamico',
-    grapes:'Pinot Grigio',
-    producer:'Lunaria',
-    origin:'Abruzzo',
-    suggestion:'Pizza Principessa',
-    glass:'7,50',
-    bottle:'32,00'
-  },
-  {
-    name:'Lambrusco Emilia Secco Bio',
-    grapes:'Lambrusco',
-    producer:'Medici Ermete',
-    origin:'Emilia Romagna',
-    suggestion:'Pizza Regina',
-    glass:'6,00',
-    bottle:'25,00'
-  },
-  {
-    name:'Nero D\'Avola Bio',
-    grapes:'Nero D\'Avola',
-    producer:'Due Terre Wines',
-    origin:'Sicilia',
-    suggestion:'Pizza Napoli',
-    glass:'7,50',
-    bottle:'32,00'
-  },
-  {
-    name:'Negroamaro del Salento IGP',
-    grapes:'Negroamaro',
-    producer:'Vecchia Torre',
-    origin:'Puglia',
-    suggestion:'Pizza Calabrese',
-    glass:'7,50',
-    bottle:'30,00'
-  },
-  {
-    name:'Primitivo Elementa',
-    grapes:'Primitivo',
-    producer:'Orsogna',
-    origin:'Abruzzo',
-    suggestion:'Pizza Boscaiola',
-    glass:'8,00',
-    bottle:'35,00'
-  },
-  {
-    name:'Montepulciano Coste di Moro Bio',
-    grapes:'Montepulciano',
-    producer:'Lunaria',
-    origin:'Abruzzo',
-    suggestion:'Pizza 4 Stagioni',
-    glass:'8,00',
-    bottle:'34,00'
-  },
-  {
-    name:'Dolcetto D\'Alba Bio',
-    grapes:'Dolcetto',
-    producer:'Brezza',
-    origin:'Piemonte',
-    suggestion:'Pizza Porchetta Funghi',
-    glass:'8,00',
-    bottle:'38,00'
-  },
-  {
-    name:'Nebbiolo Delle Langhe Bio',
-    grapes:'Nebbiolo',
-    producer:'Brezza',
-    origin:'Piemonte',
-    suggestion:'Pizza Patate e Tartufo',
-    glass:'8,00',
-    bottle:'38,00'
-  },
-  {
-    name:'Valpolicella Classico Superiore Persegà',
-    grapes:'corvina, corvinone, rondinella',
-    producer:'Antolini',
-    origin:'Veneto',
-    suggestion:'Salsiccia Friarielli',
-    glass:'8,00',
-    bottle:'36,00'
-  },
+    {
+        name:'Prosecco Doc Settolo Bio',
+        grapes:'Glera',
+        producer:'Fratelli Collavo',
+        origin:'Veneto',
+        suggestion:'Pizza Fresca',
+        glass:'7,50',
+        bottle:'34,00'
+    },
+    {
+        name:'Trebbiano Charisma Biodinamico',
+        grapes:'Trebbiano',
+        producer:'Lunaria',
+        origin:'Abruzzo',
+        suggestion:'Pizza Rucola Reggiano',
+        glass:'8,00',
+        bottle:'32,00'
+    },
+    {
+        name:'Malvasia Labelle Biodinamico',
+        grapes:'Malvasia',
+        producer:'Lunaria',
+        origin:'Abruzzo',
+        suggestion:'Pizza Siciliana',
+        glass:'8,00',
+        bottle:'33,00'
+    },
+    {
+        name:'Pinot Grigio Ramoro Biodinamico ',
+        grapes:'Pinot Grigio',
+        producer:'Lunaria',
+        origin:'Abruzzo',
+        suggestion:'Pizza Principessa',
+        glass:'8,00',
+        bottle:'33,00'
+    },
+    {
+        name:'Lambrusco Emilia Secco Bio',
+        grapes:'Lambrusco',
+        producer:'Medici Ermete',
+        origin:'Emilia Romagna',
+        suggestion:'Pizza Regina',
+        glass:'7,00',
+        bottle:'26,00'
+    },
+    {
+        name:'Nero D\'Avola Bio',
+        grapes:'Nero D\'Avola',
+        producer:'Due Terre Wines',
+        origin:'Sicilia',
+        suggestion:'Pizza Napoli',
+        glass:'8,00',
+        bottle:'33,00'
+    },
+    {
+        name:'Negroamaro del Salento IGP',
+        grapes:'Negroamaro',
+        producer:'Vecchia Torre',
+        origin:'Puglia',
+        suggestion:'Pizza Calabrese',
+        glass:'8,00',
+        bottle:'33,00'
+    },
+    {
+        name:'Primitivo Elementa',
+        grapes:'Primitivo',
+        producer:'Orsogna',
+        origin:'Abruzzo',
+        suggestion:'Pizza Boscaiola',
+        glass:'8,00',
+        bottle:'36,00'
+    },
+    {
+        name:'Montepulciano Coste di Moro Bio',
+        grapes:'Montepulciano',
+        producer:'Lunaria',
+        origin:'Abruzzo',
+        suggestion:'Pizza 4 Stagioni',
+        glass:'8,00',
+        bottle:'35,00'
+    },
+    {
+        name:'Dolcetto D\'Alba Bio',
+        grapes:'Dolcetto',
+        producer:'Brezza',
+        origin:'Piemonte',
+        suggestion:'Pizza Porchetta Funghi',
+        glass:'8,00',
+        bottle:'39,00'
+    },
+    {
+        name:'Nebbiolo Delle Langhe Bio',
+        grapes:'Nebbiolo',
+        producer:'Brezza',
+        origin:'Piemonte',
+        suggestion:'Pizza Patate e Tartufo',
+        glass:'8,00',
+        bottle:'39,00'
+    },
+    {
+        name:'Valpolicella Classico Superiore Persegà',
+        grapes:'corvina, corvinone, rondinella',
+        producer:'Antolini',
+        origin:'Veneto',
+        suggestion:'Salsiccia Friarielli',
+        glass:'8,00',
+        bottle:'37,00'
+    },
 ]
 
 const supportLinks = [
