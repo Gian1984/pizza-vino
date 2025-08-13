@@ -380,7 +380,7 @@ const wines=[
         origin:'Abruzzo',
         suggestion:'Pizza Rucola Reggiano',
         glass:'8,00',
-        bottle:'32,00'
+        bottle:'34,00'
     },
     {
         name:'Malvasia Labelle Biodinamico',
@@ -389,7 +389,7 @@ const wines=[
         origin:'Abruzzo',
         suggestion:'Pizza Siciliana',
         glass:'8,00',
-        bottle:'33,00'
+        bottle:'35,00'
     },
     {
         name:'Pinot Grigio Ramoro Biodinamico ',
@@ -398,7 +398,7 @@ const wines=[
         origin:'Abruzzo',
         suggestion:'Pizza Principessa',
         glass:'8,00',
-        bottle:'33,00'
+        bottle:'35,00'
     },
     {
         name:'Lambrusco Emilia Secco Bio',
@@ -416,7 +416,7 @@ const wines=[
         origin:'Sicilia',
         suggestion:'Pizza Napoli',
         glass:'8,00',
-        bottle:'33,00'
+        bottle:'35,00'
     },
     {
         name:'Negroamaro del Salento IGP',
@@ -425,7 +425,7 @@ const wines=[
         origin:'Puglia',
         suggestion:'Pizza Calabrese',
         glass:'8,00',
-        bottle:'33,00'
+        bottle:'35,00'
     },
     {
         name:'Primitivo Elementa',
@@ -434,7 +434,7 @@ const wines=[
         origin:'Abruzzo',
         suggestion:'Pizza Boscaiola',
         glass:'8,00',
-        bottle:'36,00'
+        bottle:'38,00'
     },
     {
         name:'Montepulciano Coste di Moro Bio',
@@ -443,7 +443,7 @@ const wines=[
         origin:'Abruzzo',
         suggestion:'Pizza 4 Stagioni',
         glass:'8,00',
-        bottle:'35,00'
+        bottle:'37,00'
     },
     {
         name:'Dolcetto D\'Alba Bio',
@@ -451,7 +451,7 @@ const wines=[
         producer:'Brezza',
         origin:'Piemonte',
         suggestion:'Pizza Porchetta Funghi',
-        glass:'8,00',
+        glass:'9,00',
         bottle:'39,00'
     },
     {
@@ -460,7 +460,7 @@ const wines=[
         producer:'Brezza',
         origin:'Piemonte',
         suggestion:'Pizza Patate e Tartufo',
-        glass:'8,00',
+        glass:'9,00',
         bottle:'39,00'
     },
     {
@@ -469,8 +469,8 @@ const wines=[
         producer:'Antolini',
         origin:'Veneto',
         suggestion:'Salsiccia Friarielli',
-        glass:'8,00',
-        bottle:'37,00'
+        glass:'9,00',
+        bottle:'39,00'
     },
 ]
 

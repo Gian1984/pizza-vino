@@ -1,117 +1,197 @@
+// src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 
+// immagine og/tw condivisa (in public/img/)
+const OG_IMAGE = '/img/pexels-koolshooters-7142952.jpg'
 
+// util: normalizza il path (niente slash finale, tranne '/')
+function normalizePath (path) {
+  if (!path) return '/'
+  if (path === '/') return '/'
+  return path.replace(/\/+$/, '')
+}
+
+// util: crea assoluto per canonical (fallback su origin)
+function absoluteUrl (path) {
+  const base = typeof window !== 'undefined' ? window.location.origin : ''
+  return base + normalizePath(path)
+}
+
+// definisci una mappa degli alternate per hreflang
+const alternates = {
+  fr: '/',
+  en: '/en',
+  it: '/it'
+}
 
 const routes = [
+  // lingue principali
   {
     path: '/',
-    name: 'Home',
+    name: 'home-fr',
     component: Home,
     meta: {
-      title: 'Home Français - Pizza Vino, per chi ama la pizza, une excellente pizza',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Page d\'accueil de la pizzeria Pizza Vino ixelles en français.'
-        },
-        {
-          property: 'og:description',
-          content: 'La pizzeria Pizza Vino est située à Bruxelles précisément à Ixelles. Produits frais choisis quotidiennement et tradition typiquement italienne se rencontrent en un seul endroit : la pizza !.'
-        }
-      ]
+      lang: 'fr',
+      title: 'Pizza Vino – Pizzeria à Ixelles (FR)',
+      description: "Page d'accueil de la pizzeria Pizza Vino à Ixelles. Produits frais, tradition italienne, four bien chaud.",
+      ogTitle: 'Pizza Vino – Pizzeria à Ixelles',
+      ogDescription: "Produits frais choisis quotidiennement et tradition italienne se rencontrent en un seul endroit : la pizza.",
+      ogImage: OG_IMAGE,
+      robots: 'index,follow'
     }
   },
   {
-    path: '/HomeEN',
-    name: 'HomeEN',
-    component: () => import(/* webpackChunkName: "about" */ '../views/HomeEN.vue'),
+    path: '/en',
+    name: 'home-en',
+    component: () => import(/* webpackChunkName: "home-en" */ '../views/HomeEN.vue'),
     meta: {
-      title: 'Home English - Pizza Vino, per chi ama la pizza, une excellente pizza',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Home page of the pizzeria pizza vino Ixelles in english.'
-        },
-        {
-          property: 'og:description',
-          content: 'The pizzeria Pizza Vino , is located in Brussels precisely in Ixelles. Daily chosen fresh products and the typical Italian tradition meet all in one place: the pizza!.'
-        }
-      ]
+      lang: 'en',
+      title: 'Pizza Vino – Pizzeria in Ixelles (EN)',
+      description: 'Home page of Pizza Vino in Ixelles, Brussels. Fresh daily ingredients and true Italian tradition.',
+      ogTitle: 'Pizza Vino – Pizzeria in Ixelles',
+      ogDescription: 'Daily selected fresh products and Italian tradition meet in one place: pizza.',
+      ogImage: OG_IMAGE,
+      robots: 'index,follow'
     }
   },
   {
-    path: '/HomeIT',
-    name: 'HomeIT',
-    component: () => import(/* webpackChunkName: "about" */ '../views/HomeIT.vue'),
+    path: '/it',
+    name: 'home-it',
+    component: () => import(/* webpackChunkName: "home-it" */ '../views/HomeIT.vue'),
     meta: {
-      title: 'Home Italiano - Pizza Vino, per chi ama la pizza, une excellente pizza',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Home page della pizzeria pizza vino ixelles in Italiano.'
-        },
-        {
-          property: 'og:description',
-          content: 'La pizzeria Pizza Vino , si trova a Bruxelles precisamente a Ixelles. Prodotti freschi scelti giornalmente e la tipica tradizione italiana si incontrano in un unico luogo: la pizza!.'
-        }
-      ]
+      lang: 'it',
+      title: 'Pizza Vino – Pizzeria a Ixelles (IT)',
+      description: "Home page della pizzeria Pizza Vino a Ixelles, Bruxelles. Ingredienti freschi e tradizione italiana.",
+      ogTitle: 'Pizza Vino – Pizzeria a Ixelles',
+      ogDescription: 'Prodotti freschi e tradizione italiana in un unico luogo: la pizza.',
+      ogImage: OG_IMAGE,
+      robots: 'index,follow'
     }
   },
+
+  // redirect 301 (per preservare seo dai vecchi url)
+  { path: '/HomeEN', redirect: { path: '/en' } },
+  { path: '/HomeIT', redirect: { path: '/it' } },
+
+  // catch-all 404 (noindex)
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/:pathMatch(.*)*',
+    name: 'not-found',
+    component: () => import('../views/NotFound.vue'),
+    meta: {
+      title: 'pagina non trovata – Pizza Vino',
+      description: 'la pagina che cerchi non esiste.',
+      robots: 'noindex,follow',
+      ogImage: OG_IMAGE
+    }
   }
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  scrollBehavior() {
+    return { top: 0 }
+  }
 })
 
-// This callback runs before every route change, including on page load.
+// helper per aggiungere <meta> o <link> controllati
+function addHeadTag(tagName, attrs = {}) {
+  const el = document.createElement(tagName)
+  Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v))
+  el.setAttribute('data-vue-router-controlled', '')
+  document.head.appendChild(el)
+  return el
+}
+
 router.beforeEach((to, from, next) => {
-  // This goes through the matched routes from last to first, finding the closest route with a title.
-  // e.g., if we have `/some/deep/nested/route` and `/some`, `/deep`, and `/nested` have titles,
-  // `/nested`'s will be chosen.
-  const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title);
+  // normalizza il path (evita maiuscole e slash finali)
+  const normalized = normalizePath(to.path)
+  if (to.path !== normalized || /[A-Z]/.test(to.path)) {
+    return next({ path: normalized.toLowerCase(), query: to.query, hash: to.hash, replace: true })
+  }
+  next()
+})
 
-  // Find the nearest route element with meta tags.
-  const nearestWithMeta = to.matched.slice().reverse().find(r => r.meta && r.meta.metaTags);
+// aggiorna head dopo la navigazione (dom disponibile)
+router.afterEach((to) => {
+  const nearest = to.matched.slice().reverse().find(r => r.meta) || {}
+  const meta = nearest.meta || {}
 
-  const previousNearestWithMeta = from.matched.slice().reverse().find(r => r.meta && r.meta.metaTags);
+  // title
+  if (meta.title) document.title = meta.title
 
-  // If a route with a title was found, set the document (page) title to that value.
-  if(nearestWithTitle) {
-    document.title = nearestWithTitle.meta.title;
-  } else if(previousNearestWithMeta) {
-    document.title = previousNearestWithMeta.meta.title;
+  // pulisci i vecchi tag controllati
+  Array.from(document.querySelectorAll('[data-vue-router-controlled]'))
+    .forEach(el => el.parentNode && el.parentNode.removeChild(el))
+
+  // canonical
+  addHeadTag('link', { rel: 'canonical', href: absoluteUrl(to.fullPath || to.path) })
+
+  // basic meta
+  if (meta.description) addHeadTag('meta', { name: 'description', content: meta.description })
+  if (meta.robots) addHeadTag('meta', { name: 'robots', content: meta.robots })
+
+  // open graph
+  addHeadTag('meta', { property: 'og:type', content: 'website' })
+  addHeadTag('meta', { property: 'og:url', content: absoluteUrl(to.fullPath || to.path) })
+  addHeadTag('meta', { property: 'og:title', content: meta.ogTitle || meta.title || 'Pizza Vino' })
+  addHeadTag('meta', { property: 'og:description', content: meta.ogDescription || meta.description || '' })
+  // usa sempre l’immagine condivisa (assoluta)
+  addHeadTag('meta', { property: 'og:image', content: absoluteUrl(OG_IMAGE) })
+
+  if (meta.lang) {
+    const ogLocale = meta.lang === 'en' ? 'en_US' : (meta.lang === 'it' ? 'it_IT' : 'fr_BE')
+    addHeadTag('meta', { property: 'og:locale', content: ogLocale })
+    Object.keys(alternates)
+      .filter(l => l !== meta.lang)
+      .forEach(l => {
+        const alt = l === 'en' ? 'en_US' : (l === 'it' ? 'it_IT' : 'fr_BE')
+        addHeadTag('meta', { property: 'og:locale:alternate', content: alt })
+      })
   }
 
-  // Remove any stale meta tags from the document using the key attribute we set below.
-  Array.from(document.querySelectorAll('[data-vue-router-controlled]')).map(el => el.parentNode.removeChild(el));
+  // twitter
+  addHeadTag('meta', { name: 'twitter:card', content: 'summary_large_image' })
+  addHeadTag('meta', { name: 'twitter:title', content: meta.ogTitle || meta.title || 'Pizza Vino' })
+  addHeadTag('meta', { name: 'twitter:description', content: meta.ogDescription || meta.description || '' })
+  addHeadTag('meta', { name: 'twitter:image', content: absoluteUrl(OG_IMAGE) })
+  addHeadTag('meta', { name: 'twitter:image:alt', content: 'happy friends sharing pizza from Pizza Vino' })
 
-  // Skip rendering meta tags if there are none.
-  if(!nearestWithMeta) return next();
-
-  // Turn the meta tag definitions into actual elements in the head.
-  nearestWithMeta.meta.metaTags.map(tagDef => {
-    const tag = document.createElement('meta');
-
-    Object.keys(tagDef).forEach(key => {
-      tag.setAttribute(key, tagDef[key]);
-    });
-
-    // We use this to track which meta tags we create so we don't interfere with other ones.
-    tag.setAttribute('data-vue-router-controlled', '');
-
-    return tag;
+  // hreflang alternates
+  Object.entries(alternates).forEach(([lang, path]) => {
+    addHeadTag('link', {
+      rel: 'alternate',
+      hreflang: lang,
+      href: absoluteUrl(path)
+    })
   })
-      // Add the meta tags to the document head.
-      .forEach(tag => document.head.appendChild(tag));
+  addHeadTag('link', { rel: 'alternate', hreflang: 'x-default', href: absoluteUrl(alternates.fr) })
 
-  next();
-});
+  // json-ld (restaurant) sulle home
+  if (to.name && String(to.name).startsWith('home')) {
+    const jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'Restaurant',
+      name: 'Pizza Vino',
+      servesCuisine: ['Pizza', 'Italian'],
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Ixelles',
+        addressRegion: 'Bruxelles',
+        addressCountry: 'BE'
+      },
+      url: absoluteUrl('/'),
+      image: absoluteUrl(OG_IMAGE)
+    }
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.text = JSON.stringify(jsonLd)
+    script.setAttribute('data-vue-router-controlled', '')
+    document.head.appendChild(script)
+  }
+})
 
 export default router
+
