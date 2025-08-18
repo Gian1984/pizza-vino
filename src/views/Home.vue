@@ -207,10 +207,27 @@
         </div>
       </dl>
 
+      <!--  Special pizzas / Suggestioni section -->
+
+      <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
+        <h2 class="text-4xl font-extrabold tracking-tight text-red-700 md:text-5xl lg:text-6xl suggestions" id="suggestions" lang="fr">
+          Les suggestions les plus demandées
+        </h2>
+        <p class="mt-4 text-gray-500 text-2xl" lang="fr"></p>
+      </div>
+
+      <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
+        <div v-for="pizza in suggestioni" :key="pizza.name" class="border-t border-gray-200 pt-4">
+          <dt class="text-2xl text-gray-900 white_pizza_name" lang="fr">{{ pizza.name }}</dt>
+          <dd class="mt-2 text-lg text-gray-500" lang="fr">{{ pizza.description }}</dd>
+          <dt class="font-medium text-gray-900">{{ pizza.price }}€</dt>
+        </div>
+      </dl>
+
       <!--  Wines selection-->
 
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
-        <h2 class="text-4xl font-extrabold tracking-tight text-red-700 md:text-5xl lg:text-6xl" id="wines">Sélection de vins</h2>
+        <h2 class="text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl lg:text-6xl" id="wines">Sélection de vins</h2>
         <p class="mt-4 text-gray-500 text-2xl">Ce qui compte c'est que cette fois pour accompagner ta pizza il y aura du bon vin.</p>
       </div>
 
@@ -367,6 +384,19 @@ const whitepizzas=[
   { name: 'Mortadella', description: 'Mozzarella, Roquette, Mortadelle, Copeaux de Pecorino Romano*, Pesto de tomates séchées et Pistaches grillées. (  Fromage traditionnel à base de lait entier de brebis, à pâte pressée cuite )', price:'20,00' },
   { name: 'Genovese', description: 'Mozzarella, Pesto Génois, Tomates jaunes et rouges de Piennolo del Vesuvio, Copeaux de Ricotta* et Pignons de pin grillés. ( Fromage à pâte fraîche )', price:'20,00' },
 ]
+
+
+const suggestioni = [
+  { name: 'Pomodoro rosso piennolo', description: 'Tomate piennolo rouge, oignon rouge de Tropea, guanciale croustillant, poivre noir, basilic.', price: '20,00' },
+  { name: 'Porchetta & tartufo', description: "Tomate, basilic, fiordilatte, porchetta d’Ariccia, mascarpone, truffe noire.", price: '20,00' },
+  { name: 'Nostra', description: 'Tomate, burratina des Pouilles, culatello, truffe noire et basilic.', price: '20,00' },
+  { name: 'Piccantissima', description: "Tomate, basilic, fiordilatte, salami piquant, ’nduja, 1/2 burrata au centre, fils de piment.", price: '20,00' },
+  { name: 'Napoli special', description: 'Tomate, basilic, burrata, câpres, anchois de Cetara.', price: '20,00' },
+  { name: 'Burrata & pesto', description: 'Tomate, burrata, tomates cerises, pesto génois maison, pignons grillés, copeaux de parmesan.', price: '20,00' },
+  { name: 'Tricolore', description: "Tomate, basilic, burrata, salami piquant, pesto génois maison, pignons grillés.", price: '20,00' },
+  { name: 'Parmigiana', description: 'Tomate, mozzarella de bufflonne, aubergines, tomates datterini, copeaux de parmesan, origan.', price: '20,00' },
+]
+
 
 const wines=[
   {
@@ -619,6 +649,7 @@ export default {
     return {
       redpizzas,
       whitepizzas,
+      suggestioni,
       wines,
       testimonials,
       fooddelivery,

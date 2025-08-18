@@ -185,7 +185,7 @@
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
         <div v-for="pizza in redpizzas" :key="pizza.name" class="border-t border-gray-200 pt-4">
-          <dt class="text-2xl text-gray-900" id="red_pizza_name" lang="it">{{ pizza.name }}</dt>
+          <dt class="text-2xl text-gray-900 white_pizza_name" lang="en">{{ pizza.name }}</dt>
           <dd class="mt-2 text-lg text-gray-500" lang="en">{{ pizza.description }}</dd>
           <dt class="font-medium text-gray-900">{{ pizza.price }}€</dt>
         </div>
@@ -200,7 +200,25 @@
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
         <div v-for="pizza in whitepizzas" :key="pizza.name" class="border-t border-gray-200 pt-4">
-          <dt class="text-2xl text-gray-900" id="white_pizza_name" lang="it">{{ pizza.name }}</dt>
+          <dt class="text-2xl text-gray-900 white_pizza_name" lang="it">{{ pizza.name }}</dt>
+          <dd class="mt-2 text-lg text-gray-500" lang="en">{{ pizza.description }}</dd>
+          <dt class="font-medium text-gray-900">{{ pizza.price }}€</dt>
+        </div>
+      </dl>
+
+
+      <!--  Special pizzas / Suggestioni section -->
+
+      <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
+        <h2 class="text-4xl font-extrabold tracking-tight text-red-700 md:text-5xl lg:text-6xl suggestions" id="suggestions" lang="en">
+          Our most requested specials
+        </h2>
+        <p class="mt-4 text-gray-500 text-2xl" lang="en"></p>
+      </div>
+
+      <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
+        <div v-for="pizza in suggestioni" :key="pizza.name" class="border-t border-gray-200 pt-4">
+          <dt class="text-2xl text-gray-900 white_pizza_name" lang="it">{{ pizza.name }}</dt>
           <dd class="mt-2 text-lg text-gray-500" lang="en">{{ pizza.description }}</dd>
           <dt class="font-medium text-gray-900">{{ pizza.price }}€</dt>
         </div>
@@ -209,13 +227,13 @@
       <!--  Wines selection-->
 
       <div class="max-w-2xl mx-auto text-center lg:max-w-4xl mt-16">
-        <h2 class="text-4xl font-extrabold tracking-tight text-red-700 md:text-5xl lg:text-6xl" id="wines">Selection of wines</h2>
+        <h2 class="text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl lg:text-6xl" id="wines">Selection of wines</h2>
         <p class="mt-4 text-gray-500 text-2xl">What matters is that this time there will be a good wine.</p>
       </div>
 
       <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
         <div v-for="wine in wines" :key="wine.name" class="border-t border-gray-200 pt-4">
-          <dt class="text-2xl text-gray-900" id="wine_name">{{ wine.name }}</dt>
+          <dt class="text-2xl text-gray-900 wine_name">{{ wine.name }}</dt>
           <dd class="mt-2 text-lg text-gray-500">Grapes: {{ wine.grapes }} - Producer: {{ wine.producer }}</dd>
           <dd class="text-lg text-gray-500">Origin: {{ wine.origin }}</dd>
           <dd class="text-lg text-gray-500">Suggestion: {{ wine.suggestion }}</dd>
@@ -362,6 +380,18 @@ const whitepizzas=[
   { name: 'Mortadella', description: 'Fior di latte, Rocket, Mortadella, Pecorino Romano cheese flakes, Dried Tomato Pesto and Toasted Pistachios.', price:'20,00' },
   { name: 'Genovese', description: 'Fior di latte, Genoese Pesto, yellow and red Tomatoes from "Piennolo del Vesuvio", Ricotta cheese flakes and Toasted Pine Nuts.', price:'20,00' },
 ]
+
+const suggestioni = [
+  { name: 'Pomodoro rosso piennolo', description: 'Red piennolo tomato, Tropea red onion, crispy guanciale, black pepper, basil.', price: '20.00' },
+  { name: 'Porchetta & tartufo', description: "Tomato, basil, fiordilatte, Ariccia porchetta, mascarpone, black truffle.", price: '20.00' },
+  { name: 'Nostra', description: 'Tomato, Apulian burratina, culatello, black truffle and basil.', price: '20.00' },
+  { name: 'Piccantissima', description: "Tomato, basil, fiordilatte, spicy salami, ’nduja, 1/2 burrata in the center, chili threads.", price: '20.00' },
+  { name: 'Napoli special', description: 'Tomato, basil, burrata, capers, Cetara anchovies.', price: '20.00' },
+  { name: 'Burrata & pesto', description: 'Tomato, burrata, cherry tomatoes, homemade Genovese pesto, toasted pine nuts, parmesan flakes.', price: '20.00' },
+  { name: 'Tricolore', description: "Tomato, basil, burrata, spicy salami, homemade Genovese pesto, toasted pine nuts.", price: '20.00' },
+  { name: 'Parmigiana', description: 'Tomato, buffalo mozzarella, eggplants, datterini tomatoes, parmesan flakes, oregano.', price: '20.00' },
+]
+
 
 const wines=[
     {
@@ -576,6 +606,7 @@ export default {
     return {
       redpizzas,
       whitepizzas,
+      suggestioni,
       wines,
       testimonials,
       fooddelivery,

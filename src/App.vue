@@ -152,9 +152,9 @@
       <a href="https://gianlucatiengo.com/">
         <p class="text-center text-base text-gray-400 hover:text-white underline">Powered by Gianluca Tiengo.</p>
       </a>
-      <a class="top-link hide" href="" id="js-top" @click="scrolltotop">
+      <div class="top-link hide" id="js-top" @click="scrolltotop">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" id="totop"><path d="M12 6H0l6-6z"/></svg>
-      </a>
+      </div>
     </div>
   </footer>
 </template>
@@ -305,8 +305,15 @@ export default {
 #pizze_bianche,
 #pizze_rosse,
 #sub_title_pizzaphoto,
+#suggestioni,
 #pizza_vino,
 #title{
+  font-family: lobster !important;
+}
+.suggestions,
+.white_pizza_name,
+.wine_name,
+.white_pizza_name{
   font-family: lobster !important;
 }
 
