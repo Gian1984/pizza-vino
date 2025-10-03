@@ -387,7 +387,7 @@ const whitepizzas=[
 
 
 const suggestioni = [
-  { name: 'Pomodoro rosso piennolo', description: 'Tomate piennolo rouge, oignon rouge de Tropea, guanciale croustillant, poivre noir, basilic.', price: '20,00' },
+  { name: 'Amatrice', description: 'Tomate piennolo rouge, oignon rouge de Tropea, guanciale croustillant, poivre noir, basilic.', price: '20,00' },
   { name: 'Porchetta & tartufo', description: "Tomate, basilic, fiordilatte, porchetta d’Ariccia, mascarpone, truffe noire.", price: '20,00' },
   { name: 'Nostra', description: 'Tomate, burratina des Pouilles, culatello, truffe noire et basilic.', price: '20,00' },
   { name: 'Piccantissima', description: "Tomate, basilic, fiordilatte, salami piquant, ’nduja, 1/2 burrata au centre, fils de piment.", price: '20,00' },
@@ -623,22 +623,7 @@ const fooddelivery = [
   },
 ]
 
-
-
-
-
-
-
-
 export default {
-
-
-
-
-
-
-
-
   components: {
     StarIcon,
     PhoneOutgoingIcon,

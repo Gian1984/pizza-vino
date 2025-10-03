@@ -382,7 +382,7 @@ const whitepizzas=[
 ]
 
 const suggestioni = [
-  { name: 'Pomodoro rosso piennolo', description: 'Red piennolo tomato, Tropea red onion, crispy guanciale, black pepper, basil.', price: '20.00' },
+  { name: 'Amatrice', description: 'Red piennolo tomato, Tropea red onion, crispy guanciale, black pepper, basil.', price: '20.00' },
   { name: 'Porchetta & tartufo', description: "Tomato, basil, fiordilatte, Ariccia porchetta, mascarpone, black truffle.", price: '20.00' },
   { name: 'Nostra', description: 'Tomato, Apulian burratina, culatello, black truffle and basil.', price: '20.00' },
   { name: 'Piccantissima', description: "Tomato, basil, fiordilatte, spicy salami, ’nduja, 1/2 burrata in the center, chili threads.", price: '20.00' },
