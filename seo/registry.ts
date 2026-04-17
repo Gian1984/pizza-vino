@@ -17,15 +17,15 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
     'home-fr': {
       locale: 'fr',
       path: '/',
-      title: 'Pizza Vino Ixelles | Pizza napolitaine, vins italiens et livraison à Bruxelles',
+      title: 'Pizza Vino Ixelles | Pizza artisanale, vins italiens et livraison à Bruxelles',
       description:
-        'Pizza Vino à Ixelles propose une pizza napolitaine artisanale, des vins italiens soigneusement choisis, la vente à emporter et la livraison à Bruxelles.',
-      ogTitle: 'Pizza Vino à Ixelles | Pizzeria napolitaine et vins italiens',
+        'Découvrez Pizza Vino à Ixelles : pizza artisanale à pâte légère (48-72h de maturation), ingrédients italiens de qualité, vins sélectionnés et livraison à Bruxelles.',
+      ogTitle: 'Pizza Vino à Ixelles | Pizza artisanale et vins italiens',
       ogDescription:
-        'Découvrez une adresse italienne à Ixelles pour manger sur place, commander à emporter ou se faire livrer une vraie pizza napolitaine.',
+        'Pizzeria à Ixelles : une pâte légère et digeste, cuisson au four Valoriani et des saveurs authentiques italiennes à déguster sur place ou en livraison.',
       ogImage: frImage,
       keywords:
-        'pizzeria ixelles, pizza napolitaine ixelles, restaurant italien ixelles, pizza bruxelles, livraison pizza ixelles, pizza vino',
+        'pizzeria ixelles, pizza artisanale ixelles, restaurant italien ixelles, pizza bruxelles, livraison pizza ixelles, pizza vino, pizza digeste',
       canonical: frUrl,
       alternates: { fr: frUrl, en: enUrl, it: itUrl },
       robots: 'index,follow',
@@ -36,15 +36,15 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
           url: frUrl,
           title: 'Pizza Vino à Ixelles',
           description:
-            'Pizzeria napolitaine à Ixelles avec ingrédients italiens, vins sélectionnés, vente à emporter et livraison.',
+            'Pizzeria artisanale à Ixelles avec ingrédients italiens, vins sélectionnés, vente à emporter et livraison.',
           image: frImage,
           locale: 'fr-BE',
         }),
         buildWebPageSchema({
           url: frUrl,
-          title: 'Pizza Vino Ixelles | Pizza napolitaine, vins italiens et livraison à Bruxelles',
+          title: 'Pizza Vino Ixelles | Pizza artisanale, vins italiens et livraison à Bruxelles',
           description:
-            'Pizza Vino à Ixelles propose une pizza napolitaine artisanale, des vins italiens soigneusement choisis, la vente à emporter et la livraison à Bruxelles.',
+            'Pizza Vino à Ixelles propose une pizza artisanale à pâte légère, des vins italiens soigneusement choisis, la vente à emporter et la livraison.',
           image: frImage,
           locale: 'fr-BE',
         }),
@@ -58,11 +58,11 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
           },
           {
             question: 'Peut-on commander Pizza Vino en livraison ?',
-            answer: 'Oui, Pizza Vino propose la livraison via plusieurs plateformes partenaires ainsi que la vente à emporter.',
+            answer: 'Oui, Pizza Vino propose la livraison via Deliveroo et Uber Eats ainsi que la vente à emporter.',
           },
           {
             question: 'Quel style de pizza propose Pizza Vino ?',
-            answer: 'La maison est orientée vers une pizza napolitaine artisanale avec pâte légère, cuisson rapide et ingrédients italiens.',
+            answer: 'Nous proposons une pizza artisanale à pâte légère, maturée entre 48 et 72 heures pour une digestibilité optimale, avec un cornicione alvéolé et cuite au four Valoriani.',
           },
         ]),
       ],
@@ -70,15 +70,15 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
     'home-en': {
       locale: 'en',
       path: '/en',
-      title: 'Pizza Vino Ixelles | Neapolitan pizza, Italian wine and takeaway in Brussels',
+      title: 'Pizza Vino Ixelles | Artisan Pizza, Italian Wine & Delivery in Brussels',
       description:
-        'Pizza Vino in Ixelles serves artisan Neapolitan pizza, carefully chosen Italian wines, takeaway and delivery in Brussels.',
-      ogTitle: 'Pizza Vino in Ixelles | Artisan pizza and Italian wine',
+        'Enjoy artisan pizza in Ixelles with light dough matured for 48-72h. High-quality Italian ingredients, selected wines, takeaway and delivery in Brussels.',
+      ogTitle: 'Pizza Vino Ixelles | Artisan Pizza & Italian Wine',
       ogDescription:
-        'Visit Pizza Vino for Neapolitan-style pizza in Ixelles, Brussels, with dine-in, takeaway and delivery options.',
+        'Experience authentic Italian flavors in Ixelles: light, highly digestible dough and premium ingredients cooked in a traditional Valoriani oven.',
       ogImage: enImage,
       keywords:
-        'pizza ixelles, neapolitan pizza brussels, italian restaurant ixelles, takeaway pizza brussels, pizza delivery ixelles, pizza vino',
+        'pizza ixelles, artisan pizza brussels, italian restaurant ixelles, takeaway pizza brussels, pizza delivery ixelles, pizza vino, light dough pizza',
       canonical: enUrl,
       alternates: { fr: frUrl, en: enUrl, it: itUrl },
       robots: 'index,follow',
@@ -89,15 +89,15 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
           url: enUrl,
           title: 'Pizza Vino in Ixelles',
           description:
-            'Neapolitan pizza restaurant in Ixelles with Italian ingredients, wine pairings, takeaway and delivery.',
+            'Artisan pizza restaurant in Ixelles with Italian ingredients, wine pairings, takeaway and delivery.',
           image: enImage,
           locale: 'en-BE',
         }),
         buildWebPageSchema({
           url: enUrl,
-          title: 'Pizza Vino Ixelles | Neapolitan pizza, Italian wine and takeaway in Brussels',
+          title: 'Pizza Vino Ixelles | Artisan Pizza, Italian Wine & Delivery in Brussels',
           description:
-            'Pizza Vino in Ixelles serves artisan Neapolitan pizza, carefully chosen Italian wines, takeaway and delivery in Brussels.',
+            'Pizza Vino in Ixelles serves artisan pizza with light dough matured for 48-72 hours, carefully chosen Italian wines and delivery options.',
           image: enImage,
           locale: 'en-BE',
         }),
@@ -112,11 +112,11 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
           },
           {
             question: 'Does Pizza Vino offer takeaway and delivery?',
-            answer: 'Yes. Guests can order takeaway and use delivery platforms linked directly from the site.',
+            answer: 'Yes. Guests can order takeaway or use delivery platforms like Deliveroo and Uber Eats.',
           },
           {
             question: 'What kind of pizza does Pizza Vino make?',
-            answer: 'Pizza Vino focuses on artisan Neapolitan-style pizza with long dough fermentation and carefully sourced Italian ingredients.',
+            answer: 'We focus on artisan pizza with a light dough that rests for 48-72 hours, ensuring high digestibility and authentic flavors with a pronounced, hollowed-out crust.',
           },
         ]),
       ],
@@ -124,15 +124,15 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
     'home-it': {
       locale: 'it',
       path: '/it',
-      title: 'Pizza Vino Ixelles | Pizza napoletana, vini italiani e asporto a Bruxelles',
+      title: 'Pizza Vino Ixelles | Pizza artigianale, vini italiani e asporto a Bruxelles',
       description:
-        'Pizza Vino a Ixelles propone pizza napoletana artigianale, vini italiani selezionati, asporto e consegna a Bruxelles.',
-      ogTitle: 'Pizza Vino a Ixelles | Pizza napoletana autentica e vini italiani',
+        'Pizza Vino a Ixelles: pizza artigianale con impasto leggero (48-72h di maturazione), ingredienti italiani d\'eccellenza e consegna a domicilio a Bruxelles.',
+      ogTitle: 'Pizza Vino a Ixelles | Pizza artigianale e vini italiani',
       ogDescription:
-        'Scopri Pizza Vino a Ixelles: impasto leggero, ingredienti italiani, tavoli in sala, asporto e delivery a Bruxelles.',
+        'Vera pizza artigianale a Ixelles: impasto digeribile, forno Valoriani e i migliori prodotti Made in Italy per un sapore autentico.',
       ogImage: itImage,
       keywords:
-        'pizza ixelles, pizza napoletana bruxelles, pizzeria italiana ixelles, asporto pizza bruxelles, delivery pizza ixelles, pizza vino',
+        'pizza ixelles, pizza artigianale bruxelles, pizzeria italiana ixelles, asporto pizza bruxelles, delivery pizza ixelles, pizza vino, pizza digeribile',
       canonical: itUrl,
       alternates: { fr: frUrl, en: enUrl, it: itUrl },
       robots: 'index,follow',
@@ -143,15 +143,15 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
           url: itUrl,
           title: 'Pizza Vino a Ixelles',
           description:
-            'Pizzeria napoletana a Ixelles con ingredienti italiani, vini selezionati, asporto e consegna.',
+            'Pizzeria artigianale a Ixelles con ingredienti italiani, vini selezionati, asporto e consegna.',
           image: itImage,
           locale: 'it-BE',
         }),
         buildWebPageSchema({
           url: itUrl,
-          title: 'Pizza Vino Ixelles | Pizza napoletana, vini italiani e asporto a Bruxelles',
+          title: 'Pizza Vino Ixelles | Pizza artigianale, vini italiani e asporto a Bruxelles',
           description:
-            'Pizza Vino a Ixelles propone pizza napoletana artigianale, vini italiani selezionati, asporto e consegna a Bruxelles.',
+            'Pizza Vino a Ixelles propone pizza artigianale con impasto a lunga maturazione, vini italiani selezionati, asporto e consegna.',
           image: itImage,
           locale: 'it-BE',
         }),
@@ -166,11 +166,11 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
           },
           {
             question: 'Pizza Vino fa asporto e consegna?',
-            answer: 'Sì. È possibile ordinare da asporto oppure usare le piattaforme di delivery collegate dal sito.',
+            answer: 'Sì. È possibile ordinare da asporto oppure usare le piattaforme Deliveroo e Uber Eats.',
           },
           {
             question: 'Che tipo di pizza propone Pizza Vino?',
-            answer: 'Pizza Vino propone una pizza napoletana artigianale con impasto a lunga maturazione e ingredienti italiani selezionati.',
+            answer: 'Proponiamo una pizza artigianale con impasto leggero maturato 48-72 ore per la massima digeribilità, cornicione alveolato e cottura in forno Valoriani.',
           },
         ]),
       ],
