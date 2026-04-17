@@ -45,8 +45,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: .output/public/
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
-          protocol: ftps
-          security: loose
+          protocol: ftp
           state-name: .ftp-deploy-sync-state.json
           exclude: |
             **/.git*
