@@ -41,9 +41,9 @@ export default defineNuxtConfig({
     '/': { prerender: true },
     '/en': { prerender: true },
     '/it': { prerender: true },
-    '/HomeEN': { prerender: true, robots: false },
-    '/HomeIT': { prerender: true, robots: false },
-    '/404': { prerender: true, robots: false },
+    '/HomeEN': { prerender: true },
+    '/HomeIT': { prerender: true },
+    '/404': { prerender: true },
   },
   sitemap: {
     defaults: {

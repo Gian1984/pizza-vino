@@ -1,14 +1,17 @@
 import { buildBreadcrumbSchema, buildFaqSchema, buildOrganizationSchema, buildRestaurantSchema, buildWebPageSchema, buildWebsiteSchema } from '~/seo/schema'
-import { DEFAULT_OG_IMAGE, withSiteUrl } from '~/seo/site'
+import { DEFAULT_OG_IMAGE, PAGE_OG_IMAGES, withSiteUrl } from '~/seo/site'
 import type { SeoEntry } from '~/seo/types'
 
 export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en' | 'home-it', SeoEntry> {
   const frUrl = withSiteUrl(siteUrl, '/')
   const enUrl = withSiteUrl(siteUrl, '/en')
   const itUrl = withSiteUrl(siteUrl, '/it')
-  const image = withSiteUrl(siteUrl, DEFAULT_OG_IMAGE)
+  const brandImage = withSiteUrl(siteUrl, DEFAULT_OG_IMAGE)
+  const frImage = withSiteUrl(siteUrl, PAGE_OG_IMAGES['home-fr'])
+  const enImage = withSiteUrl(siteUrl, PAGE_OG_IMAGES['home-en'])
+  const itImage = withSiteUrl(siteUrl, PAGE_OG_IMAGES['home-it'])
   const websiteSchema = buildWebsiteSchema(siteUrl)
-  const organizationSchema = buildOrganizationSchema(siteUrl, image)
+  const organizationSchema = buildOrganizationSchema(siteUrl, brandImage)
 
   return {
     'home-fr': {
@@ -20,7 +23,7 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
       ogTitle: 'Pizza Vino à Ixelles | Pizzeria napolitaine et vins italiens',
       ogDescription:
         'Découvrez une adresse italienne à Ixelles pour manger sur place, commander à emporter ou se faire livrer une vraie pizza napolitaine.',
-      ogImage: image,
+      ogImage: frImage,
       keywords:
         'pizzeria ixelles, pizza napolitaine ixelles, restaurant italien ixelles, pizza bruxelles, livraison pizza ixelles, pizza vino',
       canonical: frUrl,
@@ -34,7 +37,7 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
           title: 'Pizza Vino à Ixelles',
           description:
             'Pizzeria napolitaine à Ixelles avec ingrédients italiens, vins sélectionnés, vente à emporter et livraison.',
-          image,
+          image: frImage,
           locale: 'fr-BE',
         }),
         buildWebPageSchema({
@@ -42,7 +45,7 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
           title: 'Pizza Vino Ixelles | Pizza napolitaine, vins italiens et livraison à Bruxelles',
           description:
             'Pizza Vino à Ixelles propose une pizza napolitaine artisanale, des vins italiens soigneusement choisis, la vente à emporter et la livraison à Bruxelles.',
-          image,
+          image: frImage,
           locale: 'fr-BE',
         }),
         buildBreadcrumbSchema([
@@ -73,7 +76,7 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
       ogTitle: 'Pizza Vino in Ixelles | Artisan pizza and Italian wine',
       ogDescription:
         'Visit Pizza Vino for Neapolitan-style pizza in Ixelles, Brussels, with dine-in, takeaway and delivery options.',
-      ogImage: image,
+      ogImage: enImage,
       keywords:
         'pizza ixelles, neapolitan pizza brussels, italian restaurant ixelles, takeaway pizza brussels, pizza delivery ixelles, pizza vino',
       canonical: enUrl,
@@ -87,7 +90,7 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
           title: 'Pizza Vino in Ixelles',
           description:
             'Neapolitan pizza restaurant in Ixelles with Italian ingredients, wine pairings, takeaway and delivery.',
-          image,
+          image: enImage,
           locale: 'en-BE',
         }),
         buildWebPageSchema({
@@ -95,7 +98,7 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
           title: 'Pizza Vino Ixelles | Neapolitan pizza, Italian wine and takeaway in Brussels',
           description:
             'Pizza Vino in Ixelles serves artisan Neapolitan pizza, carefully chosen Italian wines, takeaway and delivery in Brussels.',
-          image,
+          image: enImage,
           locale: 'en-BE',
         }),
         buildBreadcrumbSchema([
@@ -127,7 +130,7 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
       ogTitle: 'Pizza Vino a Ixelles | Pizza napoletana autentica e vini italiani',
       ogDescription:
         'Scopri Pizza Vino a Ixelles: impasto leggero, ingredienti italiani, tavoli in sala, asporto e delivery a Bruxelles.',
-      ogImage: image,
+      ogImage: itImage,
       keywords:
         'pizza ixelles, pizza napoletana bruxelles, pizzeria italiana ixelles, asporto pizza bruxelles, delivery pizza ixelles, pizza vino',
       canonical: itUrl,
@@ -141,7 +144,7 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
           title: 'Pizza Vino a Ixelles',
           description:
             'Pizzeria napoletana a Ixelles con ingredienti italiani, vini selezionati, asporto e consegna.',
-          image,
+          image: itImage,
           locale: 'it-BE',
         }),
         buildWebPageSchema({
@@ -149,7 +152,7 @@ export function createSeoRegistry(siteUrl: string): Record<'home-fr' | 'home-en'
           title: 'Pizza Vino Ixelles | Pizza napoletana, vini italiani e asporto a Bruxelles',
           description:
             'Pizza Vino a Ixelles propone pizza napoletana artigianale, vini italiani selezionati, asporto e consegna a Bruxelles.',
-          image,
+          image: itImage,
           locale: 'it-BE',
         }),
         buildBreadcrumbSchema([

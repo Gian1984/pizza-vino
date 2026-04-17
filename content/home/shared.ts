@@ -87,17 +87,14 @@ export const partners: ImageCard[] = [
 export const deliveryFr: DeliveryCard[] = [
   { name: 'Commandez via Deliveroo', link: 'https://deliveroo.be/fr/menu/brussels/boondael/pizza-vino', imageSrc: '/img/deliveroo.png', description: 'Faites-vous livrer vos pizzas préférées à Ixelles et dans les environs.' },
   { name: 'Commandez via Uber Eats', link: 'https://www.ubereats.com/be/store/pizzavino/FMBh-fUqQLaX1ctZnOTC3w', imageSrc: '/img/Uber-Eats-Logo.png', description: 'Retrouvez Pizza Vino sur Uber Eats pour une livraison rapide.' },
-  { name: 'Commandez via Proxideal', link: 'https://www.proxideal.eu/', imageSrc: '/img/Proxideal_Logo-01.png', description: 'Une alternative locale pour vos commandes à emporter ou en livraison.' },
 ]
 
 export const deliveryEn: DeliveryCard[] = [
   { name: 'Order on Deliveroo', link: 'https://deliveroo.be/fr/menu/brussels/boondael/pizza-vino', imageSrc: '/img/deliveroo.png', description: 'Get your favorite Neapolitan-style pizzas delivered in Ixelles and nearby.' },
   { name: 'Order on Uber Eats', link: 'https://www.ubereats.com/be/store/pizzavino/FMBh-fUqQLaX1ctZnOTC3w', imageSrc: '/img/Uber-Eats-Logo.png', description: 'Find Pizza Vino on Uber Eats for a quick and reliable delivery option.' },
-  { name: 'Order on Proxideal', link: 'https://www.proxideal.eu/', imageSrc: '/img/Proxideal_Logo-01.png', description: 'A local platform for takeaway and neighborhood delivery.' },
 ]
 
 export const deliveryIt: DeliveryCard[] = [
   { name: 'Ordina su Deliveroo', link: 'https://deliveroo.be/fr/menu/brussels/boondael/pizza-vino', imageSrc: '/img/deliveroo.png', description: 'Ricevi a casa le pizze di Pizza Vino a Ixelles e nei dintorni.' },
   { name: 'Ordina su Uber Eats', link: 'https://www.ubereats.com/be/store/pizzavino/FMBh-fUqQLaX1ctZnOTC3w', imageSrc: '/img/Uber-Eats-Logo.png', description: 'Una soluzione rapida per gustare Pizza Vino anche a domicilio.' },
-  { name: 'Ordina su Proxideal', link: 'https://www.proxideal.eu/', imageSrc: '/img/Proxideal_Logo-01.png', description: 'Una piattaforma locale per asporto e consegne di quartiere.' },
 ]

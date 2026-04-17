@@ -78,6 +78,7 @@ export type HeroHighlight = {
 export type ContentLabels = {
   craftsmanshipTitle: string
   craftsmanshipSubtitle: string
+  craftsmanshipBody: string
   galleryTitle: string
   gallerySubtitle: string
   menuIntroTitle: string
@@ -90,6 +91,7 @@ export type ContentLabels = {
   winesDescription: string
   testimonialsTitle: string
   testimonialsSubtitle: string
+  testimonialsListTitle: string
   deliveryTitle: string
   visitTitle: string
   addressTitle: string

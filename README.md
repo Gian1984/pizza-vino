@@ -8,7 +8,10 @@ Nuxt static migration for Pizza Vino with three prerendered pages:
 
 ## Setup
 
+Use Node 20 LTS.
+
 ```bash
+nvm use
 npm install
 ```
 

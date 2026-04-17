@@ -3,266 +3,256 @@ import { ChevronRightIcon, StarIcon } from '@heroicons/vue/20/solid'
 import SiteFooter from '~/components/layout/SiteFooter.vue'
 import SiteHeader from '~/components/layout/SiteHeader.vue'
 import { partners } from '~/content/home/shared'
-import type { HomeContent } from '~/content/home/types'
+import type { HomeContent, LocaleCode } from '~/content/home/types'
 
 defineProps<{
   content: HomeContent
 }>()
+
+const wineLabels: Record<LocaleCode, { grapes: string; producer: string; origin: string; suggestion: string; glass: string; bottle: string }> = {
+  fr: { grapes: 'Cépages', producer: 'Producteur', origin: 'Origine', suggestion: 'Suggestion', glass: 'Verre', bottle: 'Bouteille' },
+  en: { grapes: 'Grapes', producer: 'Producer', origin: 'Origin', suggestion: 'Suggestion', glass: 'Glass', bottle: 'Bottle' },
+  it: { grapes: 'Uve', producer: 'Produttore', origin: 'Origine', suggestion: 'Suggestione', glass: 'Bicchiere', bottle: 'Bottiglia' },
+}
 </script>
 
 <template>
-  <div class="min-h-screen bg-stone-50">
+  <div class="min-h-screen bg-white">
     <SiteHeader :current-path="content.path" :navigation="content.navigation" :locale="content.locale" />
 
     <main>
       <section
-        class="relative overflow-hidden border-b border-stone-200 bg-stone-950 text-white"
-        :style="{ backgroundImage: `linear-gradient(rgba(17, 24, 39, 0.55), rgba(17, 24, 39, 0.65)), url(${content.hero.heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
+        class="bg-gray-900 pt-10 text-white sm:pt-16 lg:overflow-hidden lg:pb-14 lg:pt-8"
+        :style="{ backgroundImage: `url(${content.hero.heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
       >
-        <div class="shell grid gap-12 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:py-28">
-          <div class="space-y-8">
-            <p class="inline-flex rounded-full bg-white/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.25em] text-stone-100">
-              {{ content.langLabel }}
-            </p>
-            <div class="space-y-5">
-              <h1 class="max-w-4xl text-5xl leading-tight sm:text-6xl lg:text-7xl">
+        <div class="shell py-10"></div>
+        <div class="shell lg:grid lg:grid-cols-2 lg:gap-8">
+          <div class="mx-auto max-w-md px-0 sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
+            <div class="pb-28 lg:py-24">
+              <h1 class="mt-4 text-5xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 lg:text-7xl">
                 {{ content.hero.title }}
               </h1>
-              <p class="max-w-2xl text-2xl text-stone-100/90">
-                {{ content.hero.lead }}
-              </p>
-            </div>
-            <ul class="grid gap-3 text-xl text-stone-100/90 sm:grid-cols-3 sm:text-2xl">
-              <li
-                v-for="(bullet, index) in content.hero.bullets"
-                :key="bullet"
-                class="rounded-[1.5rem] border border-white/15 bg-white/10 px-5 py-4 backdrop-blur"
-              >
-                <span class="block text-sm uppercase tracking-[0.2em] text-stone-300">#{{ index + 1 }}</span>
-                <span>{{ bullet }}</span>
-              </li>
-            </ul>
-            <div class="flex flex-wrap gap-4">
-              <a :href="content.hero.pdfHref" class="inline-flex items-center gap-3 rounded-full bg-white px-5 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-stone-900 hover:bg-stone-100">
-                {{ content.hero.pdfLabel }}
-                <ChevronRightIcon class="h-5 w-5" />
-              </a>
-              <a href="tel:+32494693028" class="inline-flex items-center gap-3 rounded-full border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white hover:bg-white/10">
-                {{ content.hero.callLabel }}
-              </a>
-            </div>
-          </div>
-
-          <div class="paper-panel self-end rounded-[2.5rem] bg-white/95 p-8 text-stone-900">
-            <p class="text-sm uppercase tracking-[0.25em] text-red-700">{{ content.heroHighlight.locationLabel }}</p>
-            <h2 class="mt-3 text-4xl">{{ content.heroHighlight.title }}</h2>
-            <p class="mt-4 text-lg text-stone-600">
-              {{ content.heroHighlight.description }}
-            </p>
-            <div class="mt-6 grid gap-3 sm:grid-cols-2">
-              <div class="rounded-[1.5rem] bg-stone-100 p-4">
-                <p class="text-sm uppercase tracking-[0.2em] text-stone-500">{{ content.heroHighlight.doughLabel }}</p>
-                <p class="mt-2 text-lg">{{ content.heroHighlight.doughValue }}</p>
+              <div class="mt-5 sm:mt-12">
+                <blockquote class="sm:flex lg:block">
+                  <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="flex-shrink-0 text-gray-300">
+                    <path d="M0 18h8.7v-5.555c-.024-3.906 1.113-6.841 2.892-9.68L6.452 0C3.188 2.644-.026 7.86 0 12.469V18zm12.408 0h8.7v-5.555C21.083 8.539 22.22 5.604 24 2.765L18.859 0c-3.263 2.644-6.476 7.86-6.451 12.469V18z" fill="currentColor" />
+                  </svg>
+                  <div class="mt-2 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-5">
+                    <h2 class="text-3xl text-white sm:text-4xl">{{ content.hero.lead }}</h2>
+                    <cite v-for="(bullet, index) in content.hero.bullets" :key="bullet" class="mt-2 block text-2xl font-extralight italic text-white">
+                      # {{ index + 1 }} &mdash; {{ bullet }}
+                    </cite>
+                  </div>
+                </blockquote>
               </div>
-              <div class="rounded-[1.5rem] bg-stone-100 p-4">
-                <p class="text-sm uppercase tracking-[0.2em] text-stone-500">{{ content.heroHighlight.serviceLabel }}</p>
-                <p class="mt-2 text-lg">{{ content.heroHighlight.serviceValue }}</p>
+              <div class="mt-10 flex flex-wrap gap-3 sm:mt-12">
+                <a :href="content.hero.pdfHref" class="mr-2 inline-flex items-center rounded-full border-2 border-black bg-white p-1 pr-2 text-sm text-black hover:bg-gray-300 sm:text-base lg:text-sm xl:text-base">
+                  <span class="rounded-full bg-gradient-to-r from-teal-500 to-cyan-600 px-3 py-0.5 text-xs font-semibold uppercase tracking-wide">{{ content.hero.pdfLabel }}</span>
+                  <ChevronRightIcon class="ml-2 h-5 w-5 text-gray-500" />
+                </a>
+                <a href="tel:+32494693028" class="inline-flex items-center rounded-full border-2 border-black bg-white p-1 pr-2 text-sm text-black hover:bg-gray-300 sm:text-base lg:text-sm xl:text-base">
+                  <span class="rounded-full bg-gradient-to-r from-teal-500 to-cyan-600 px-3 py-0.5 text-xs font-semibold uppercase tracking-wide">{{ content.hero.callLabel }}</span>
+                </a>
               </div>
             </div>
           </div>
+          <div class="mt-12 -mb-16 sm:-mb-48 lg:m-0"></div>
         </div>
       </section>
 
-      <section class="bg-[url('/img/carrelage.png')] bg-repeat py-14">
+      <section class="bg-white py-12 text-center lg:py-24" style="background-image: url('/img/carrelage.png')">
         <div class="shell">
-          <div class="paper-panel p-8 sm:p-10">
-            <div class="grid grid-cols-2 gap-8 sm:grid-cols-4">
-              <div v-for="partner in partners" :key="partner.name" class="flex items-center justify-center">
-                <img :src="partner.imageSrc" :alt="partner.name" class="max-h-24 w-auto object-contain lg:max-h-28" />
+          <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12">
+            <li v-for="partner in partners" :key="partner.name">
+              <img class="mx-auto h-20 lg:h-36" :src="partner.imageSrc" :alt="partner.name" />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="bg-white" style="background-image: url('/img/carrelage.png')">
+        <div class="relative bg-gray-800 pb-32">
+          <div class="absolute inset-0">
+            <img class="h-full w-full object-cover" src="/img/new-burratina.jpg" alt="" />
+            <div class="absolute inset-0 bg-gray-400 mix-blend-multiply" aria-hidden="true" />
+          </div>
+          <div class="shell relative py-24 sm:py-32">
+            <h2 class="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">{{ content.labels.craftsmanshipTitle }}</h2>
+            <p class="mt-6 max-w-3xl text-2xl text-white">{{ content.labels.craftsmanshipBody }}</p>
+          </div>
+        </div>
+        <section class="relative z-10 mx-auto -mt-32 max-w-screen-2xl px-4 sm:px-6 lg:px-8" aria-labelledby="contact-heading">
+          <h2 id="contact-heading" class="sr-only">Contact us</h2>
+          <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0">
+            <article v-for="item in content.supportLinks" :key="item.name" class="flex flex-col rounded-2xl bg-white shadow-xl">
+              <div class="flex-1 rounded-2xl border-4 border-red-700 px-6 pb-8 pt-16 md:px-8">
+                <div class="flow-root">
+                  <img :src="item.imageSrc" :alt="item.name" class="mx-auto h-[18rem] w-full rounded-[1rem] object-cover object-center" />
+                </div>
+                <h3 class="mt-2 text-4xl text-gray-900">{{ item.name }}</h3>
+                <p class="mt-4 text-lg text-gray-500">{{ item.description }}</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <section style="background-image: url('/img/carrelage.png')" class="relative pt-20">
+        <div class="shell">
+          <div class="space-y-4 pb-20 sm:space-y-12">
+            <h2 class="text-center text-4xl font-extrabold tracking-tight text-black md:text-5xl lg:text-6xl">{{ content.labels.galleryTitle }}</h2>
+          </div>
+
+          <div class="mt-4 flow-root">
+            <div class="-my-2">
+              <div class="relative box-content h-80 overflow-x-auto py-2 xl:overflow-visible">
+                <div class="absolute flex min-w-[1120px] space-x-8 px-4 sm:px-6 lg:px-8 xl:relative xl:grid xl:min-w-0 xl:grid-cols-5 xl:gap-x-8 xl:space-x-0 xl:px-0">
+                  <article v-for="item in content.categories" :key="item.name" class="group relative h-80 w-56 overflow-hidden rounded-lg xl:w-auto">
+                    <span class="absolute inset-0">
+                      <img :src="item.imageSrc" :alt="item.name" class="h-full w-full object-cover object-center transition duration-500 group-hover:scale-110" />
+                    </span>
+                    <span aria-hidden="true" class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50" />
+                    <span class="relative mt-auto flex h-full items-end px-6 pb-6 text-center text-xl font-bold text-white">{{ item.name }}</span>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 flow-root pb-20">
+            <div class="-my-2">
+              <div class="relative box-content h-80 overflow-x-auto py-2 xl:overflow-visible">
+                <div class="absolute flex min-w-[1120px] space-x-8 px-4 sm:px-6 lg:px-8 xl:relative xl:grid xl:min-w-0 xl:grid-cols-5 xl:gap-x-8 xl:space-x-0 xl:px-0">
+                  <article v-for="item in content.galleries" :key="item.name" class="group relative h-80 w-56 overflow-hidden rounded-lg xl:w-auto">
+                    <span class="absolute inset-0">
+                      <img :src="item.imageSrc" :alt="item.name" class="h-full w-full object-cover object-center transition duration-500 group-hover:scale-110" />
+                    </span>
+                    <span aria-hidden="true" class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50" />
+                    <span class="relative mt-auto flex h-full items-end px-6 pb-6 text-center text-xl font-bold text-white">{{ item.name }}</span>
+                  </article>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="relative overflow-hidden bg-stone-900 py-24 text-white">
-        <img src="/img/new-burratina.jpg" alt="" class="absolute inset-0 h-full w-full object-cover opacity-20" />
-        <div class="shell relative space-y-12">
+      <section class="bg-white py-12 text-center lg:py-12" style="background-image: url('/img/carrelage.png')">
+        <div class="shell">
+          <h2 class="py-20 text-4xl font-extrabold tracking-tight text-black md:text-5xl lg:text-6xl">{{ content.labels.menuIntroTitle }}</h2>
+        </div>
+      </section>
+
+      <section class="bg-white pb-24" style="background-image: url('/img/patterns/close-up-white-marble-texture-background.jpg')">
+        <div aria-hidden="true" class="relative">
+          <img src="/img/pizza-burratina.png" alt="" class="h-96 w-full object-cover object-center" />
+          <div class="absolute inset-0 bg-gradient-to-t from-white" />
+        </div>
+
+        <div class="shell relative -mt-12 space-y-16 pb-16 sm:pb-24">
           <div class="max-w-3xl space-y-4">
-            <p class="text-sm uppercase tracking-[0.25em] text-stone-300">{{ content.labels.craftsmanshipTitle }}</p>
-            <h2 class="section-title">{{ content.labels.craftsmanshipSubtitle }}</h2>
+            <h2 id="pizze_rosse" class="text-4xl font-extrabold tracking-tight text-red-700 md:text-5xl lg:text-6xl">{{ content.labels.redPizzasTitle }}</h2>
+            <p class="text-2xl text-gray-500">{{ content.labels.redPizzasDescription }}</p>
           </div>
-          <div class="grid gap-8 lg:grid-cols-3">
-            <article v-for="item in content.supportLinks" :key="item.name" class="paper-panel rounded-[2rem] border-white/10 bg-white/95 p-6 text-stone-900">
-              <div class="overflow-hidden rounded-[1.25rem] bg-stone-100 ring-1 ring-stone-200/80">
-                <img
-                  :src="item.imageSrc"
-                  :alt="item.name"
-                  class="aspect-[4/3] w-full object-cover object-center"
-                />
-              </div>
-              <h3 class="mt-5 text-3xl">{{ item.name }}</h3>
-              <p class="mt-3 text-lg text-stone-600">{{ item.description }}</p>
+
+          <div class="grid gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-3">
+            <article v-for="pizza in content.redPizzas" :key="pizza.name" class="border-t border-gray-200 pt-4">
+              <h3 class="text-3xl text-gray-900">{{ pizza.name }}</h3>
+              <p class="mt-2 text-lg text-gray-500">{{ pizza.description }}</p>
+              <p class="font-medium text-gray-900">{{ pizza.price }}€</p>
+            </article>
+          </div>
+
+          <div class="max-w-3xl space-y-4">
+            <h2 id="pizze_bianche" class="text-4xl font-extrabold tracking-tight text-black md:text-5xl lg:text-6xl">{{ content.labels.whitePizzasTitle }}</h2>
+            <p class="text-2xl text-gray-500">{{ content.labels.whitePizzasDescription }}</p>
+          </div>
+
+          <div class="grid gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-3">
+            <article v-for="pizza in content.whitePizzas" :key="pizza.name" class="border-t border-gray-200 pt-4">
+              <h3 class="text-3xl text-gray-900">{{ pizza.name }}</h3>
+              <p class="mt-2 text-lg text-gray-500">{{ pizza.description }}</p>
+              <p class="font-medium text-gray-900">{{ pizza.price }}€</p>
+            </article>
+          </div>
+
+          <div class="max-w-3xl space-y-4">
+            <h2 id="suggestioni" class="text-4xl font-extrabold tracking-tight text-red-700 md:text-5xl lg:text-6xl">{{ content.labels.specialsTitle }}</h2>
+          </div>
+
+          <div class="grid gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-3">
+            <article v-for="pizza in content.specials" :key="pizza.name" class="border-t border-gray-200 pt-4">
+              <h3 class="text-3xl text-gray-900">{{ pizza.name }}</h3>
+              <p class="mt-2 text-lg text-gray-500">{{ pizza.description }}</p>
+              <p class="font-medium text-gray-900">{{ pizza.price }}€</p>
+            </article>
+          </div>
+
+          <div class="max-w-3xl space-y-4">
+            <h2 id="wines" class="text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl lg:text-6xl">{{ content.labels.winesTitle }}</h2>
+            <p class="text-2xl text-gray-500">{{ content.labels.winesDescription }}</p>
+          </div>
+
+          <div class="grid gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-3">
+            <article v-for="wine in content.wines" :key="wine.name" class="border-t border-gray-200 pt-4">
+              <h3 class="text-3xl text-gray-900">{{ wine.name }}</h3>
+              <p class="mt-2 text-lg text-gray-500">{{ wineLabels[content.locale].grapes }}: {{ wine.grapes }} - {{ wineLabels[content.locale].producer }}: {{ wine.producer }}</p>
+              <p class="text-lg text-gray-500">{{ wineLabels[content.locale].origin }}: {{ wine.origin }}</p>
+              <p class="text-lg text-gray-500">{{ wineLabels[content.locale].suggestion }}: {{ wine.suggestion }}</p>
+              <p class="font-medium text-gray-900">{{ wineLabels[content.locale].glass }}: {{ wine.glass }}€ - {{ wineLabels[content.locale].bottle }}: {{ wine.bottle }}€</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="bg-[url('/img/carrelage.png')] bg-repeat py-24">
-        <div class="shell space-y-8">
-          <div class="max-w-3xl space-y-4">
-            <p class="text-sm uppercase tracking-[0.25em] text-red-700">{{ content.labels.galleryTitle }}</p>
-            <h2 class="section-title text-stone-900">{{ content.labels.gallerySubtitle }}</h2>
+      <section class="relative overflow-hidden bg-white">
+        <div aria-hidden="true" class="absolute inset-0">
+          <div class="absolute inset-0 mx-auto overflow-hidden">
+            <img src="/img/pexels-koolshooters-7142952.jpg" alt="" class="h-full w-full object-cover object-center" />
           </div>
-          <div class="grid gap-6 lg:grid-cols-5">
-            <article v-for="item in content.categories" :key="item.name" class="overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-stone-200/80">
-              <div class="overflow-hidden rounded-b-[1.6rem] rounded-t-[1.6rem] bg-stone-100">
-                <img
-                  :src="item.imageSrc"
-                  :alt="item.name"
-                  class="aspect-[4/3] w-full object-cover object-center transition duration-500 hover:scale-[1.02] lg:aspect-[4/5]"
-                />
-              </div>
-              <div class="px-4 py-4">
-                <p class="text-2xl text-stone-900">{{ item.name }}</p>
-              </div>
-            </article>
-          </div>
-          <div class="grid gap-6 lg:grid-cols-5">
-            <article v-for="item in content.galleries" :key="item.name" class="overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-stone-200/80">
-              <div class="overflow-hidden rounded-b-[1.6rem] rounded-t-[1.6rem] bg-stone-100">
-                <img
-                  :src="item.imageSrc"
-                  :alt="item.name"
-                  class="aspect-[4/3] w-full object-cover object-center transition duration-500 hover:scale-[1.02] lg:aspect-[4/5]"
-                />
-              </div>
-              <div class="px-4 py-4">
-                <p class="text-2xl text-stone-900">{{ item.name }}</p>
-              </div>
-            </article>
-          </div>
+          <div class="absolute inset-0 bg-white bg-opacity-10" />
+          <div class="absolute inset-0 bg-gradient-to-r from-white via-white" />
         </div>
-      </section>
 
-      <section id="menu" class="bg-[url('/img/patterns/close-up-white-marble-texture-background.jpg')] bg-cover bg-center py-24">
-        <div class="shell space-y-16">
-          <div class="max-w-3xl space-y-4">
-            <p class="text-sm uppercase tracking-[0.25em] text-red-700">{{ content.labels.menuIntroTitle }}</p>
-            <h2 class="section-title text-stone-900">{{ content.labels.redPizzasTitle }}</h2>
-            <p class="text-xl text-stone-600">{{ content.labels.redPizzasDescription }}</p>
-          </div>
-
-          <div class="grid gap-6 lg:grid-cols-3">
-            <article v-for="pizza in content.redPizzas" :key="pizza.name" class="paper-panel p-6">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="text-3xl text-stone-900">{{ pizza.name }}</h3>
-                <span class="rounded-full bg-red-50 px-3 py-1 text-sm font-semibold text-red-700">{{ pizza.price }}€</span>
-              </div>
-              <p class="mt-4 text-lg text-stone-600">{{ pizza.description }}</p>
-            </article>
-          </div>
-
-          <div class="max-w-3xl space-y-4">
-            <h2 class="section-title text-stone-900">{{ content.labels.whitePizzasTitle }}</h2>
-            <p class="text-xl text-stone-600">{{ content.labels.whitePizzasDescription }}</p>
-          </div>
-
-          <div class="grid gap-6 lg:grid-cols-3">
-            <article v-for="pizza in content.whitePizzas" :key="pizza.name" class="paper-panel p-6">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="text-3xl text-stone-900">{{ pizza.name }}</h3>
-                <span class="rounded-full bg-stone-100 px-3 py-1 text-sm font-semibold text-stone-700">{{ pizza.price }}€</span>
-              </div>
-              <p class="mt-4 text-lg text-stone-600">{{ pizza.description }}</p>
-            </article>
-          </div>
-
-          <div class="max-w-3xl space-y-4">
-            <h2 class="section-title text-stone-900">{{ content.labels.specialsTitle }}</h2>
-          </div>
-
-          <div class="grid gap-6 lg:grid-cols-3">
-            <article v-for="pizza in content.specials" :key="pizza.name" class="paper-panel p-6">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="text-3xl text-stone-900">{{ pizza.name }}</h3>
-                <span class="rounded-full bg-red-700 px-3 py-1 text-sm font-semibold text-white">{{ pizza.price }}€</span>
-              </div>
-              <p class="mt-4 text-lg text-stone-600">{{ pizza.description }}</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="wines" class="bg-stone-950 py-24 text-white">
-        <div class="shell space-y-12">
-          <div class="max-w-3xl space-y-4">
-            <p class="text-sm uppercase tracking-[0.25em] text-stone-300">{{ content.labels.winesTitle }}</p>
-            <h2 class="section-title">{{ content.labels.winesDescription }}</h2>
-          </div>
-          <div class="grid gap-6 lg:grid-cols-3">
-            <article v-for="wine in content.wines" :key="wine.name" class="rounded-[2rem] border border-white/10 bg-white/5 p-6">
-              <h3 class="text-3xl">{{ wine.name }}</h3>
-              <p class="mt-3 text-stone-300">Grapes: {{ wine.grapes }}</p>
-              <p class="text-stone-300">Producer: {{ wine.producer }}</p>
-              <p class="text-stone-300">Origin: {{ wine.origin }}</p>
-              <p class="mt-2 text-stone-100">Pairing: {{ wine.suggestion }}</p>
-              <p class="mt-4 text-sm uppercase tracking-[0.2em] text-red-300">
-                Glass {{ wine.glass }}€ · Bottle {{ wine.bottle }}€
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="relative overflow-hidden bg-white py-24">
-        <img src="/img/pexels-koolshooters-7142952.jpg" alt="" class="absolute inset-0 h-full w-full object-cover opacity-[0.08]" />
-        <div class="shell relative space-y-12">
-          <div class="max-w-3xl space-y-4">
-            <p class="text-sm uppercase tracking-[0.25em] text-red-700">{{ content.labels.testimonialsTitle }}</p>
-            <h2 class="section-title text-stone-900">{{ content.labels.testimonialsSubtitle }}</h2>
-          </div>
-          <div class="grid gap-6 lg:grid-cols-3">
-            <article v-for="testimonial in content.testimonials" :key="testimonial.id" class="paper-panel p-6">
-              <div class="flex items-center gap-1">
-                <StarIcon
-                  v-for="index in [1, 2, 3, 4, 5]"
-                  :key="index"
-                  class="h-5 w-5"
-                  :class="index <= testimonial.rating ? 'text-amber-400' : 'text-stone-200'"
-                />
-              </div>
-              <p class="mt-5 text-xl text-stone-700">“{{ testimonial.quote }}”</p>
-              <p class="mt-5 font-semibold text-stone-900">{{ testimonial.attribution }}</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-[url('/img/carrelage.png')] bg-repeat py-24">
-        <div class="shell space-y-8">
-          <div class="max-w-3xl space-y-4">
-            <p class="text-sm uppercase tracking-[0.25em] text-red-700">{{ content.labels.deliveryTitle }}</p>
-            <h2 class="section-title text-stone-900">{{ content.footer.deliveryTitle }}</h2>
-          </div>
-          <div class="grid gap-6 lg:grid-cols-3">
-            <a
-              v-for="item in content.delivery"
-              :key="item.name"
-              :href="item.link"
-              target="_blank"
-              rel="noreferrer"
-              class="paper-panel block p-6 hover:-translate-y-1"
-            >
-              <img :src="item.imageSrc" :alt="item.name" class="h-14 w-auto object-contain" />
-              <h3 class="mt-5 text-3xl text-stone-900">{{ item.name }}</h3>
-              <p class="mt-3 text-lg text-stone-600">{{ item.description }}</p>
+        <section class="shell relative flex flex-col items-center px-4 pt-32 text-center sm:px-6 lg:px-8">
+          <div class="max-w-2xl lg:max-w-none">
+            <h2 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">{{ content.labels.testimonialsTitle }}</h2>
+            <p class="mx-auto mt-4 max-w-xl text-2xl text-gray-600">{{ content.labels.testimonialsSubtitle }}</p>
+            <a href="https://fr.tripadvisor.be/Restaurant_Review-g1136493-d19872077-Reviews-PizzaVino-Ixelles_Brussels.html" class="inline-flex items-center rounded-full bg-transparent p-1 pr-2 text-white hover:text-gray-200">
+              <span class="rounded-full"><img class="mx-auto h-28" src="/img/Tripadvisor-Logo.png" alt="Tripadvisor" /></span>
+              <ChevronRightIcon class="h-5 w-5 text-black" />
             </a>
           </div>
-        </div>
+        </section>
+
+        <section class="shell relative py-24 sm:px-6 lg:px-8 lg:py-32">
+          <div class="max-w-2xl lg:max-w-none">
+            <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">{{ content.labels.testimonialsListTitle }}</h2>
+            <div class="mt-16 space-y-16 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">
+              <blockquote v-for="testimonial in content.testimonials" :key="testimonial.id" class="sm:flex lg:block">
+                <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="flex-shrink-0 text-gray-300">
+                  <path d="M0 18h8.7v-5.555c-.024-3.906 1.113-6.841 2.892-9.68L6.452 0C3.188 2.644-.026 7.86 0 12.469V18zm12.408 0h8.7v-5.555C21.083 8.539 22.22 5.604 24 2.765L18.859 0c-3.263 2.644-6.476 7.86-6.451 12.469V18z" fill="currentColor" />
+                </svg>
+                <div class="mt-8 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-5">
+                  <div class="flex items-center">
+                    <StarIcon v-for="index in [1, 2, 3, 4, 5]" :key="index" class="h-5 w-5" :class="index <= testimonial.rating ? 'text-amber-400' : 'text-stone-200'" />
+                  </div>
+                  <p class="mt-2 text-lg text-gray-900">{{ testimonial.quote }}</p>
+                  <cite class="mt-4 block font-semibold not-italic text-gray-900">{{ testimonial.attribution }}</cite>
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
 
-    <SiteFooter :footer="content.footer" :address-title="content.labels.addressTitle" :phone-title="content.labels.phoneTitle" />
+    <SiteFooter
+      :footer="content.footer"
+      :delivery="content.delivery"
+      :locale="content.locale"
+      :address-title="content.labels.addressTitle"
+      :phone-title="content.labels.phoneTitle"
+    />
   </div>
 </template>

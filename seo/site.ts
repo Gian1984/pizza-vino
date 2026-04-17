@@ -1,6 +1,11 @@
 export const BRAND_NAME = 'Pizza Vino'
-export const DEFAULT_OG_IMAGE = '/img/pexels-koolshooters-7142952.jpg'
+export const DEFAULT_OG_IMAGE = '/og/brand.png'
 export const DEFAULT_TWITTER_IMAGE = DEFAULT_OG_IMAGE
+export const PAGE_OG_IMAGES = {
+  'home-fr': '/og/home-fr.png',
+  'home-en': '/og/home-en.png',
+  'home-it': '/og/home-it.png',
+} as const
 export const BUSINESS_PHONE = '+32494693028'
 export const BUSINESS_PHONE_DISPLAY = '0494 69 30 28'
 export const BUSINESS_ADDRESS = 'Avenue des Saisons 15, 1050 Ixelles, Brussels, Belgium'
