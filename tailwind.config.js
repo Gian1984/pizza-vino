@@ -1,9 +1,18 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: { content: ['./public/**/*.html', './src/**/*.vue'] },
+  content: [
+    './app.vue',
+    './components/**/*.{vue,js,ts}',
+    './content/**/*.{ts,js}',
+    './composables/**/*.{ts,js}',
+    './layouts/**/*.{vue,js,ts}',
+    './pages/**/*.{vue,js,ts}',
+    './seo/**/*.{ts,js}',
+    './public/**/*.html',
+    './src/**/*.{vue,js,jsx,ts,tsx}',
+  ],
   presets: [],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
       sm: '640px',
@@ -19,7 +28,8 @@ module.exports = {
 
       black: colors.black,
       white: colors.white,
-      gray: colors.coolGray,
+      gray: colors.slate,
+      stone: colors.stone,
       red: colors.red,
       yellow: colors.amber,
       green: colors.emerald,

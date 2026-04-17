@@ -1,24 +1,65 @@
-# pizza-vino
+# Pizza Vino
 
-## Project setup
-```
+Nuxt static migration for Pizza Vino with three prerendered pages:
+
+- `/`
+- `/en`
+- `/it`
+
+## Setup
+
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+## Development
+
+```bash
+npm run dev
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+## Type checking
+
+```bash
+npm run typecheck
 ```
 
-### Lints and fixes files
-```
-npm run lint
+## Static generation
+
+```bash
+npm run generate
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The generated static site is written to `.output/public`.
+
+## Production site URL
+
+Set the public site URL before generating production output:
+
+```bash
+NUXT_PUBLIC_SITE_URL=https://www.pizzavino.be npm run generate
+```
+
+You can start from:
+
+```bash
+cp .env.example .env
+```
+
+This value is used for:
+
+- canonical URLs
+- hreflang alternates
+- Open Graph URLs
+- `robots.txt`
+- `sitemap.xml`
+
+## SEO structure
+
+SEO data is centralized in `seo/`:
+
+- `seo/site.ts`
+- `seo/schema.ts`
+- `seo/registry.ts`
+
+Localized page content lives in `content/home/`.
