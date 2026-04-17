@@ -7,10 +7,10 @@ $logoPath = $root . '/public/img/pizza-vino-logo.jpeg';
 $outputDir = $root . '/public/og';
 
 $images = [
-    'brand' => 'Pizza Vino',
-    'home-fr' => 'Pizza Vino',
-    'home-en' => 'Pizza Vino',
-    'home-it' => 'Pizza Vino',
+    'brand' => ['title' => 'Pizza Vino', 'subtitle' => 'Ixelles'],
+    'home-fr' => ['title' => 'Pizza Vino', 'subtitle' => 'Pizzeria Artisanale | Ixelles'],
+    'home-en' => ['title' => 'Pizza Vino', 'subtitle' => 'Artisan Pizzeria | Ixelles'],
+    'home-it' => ['title' => 'Pizza Vino', 'subtitle' => 'Pizzeria Artigianale | Ixelles'],
 ];
 
 if (!extension_loaded('gd')) {
@@ -67,7 +67,9 @@ $logoHeight = imagesy($logo);
 $logoTargetWidth = 250;
 $logoTargetHeight = (int) round(($logoHeight / $logoWidth) * $logoTargetWidth);
 
-foreach ($images as $slug => $title) {
+foreach ($images as $slug => $data) {
+    $title = $data['title'];
+    $subtitle = $data['subtitle'];
     $canvas = imagecreatetruecolor($canvasWidth, $canvasHeight);
 
     if (!$canvas) {
